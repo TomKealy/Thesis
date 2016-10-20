@@ -1,0 +1,92 @@
+\documentclass{article}
+\bibliographystyle{plain}
+\input{macros}
+
+\title{Thesis Chapter Plan}
+\author{Tom Kealy}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+\begin{itemize}
+\item Message of the Thesis
+\end{itemize}
+
+\begin{itemize}
+\item Need for Dynamic spectrum management
+\item Chapter introduction
+\end{itemize}
+
+\section{Spectrum Sensing}
+
+\subsection{Nyquist Approaches}
+\begin{itemize}
+\item Nyquist Theorem as convolution with fence post function
+\end{itemize}
+
+
+
+\subsection{Compressive Sensing}
+\begin{itemize}
+\item Comparison with Source coding: why are we collecting all this extra data?
+\item Can we colect less?
+\item This requires undersampling (relative to the number of Nyquist samples)
+\item Leads to tree questions 1 - How to obtain samples, 2 - how to reconstruct the signal, 3 - How to perform inference on samples
+\item Signals which we can compress are sparse - some examples
+\item Instead of measuring sparse coefficients measure correlations between signal and some other basis
+\item Incoherence
+\item Restricted Isometry Property
+\item Reconstruction: solve a linear program/do Bayesian inference.
+\item Example: single pixel camera
+\end{itemize}
+
+\subsection{Architectures for Compressive Spectrum Sensing}
+
+\subsubsection{Random Demodulator}
+
+\subsubsection{Modulated Wideband Converter}
+
+
+
+\section{Convex Optimisation}
+
+\subsection{ADMM}
+\subsection{The Proximity Operator}
+\subsubsection{Properties}
+\subsubsection{Motivation}
+\subsubsection{Examples}
+
+
+\section{Distributed Spectrum Sensing}
+\begin{itemize}
+\item Why distributed sensing?
+\item Greedy vs Convex methods
+\item Why Convex Methods
+\end{itemize}
+
+\subsection{Sensing Models}
+\begin{itemize}
+\item Frequency Only vs Joint Frequency and Space
+\end{itemize}
+
+\subsection{Constrained Optimisation on Graphs}\label{sec:opt-on-graphs}
+
+\section{New Basis}
+
+\subsection{Edge Detection}
+
+\section{Compressive Inference}
+\begin{itemize}
+\item What problem are we solving?
+\item We can 
+\end{itemize}
+
+\section{Numerical Results}
+
+\section{Group Testing}
+
+\section{Conclusions}
+
+\end{document}

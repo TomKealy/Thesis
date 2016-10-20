@@ -1,0 +1,2717 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.14)  9 FEB 2016 12:58
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Thesis_draft0.tex
+(./Thesis_draft0.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count89
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks17
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip48
+\f@ncyO@elh=\skip49
+\f@ncyO@erh=\skip50
+\f@ncyO@olh=\skip51
+\f@ncyO@orh=\skip52
+\f@ncyO@elf=\skip53
+\f@ncyO@erf=\skip54
+\f@ncyO@olf=\skip55
+\f@ncyO@orf=\skip56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box28
+\beforetitleunit=\skip57
+\aftertitleunit=\skip58
+\ttl@plus=\dimen114
+\ttl@minus=\dimen115
+\ttl@toksa=\toks21
+\titlewidth=\dimen116
+\titlewidthlast=\dimen117
+\titlewidthfirst=\dimen118
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@ContinuedFloat=\count102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip59
+\cftbeforetoctitleskip=\skip60
+\cftaftertoctitleskip=\skip61
+\cftbeforepartskip=\skip62
+\cftpartnumwidth=\skip63
+\cftpartindent=\skip64
+\cftbeforechapskip=\skip65
+\cftchapindent=\skip66
+\cftchapnumwidth=\skip67
+\cftbeforesecskip=\skip68
+\cftsecindent=\skip69
+\cftsecnumwidth=\skip70
+\cftbeforesubsecskip=\skip71
+\cftsubsecindent=\skip72
+\cftsubsecnumwidth=\skip73
+\cftbeforesubsubsecskip=\skip74
+\cftsubsubsecindent=\skip75
+\cftsubsubsecnumwidth=\skip76
+\cftbeforeparaskip=\skip77
+\cftparaindent=\skip78
+\cftparanumwidth=\skip79
+\cftbeforesubparaskip=\skip80
+\cftsubparaindent=\skip81
+\cftsubparanumwidth=\skip82
+\cftbeforeloftitleskip=\skip83
+\cftafterloftitleskip=\skip84
+\cftbeforefigskip=\skip85
+\cftfigindent=\skip86
+\cftfignumwidth=\skip87
+\c@lofdepth=\count103
+\c@lotdepth=\count104
+\cftbeforelottitleskip=\skip88
+\cftafterlottitleskip=\skip89
+\cftbeforetabskip=\skip90
+\cfttabindent=\skip91
+\cfttabnumwidth=\skip92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks22
+) (./macros.tex
+(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/share/texlive/texmf-dist/tex/latex/a4wide/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texlive/texmf-dist/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+))
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen126
+\WF@size=\dimen127
+\c@WF@wrappedlines=\count105
+\WF@box=\box29
+\WF@everypar=\toks23
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
+\babel@savecnt=\count106
+\U@D=\dimen128
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count107
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+********************************************************
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (cfiorio@um2.fr)
+********************************************************
+\skiptotal=\skip93
+\skiplinenumber=\skip94
+\skiprule=\skip95
+\skiphlne=\skip96
+\skiptext=\skip97
+\skiplength=\skip98
+\algomargin=\skip99
+\skipalgocfslide=\skip100
+\algowidth=\dimen129
+\inoutsize=\dimen130
+\inoutindent=\dimen131
+\interspacetitleruled=\dimen132
+\interspacealgoruled=\dimen133
+\interspacetitleboxruled=\dimen134
+\algocf@inoutbox=\box30
+\algocf@inputbox=\box31
+\AlCapSkip=\skip101
+\AlCapHSkip=\skip102
+\algoskipindent=\skip103
+\algocf@nlbox=\box32
+\algocf@hangingbox=\box33
+\algocf@untilbox=\box34
+\algocf@skipuntil=\skip104
+\algocf@capbox=\box35
+\algoheightruledefault=\skip105
+\algoheightrule=\skip106
+\algotitleheightruledefault=\skip107
+\algotitleheightrule=\skip108
+\c@algocfline=\count108
+\c@algocfproc=\count109
+\c@algocf=\count110
+\algocf@algoframe=\box36
+\algocf@algobox=\box37
+) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip109
+\thm@postskip=\skip110
+\thm@headsep=\skip111
+\dth@everypar=\toks31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count111
+\calc@Bcount=\count112
+\calc@Adimen=\dimen135
+\calc@Bdimen=\dimen136
+\calc@Askip=\skip112
+\calc@Bskip=\skip113
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count113
+\calc@Cskip=\skip114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count114
+\l_MT_multwidth_dim=\dimen137
+\origjot=\skip115
+\l_MT_shortvdotswithinadjustabove_dim=\dimen138
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen139
+\l_MT_above_intertext_sep=\dimen140
+\l_MT_below_intertext_sep=\dimen141
+\l_MT_above_shortintertext_sep=\dimen142
+\l_MT_below_shortintertext_sep=\dimen143
+)
+\symmcy=\mathgroup7
+\c@eqn=\count115
+\c@thm=\count116
+\c@defn=\count117
+\c@theorem=\count118
+\c@condition=\count119
+) (./Thesis_draft0.aux (./chapter1.aux) (./reportFINAL2.aux
+
+LaTeX Warning: Label `programl0' multiply defined.
+
+
+LaTeX Warning: Label `l1l2' multiply defined.
+
+
+LaTeX Warning: Label `bayesiancs' multiply defined.
+
+
+LaTeX Warning: Label `bayesiancs' multiply defined.
+
+) (./report2015.aux
+
+LaTeX Warning: Label `constrainedbp' multiply defined.
+
+
+LaTeX Warning: Label `msevssnr0' multiply defined.
+
+
+LaTeX Warning: Label `fig:erroriterations' multiply defined.
+
+
+LaTeX Warning: Label `fig:steps_splines' multiply defined.
+
+) (./cswireless_new_basis.aux) (./cswirelesspaper_new_basis.aux
+
+LaTeX Warning: Label `sec:sensingmodel' multiply defined.
+
+
+LaTeX Warning: Label `system' multiply defined.
+
+
+LaTeX Warning: Label `sec:opt-on-graphs' multiply defined.
+
+
+LaTeX Warning: Label `barxc' multiply defined.
+
+
+LaTeX Warning: Label `constrainedbp' multiply defined.
+
+
+LaTeX Warning: Label `compact-constraints' multiply defined.
+
+
+LaTeX Warning: Label `constrainedbp1' multiply defined.
+
+
+LaTeX Warning: Label `aug-lagrange' multiply defined.
+
+
+LaTeX Warning: Label `generic-iterations' multiply defined.
+
+
+LaTeX Warning: Label `dadmm_algo_lasso' multiply defined.
+
+
+LaTeX Warning: Label `sec:results' multiply defined.
+
+
+LaTeX Warning: Label `msevssnr0' multiply defined.
+
+
+LaTeX Warning: Label `fig:differentLambda' multiply defined.
+
+) (./compressive_filtering_3.aux
+
+LaTeX Warning: Label `minsamples' multiply defined.
+
+
+LaTeX Warning: Label `basis' multiply defined.
+
+
+LaTeX Warning: Label `basis-expansion' multiply defined.
+
+
+LaTeX Warning: Label `fig:hvb' multiply defined.
+
+
+LaTeX Warning: Label `fig:hvb' multiply defined.
+
+) (./root.aux) (./appendix1.aux))
+\openout1 = `Thesis_draft0.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Try loading font information for T1+pplx on input line 84.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
+File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count120
+\scratchdimen=\dimen144
+\scratchbox=\box38
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen145
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks33
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ [1
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [1
+
+] [2
+
+] [3]
+[4
+
+] [5] [6
+
+]
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 144.
+ (./Thesis_draft0.toc
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 2.
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pplx.fd
+File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
+)
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 2.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 2.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 2.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 2.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 2.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 2.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+) [7])
+\tf@toc=\write3
+\openout3 = `Thesis_draft0.toc'.
+
+ [8]
+(./Thesis_draft0.lot)
+\tf@lot=\write4
+\openout4 = `Thesis_draft0.lot'.
+
+ [9
+
+] [10
+
+] (./Thesis_draft0.lof
+
+Package natbib Warning: Citation `Strategy2013' on page xi undefined on input l
+ine 5.
+
+
+Package natbib Warning: Citation `Burbidge2007' on page xi undefined on input l
+ine 6.
+
+
+Package natbib Warning: Citation `Tian' on page xi undefined on input line 8.
+
+
+Package natbib Warning: Citation `Tibshirani1996' on page xi undefined on input
+ line 10.
+
+
+Package natbib Warning: Citation `Tibshirani1996' on page xi undefined on input
+ line 11.
+
+
+Package natbib Warning: Citation `Ji2008' on page xi undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `Atia2008' on page xi undefined on input line 
+13.
+
+
+Overfull \hbox (2.0056pt too wide) detected at line 14
+\T1/pplx/m/n/10 0.3.10 
+ []
+
+
+Package natbib Warning: Citation `Mischali2010' on page xi undefined on input l
+ine 14.
+
+
+Overfull \hbox (2.0056pt too wide) detected at line 15
+\T1/pplx/m/n/10 0.4.11 
+ []
+
+
+Overfull \hbox (2.0056pt too wide) detected at line 16
+\T1/pplx/m/n/10 0.9.12 
+ []
+
+
+Overfull \hbox (2.0056pt too wide) detected at line 17
+\T1/pplx/m/n/10 0.9.13 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 18
+\T1/pplx/m/n/10 0.10.14 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 19
+\T1/pplx/m/n/10 0.12.15 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 20
+\T1/pplx/m/n/10 0.12.16 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 21
+\T1/pplx/m/n/10 0.12.17 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 22
+\T1/pplx/m/n/10 0.12.18 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 23
+\T1/pplx/m/n/10 0.12.19 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 24
+\T1/pplx/m/n/10 0.12.20 
+ []
+
+[11]
+Overfull \hbox (7.0056pt too wide) detected at line 25
+\T1/pplx/m/n/10 0.12.21 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 26
+\T1/pplx/m/n/10 0.12.22 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 27
+\T1/pplx/m/n/10 0.12.23 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 28
+\T1/pplx/m/n/10 0.12.24 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 29
+\T1/pplx/m/n/10 0.12.25 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 30
+\T1/pplx/m/n/10 0.12.26 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 31
+\T1/pplx/m/n/10 0.17.27 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 32
+\T1/pplx/m/n/10 0.18.28 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 33
+\T1/pplx/m/n/10 0.18.29 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 34
+\T1/pplx/m/n/10 0.18.30 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 35
+\T1/pplx/m/n/10 0.22.31 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 36
+\T1/pplx/m/n/10 0.22.32 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 37
+\T1/pplx/m/n/10 0.22.33 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 38
+\T1/pplx/m/n/10 0.22.34 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 39
+\T1/pplx/m/n/10 0.22.35 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 40
+\T1/pplx/m/n/10 0.22.36 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 41
+\T1/pplx/m/n/10 0.26.37 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 42
+\T1/pplx/m/n/10 0.26.38 
+ []
+
+
+Overfull \hbox (7.0056pt too wide) detected at line 43
+\T1/pplx/m/n/10 0.26.39 
+ []
+
+)
+\tf@lof=\write5
+\openout5 = `Thesis_draft0.lof'.
+
+ [12]
+\openout2 = `chapter1.aux'.
+
+
+No file chapter1.tex.
+\openout2 = `reportFINAL2.aux'.
+
+(./reportFINAL2.tex
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 1.
+
+
+Package natbib Warning: Citation `Ukmobil' on page 1 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `Ukmobi' on page 1 undefined on input line 14.
+
+
+<uk-spectrum-allocation-chart1-640x445.jpg, id=52, 642.4pt x 446.66875pt>
+File: uk-spectrum-allocation-chart1-640x445.jpg Graphic file (type jpg)
+
+<use uk-spectrum-allocation-chart1-640x445.jpg>
+Package pdftex.def Info: uk-spectrum-allocation-chart1-640x445.jpg used on inpu
+t line 18.
+(pdftex.def)             Requested size: 286.45033pt x 199.16928pt.
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <9> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 19.
+
+
+Package natbib Warning: Citation `Strategy2013' on page 1 undefined on input li
+ne 19.
+
+
+Package natbib Warning: Citation `Strategy2013' on page 1 undefined on input li
+ne 19.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
+
+
+
+
+] <cr2.jpg, id=56, 431.36156pt x 182.18062pt>
+File: cr2.jpg Graphic file (type jpg)
+ <use cr2.jpg>
+Package pdftex.def Info: cr2.jpg used on input line 31.
+(pdftex.def)             Requested size: 212.2905pt x 199.17615pt.
+
+
+Package natbib Warning: Citation `Burbidge2007' on page 2 undefined on input li
+ne 32.
+
+
+Package natbib Warning: Citation `Burbidge2007' on page 2 undefined on input li
+ne 32.
+
+
+Package natbib Warning: Citation `Candes2006' on page 2 undefined on input line
+ 36.
+
+
+Package natbib Warning: Citation `Donoho2006' on page 2 undefined on input line
+ 36.
+
+[2 <./uk-spectrum-allocation-chart1-640x445.jpg> <./cr2.jpg>]
+
+Package natbib Warning: Citation `Donoho' on page 3 undefined on input line 38.
+
+
+<cablesnewyork.jpg, id=60, 260.975pt x 320.19624pt>
+File: cablesnewyork.jpg Graphic file (type jpg)
+ <use cablesnewyork.jpg>
+Package pdftex.def Info: cablesnewyork.jpg used on input line 46.
+(pdftex.def)             Requested size: 203.8026pt x 199.16942pt.
+
+Underfull \vbox (badness 1377) has occurred while \output is active []
+
+ [3 <./cablesnewyork.jpg>]
+
+Package natbib Warning: Citation `Yucek2009' on page 4 undefined on input line 
+79.
+
+[4] [5]
+
+Package natbib Warning: Citation `Yucek2009' on page 6 undefined on input line 
+152.
+
+[6]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 174
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.178 ... \mathbb{E} \left[ x \left(t \right)\conj
+                                                  {x \left(t_+\tau \right)} ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.178 ... \mathbb{E} \left[ x \left(t \right)\conj
+                                                  {x \left(t_+\tau \right)} ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.178 ... \mathbb{E} \left[ x \left(t \right)\conj
+                                                  {x \left(t_+\tau \right)} ...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.178 ...{E} \left[ x \left(t \right)\conj{x \left
+                                                  (t_+\tau \right)} \right]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.178 ...t(t \right)\conj{x \left(t_+\tau \right)}
+                                                   \right]
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra \right.
+l.178 ...ht)\conj{x \left(t_+\tau \right)} \right]
+                                                  
+I'm ignoring a \right that had no matching \left.
+
+! You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.179 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.179 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.179 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.193 ...t_{T} x\left(t+\frac{\tau}{2}\right)\conj
+                                                  {x\left(t+\frac{\tau}{2}\r...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.193 ...t_{T} x\left(t+\frac{\tau}{2}\right)\conj
+                                                  {x\left(t+\frac{\tau}{2}\r...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.193 ...\left(t+\frac{\tau}{2}\right)\conj{x\left
+                                                  (t+\frac{\tau}{2}\right)} ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.193 ...ght)\conj{x\left(t+\frac{\tau}{2}\right)}
+                                                   e^{-2\pi j \alpha t} dt
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.194 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.194 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.194 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[7]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.229 ...pha \neq 0} \sum_{n} S_{x}^{\alpha} \conj
+                                                  {S_{x}^{\alpha}}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.229 ...pha \neq 0} \sum_{n} S_{x}^{\alpha} \conj
+                                                  {S_{x}^{\alpha}}
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.229 ... \neq 0} \sum_{n} S_{x}^{\alpha} \conj{S_
+                                                  {x}^{\alpha}}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.229 ..._{n} S_{x}^{\alpha} \conj{S_{x}^{\alpha}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.230 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.230 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.230 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Package natbib Warning: Citation `Ghozzi2006' on page 8 undefined on input line
+ 242.
+
+[8] <bands.png, id=84, 554.07pt x 271.0125pt>
+File: bands.png Graphic file (type png)
+ <use bands.png>
+Package pdftex.def Info: bands.png used on input line 265.
+(pdftex.def)             Requested size: 407.20697pt x 199.16928pt.
+
+
+Package natbib Warning: Citation `Tian' on page 9 undefined on input line 266.
+
+
+Package natbib Warning: Citation `Tian' on page 9 undefined on input line 266.
+
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <12> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 270.
+[9 <./bands.png>]
+! Undefined control sequence.
+l.274 x\left(nT\right) = \sha
+                             \left(t-nT\right)x\left(t\right)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.280 \sha
+          \left(t-nT\right) = \sum_{k=-\infty}^{\infty} \delta\left(t - kT\r...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.341 ...sk? In classical sensing, we choose (\psi
+                                                  _k\) to be the set of \(T_...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Package natbib Warning: Citation `Candes2006' on page 11 undefined on input lin
+e 353.
+
+
+Package natbib Warning: Citation `Emma' on page 11 undefined on input line 367.
+
+
+[11]
+
+Package natbib Warning: Citation `Candes2007' on page 12 undefined on input lin
+e 381.
+
+! Extra \right.
+\rangle ->\delimiter "526930B 
+                              
+l.395 ... \phi_{k} \text{,} \psi x^* \right\rangle
+                                                   \text{   } \forall k \in ...
+I'm ignoring a \right that had no matching \left.
+
+
+Package natbib Warning: Citation `Donoho2006a' on page 12 undefined on input li
+ne 405.
+
+
+Package natbib Warning: Citation `Chen1998' on page 12 undefined on input line 
+407.
+
+
+Package natbib Warning: Citation `Tropp2007' on page 12 undefined on input line
+ 407.
+
+[12] <compressive_sensing_example.jpg, id=98, 583.42969pt x 219.82124pt>
+File: compressive_sensing_example.jpg Graphic file (type jpg)
+
+<use compressive_sensing_example.jpg>
+Package pdftex.def Info: compressive_sensing_example.jpg used on input line 428
+.
+(pdftex.def)             Requested size: 424.60037pt x 199.1756pt.
+ [13 <./compressive_sensing_example.jpg>]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 437.
+
+<l1l2.jpg, id=102, 552.56438pt x 383.18156pt>
+File: l1l2.jpg Graphic file (type jpg)
+ <use l1l2.jpg>
+Package pdftex.def Info: l1l2.jpg used on input line 443.
+(pdftex.def)             Requested size: 287.21709pt x 199.16928pt.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 444.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 444.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 444.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 444.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 444.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 444.
+
+
+Package natbib Warning: Citation `Tibshirani1996' on page 14 undefined on input
+ line 444.
+
+
+Package natbib Warning: Citation `Tibshirani1996' on page 14 undefined on input
+ line 444.
+
+[14 <./l1l2.jpg>]
+
+LaTeX Warning: Reference `program0' on page 15 undefined on input line 482.
+
+
+Package natbib Warning: Citation `Tibshirani1996' on page 15 undefined on input
+ line 482.
+
+<LaplaceandNormalDensity.png, id=106, 295.85532pt x 244.66406pt>
+File: LaplaceandNormalDensity.png Graphic file (type png)
+
+<use LaplaceandNormalDensity.png>
+Package pdftex.def Info: LaplaceandNormalDensity.png used on input line 486.
+(pdftex.def)             Requested size: 240.84682pt x 199.16928pt.
+
+
+Package natbib Warning: Citation `Tibshirani1996' on page 15 undefined on input
+ line 487.
+
+
+Package natbib Warning: Citation `Tibshirani1996' on page 15 undefined on input
+ line 487.
+
+[15 <./LaplaceandNormalDensity.png>]
+
+Package natbib Warning: Citation `Baron2010' on page 16 undefined on input line
+ 509.
+
+<bayesiancs.png, id=110, 460.72125pt x 255.20343pt>
+File: bayesiancs.png Graphic file (type png)
+ <use bayesiancs.png>
+Package pdftex.def Info: bayesiancs.png used on input line 513.
+(pdftex.def)             Requested size: 359.57906pt x 199.16928pt.
+
+
+Package natbib Warning: Citation `Ji2008' on page 16 undefined on input line 51
+4.
+
+
+Package natbib Warning: Citation `Ji2008' on page 16 undefined on input line 51
+4.
+
+
+Package natbib Warning: Citation `Dorfman1943' on page 16 undefined on input li
+ne 519.
+
+[16 <./bayesiancs.png>] [17] <GTFat.png, id=118, 459.21562pt x 351.56343pt>
+File: GTFat.png Graphic file (type png)
+
+<use GTFat.png>
+Package pdftex.def Info: GTFat.png used on input line 563.
+(pdftex.def)             Requested size: 260.151pt x 199.16928pt.
+
+
+Package natbib Warning: Citation `Atia2008' on page 18 undefined on input line 
+564.
+
+
+Package natbib Warning: Citation `Atia2008' on page 18 undefined on input line 
+564.
+
+
+Package natbib Warning: Citation `cgt' on page 18 undefined on input line 568.
+
+
+Package natbib Warning: Citation `Hwang1972' on page 18 undefined on input line
+ 577.
+
+[18 <./GTFat.png>]
+
+Package natbib Warning: Citation `Aldridge2013' on page 19 undefined on input l
+ine 595.
+
+
+Package natbib Warning: Citation `Chan2011' on page 19 undefined on input line 
+611.
+
+[19]
+
+Package natbib Warning: Citation `Baldassini2013' on page 20 undefined on input
+ line 639.
+
+
+Package natbib Warning: Citation `Emma' on page 20 undefined on input line 644.
+
+
+
+Package natbib Warning: Citation `Sejdinovic2010' on page 20 undefined on input
+ line 650.
+
+
+Package natbib Warning: Citation `Wadayama2013' on page 20 undefined on input l
+ine 650.
+
+
+Package natbib Warning: Citation `Baldassini2013' on page 20 undefined on input
+ line 650.
+
+[20]
+
+Package natbib Warning: Citation `Mishali2010' on page 21 undefined on input li
+ne 656.
+
+<mwc.png, id=128, 864.22874pt x 325.96782pt>
+File: mwc.png Graphic file (type png)
+ <use mwc.png>
+Package pdftex.def Info: mwc.png used on input line 675.
+(pdftex.def)             Requested size: 424.5835pt x 199.17331pt.
+
+
+Package natbib Warning: Citation `Mischali2010' on page 21 undefined on input l
+ine 676.
+
+
+Package natbib Warning: Citation `Mischali2010' on page 21 undefined on input l
+ine 676.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21]
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 691.
+
+
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 694.
+
+
+Package natbib Warning: Citation `Aldrouobi' on page 22 undefined on input line
+ 698.
+
+<GTvsCS.png, id=132, 553.31718pt x 406.51875pt>
+File: GTvsCS.png Graphic file (type png)
+ <use GTvsCS.png>
+Package pdftex.def Info: GTvsCS.png used on input line 702.
+(pdftex.def)             Requested size: 271.08557pt x 199.16928pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22 <./mwc.png>] [23 <./GTvsCS.png>]
+
+Package natbib Warning: Citation `Aldroubi' on page 24 undefined on input line 
+725.
+
+
+Package natbib Warning: Citation `Wadayama2013' on page 24 undefined on input l
+ine 730.
+
+
+Package natbib Warning: Citation `Sejdinovic2010' on page 24 undefined on input
+ line 730.
+
+[24]) [25]
+\openout2 = `report2015.aux'.
+
+ (./report2015.tex
+LaTeX Font Info:    Try loading font information for OMS+pplx on input line 4.
+LaTeX Font Info:    No file OMSpplx.fd. on input line 4.
+
+
+LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 4.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 11.
+
+
+Overfull \hbox (104.55322pt too wide) in paragraph at lines 15--24
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `Dahlman2014' on page 26 undefined on input li
+ne 28.
+
+
+Package natbib Warning: Citation `akan2009cognitive' on page 26 undefined on in
+put line 38.
+
+[26
+
+
+]
+
+Package natbib Warning: Citation `stevenson2009ieee' on page 27 undefined on in
+put line 40.
+
+
+Package natbib Warning: Citation `Candes2006' on page 27 undefined on input lin
+e 44.
+
+
+Package natbib Warning: Citation `mishali2010theory' on page 27 undefined on in
+put line 44.
+
+
+Package natbib Warning: Citation `tropp2010beyond' on page 27 undefined on inpu
+t line 44.
+
+
+Package natbib Warning: Citation `Zhang2011b' on page 27 undefined on input lin
+e 48.
+
+
+Package natbib Warning: Citation `mota2013d' on page 27 undefined on input line
+ 50.
+
+
+Package natbib Warning: Citation `mota2013d' on page 27 undefined on input line
+ 52.
+
+
+Package natbib Warning: Citation `mota2013d' on page 27 undefined on input line
+ 54.
+
+[27]
+
+Package natbib Warning: Citation `Boyd2010a' on page 28 undefined on input line
+ 73.
+
+
+Package natbib Warning: Citation `nesterov2005smooth' on page 28 undefined on i
+nput line 91.
+
+[28]
+Overfull \hbox (7.7429pt too wide) in paragraph at lines 120--121
+[]\T1/pplx/m/n/10 The ADMM it-er-a-tions for LASSO, which can be found by al-te
+r-nately dif-fer-en-ti-at-ing []
+ []
+
+[29] [30] [31]
+
+LaTeX Font Warning: Font shape `OMS/pplx/m/it' undefined
+(Font)              using `OMS/pplx/m/n' instead
+(Font)              for symbol `textbullet' on input line 292.
+
+[32] [33] [34] [35] [36] [37]
+
+Package natbib Warning: Citation `Boyd2010a' on page 38 undefined on input line
+ 571.
+
+
+Package natbib Warning: Citation `Boyd2010a' on page 38 undefined on input line
+ 579.
+
+
+Underfull \vbox (badness 6141) has occurred while \output is active []
+
+ [38]
+<network-ex-incidence-mat.jpg, id=189, 221.1462pt x 132.9768pt>
+File: network-ex-incidence-mat.jpg Graphic file (type jpg)
+
+<use network-ex-incidence-mat.jpg>
+Package pdftex.def Info: network-ex-incidence-mat.jpg used on input line 594.
+(pdftex.def)             Requested size: 236.60384pt x 142.26378pt.
+
+<ex-incidencematrix1.png, id=190, 397.485pt x 130.4875pt>
+File: ex-incidencematrix1.png Graphic file (type png)
+
+<use ex-incidencematrix1.png>
+Package pdftex.def Info: ex-incidencematrix1.png used on input line 601.
+(pdftex.def)             Requested size: 199.17262pt x 85.35942pt.
+
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+ [39 <./network-ex-incidence-mat.jpg> <./ex-incidencematrix1.png>] [40]
+
+Package natbib Warning: Citation `Zhang2011b' on page 41 undefined on input lin
+e 685.
+
+
+Package natbib Warning: Citation `Zhang2011b' on page 41 undefined on input lin
+e 685.
+
+
+Package natbib Warning: Citation `mishali2010theory' on page 41 undefined on in
+put line 687.
+
+<Modulated_wideband_converter.jpg, id=198, 524.1984pt x 479.8728pt>
+File: Modulated_wideband_converter.jpg Graphic file (type jpg)
+
+<use Modulated_wideband_converter.jpg>
+Package pdftex.def Info: Modulated_wideband_converter.jpg used on input line 69
+1.
+(pdftex.def)             Requested size: 226.88866pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[41] [42 <./Modulated_wideband_converter.jpg>] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 787--789
+
+ []
+
+[44] [45]
+
+Package natbib Warning: Citation `bazerque2008' on page 46 undefined on input l
+ine 860.
+
+
+LaTeX Warning: Reference `erroriterations' on page 46 undefined on input line 8
+62.
+
+<ebn0bbvsmse10ppnoH1logs.jpg, id=215, 562.1pt x 421.575pt>
+File: ebn0bbvsmse10ppnoH1logs.jpg Graphic file (type jpg)
+
+<use ebn0bbvsmse10ppnoH1logs.jpg>
+Package pdftex.def Info: ebn0bbvsmse10ppnoH1logs.jpg used on input line 866.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+<ebn0bbvsmse100ppwithH.jpg, id=216, 563.10374pt x 421.575pt>
+File: ebn0bbvsmse100ppwithH.jpg Graphic file (type jpg)
+
+<use ebn0bbvsmse100ppwithH.jpg>
+Package pdftex.def Info: ebn0bbvsmse100ppwithH.jpg used on input line 873.
+(pdftex.def)             Requested size: 277.43549pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<different_lambda.jpg, id=217, 562.1pt x 421.575pt>
+File: different_lambda.jpg Graphic file (type jpg)
+ <use different_lambda.jpg>
+Package pdftex.def Info: different_lambda.jpg used on input line 880.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<mse_iterations.jpg, id=218, 562.1pt x 421.575pt>
+File: mse_iterations.jpg Graphic file (type jpg)
+ <use mse_iterations.jpg>
+Package pdftex.def Info: mse_iterations.jpg used on input line 887.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<recon_spline.jpg, id=219, 562.1pt x 421.575pt>
+File: recon_spline.jpg Graphic file (type jpg)
+ <use recon_spline.jpg>
+Package pdftex.def Info: recon_spline.jpg used on input line 894.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<steps.jpg, id=220, 562.1pt x 421.575pt>
+File: steps.jpg Graphic file (type jpg)
+ <use steps.jpg>
+Package pdftex.def Info: steps.jpg used on input line 901.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<recon170815.jpg, id=221, 562.1pt x 421.575pt>
+File: recon170815.jpg Graphic file (type jpg)
+ <use recon170815.jpg>
+Package pdftex.def Info: recon170815.jpg used on input line 908.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<recon_new_bar.jpg, id=222, 562.1pt x 421.575pt>
+File: recon_new_bar.jpg Graphic file (type jpg)
+ <use recon_new_bar.jpg>
+Package pdftex.def Info: recon_new_bar.jpg used on input line 915.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<recon_difference.jpg, id=223, 562.1pt x 421.575pt>
+File: recon_difference.jpg Graphic file (type jpg)
+ <use recon_difference.jpg>
+Package pdftex.def Info: recon_difference.jpg used on input line 922.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<steps_difference.jpg, id=224, 562.1pt x 421.575pt>
+File: steps_difference.jpg Graphic file (type jpg)
+ <use steps_difference.jpg>
+Package pdftex.def Info: steps_difference.jpg used on input line 929.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<steps_splines.jpg, id=225, 562.1pt x 421.575pt>
+File: steps_splines.jpg Graphic file (type jpg)
+ <use steps_splines.jpg>
+Package pdftex.def Info: steps_splines.jpg used on input line 936.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<normalvsaccel.jpg, id=226, 562.1pt x 421.575pt>
+File: normalvsaccel.jpg Graphic file (type jpg)
+ <use normalvsaccel.jpg>
+Package pdftex.def Info: normalvsaccel.jpg used on input line 943.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 3826) has occurred while \output is active []
+
+ [46 <./ebn0bbvsmse10ppnoH1logs.jpg>]
+
+Package natbib Warning: Citation `goldstein2014fast' on page 47 undefined on in
+put line 953.
+
+) [47 <./ebn0bbvsmse100ppwithH.jpg>] [48 <./different_lambda.jpg> <./mse_iterat
+ions.jpg>] [49 <./recon_spline.jpg> <./steps.jpg>] [50 <./recon170815.jpg> <./r
+econ_new_bar.jpg>] [51 <./recon_difference.jpg> <./steps_difference.jpg>]
+[52 <./steps_splines.jpg> <./normalvsaccel.jpg>]
+\openout2 = `cswireless_new_basis.aux'.
+
+
+No file cswireless_new_basis.tex.
+\openout2 = `cswirelesspaper_new_basis.aux'.
+
+(./cswirelesspaper_new_basis.tex
+
+Package natbib Warning: Citation `akan2009cognitive' on page 53 undefined on in
+put line 7.
+
+
+Package natbib Warning: Citation `Candes2006' on page 53 undefined on input lin
+e 9.
+
+
+Package natbib Warning: Citation `mishali2010theory' on page 53 undefined on in
+put line 9.
+
+
+Package natbib Warning: Citation `tropp2010beyond' on page 53 undefined on inpu
+t line 9.
+
+
+Package natbib Warning: Citation `Zhang2011b' on page 53 undefined on input lin
+e 11.
+
+
+Package natbib Warning: Citation `tian2006wavelet' on page 53 undefined on inpu
+t line 13.
+
+[53
+
+
+
+
+]
+
+Package natbib Warning: Citation `tian2006wavelet' on page 54 undefined on inpu
+t line 17.
+
+
+Package natbib Warning: Citation `ling2014dlm' on page 54 undefined on input li
+ne 19.
+
+
+Package natbib Warning: Citation `mota2013d' on page 54 undefined on input line
+ 21.
+
+[54] [55] [56]
+
+Package natbib Warning: Citation `Boyd2010a' on page 57 undefined on input line
+ 183.
+
+[57]
+
+Package natbib Warning: Citation `Boyd2010a' on page 58 undefined on input line
+ 191.
+
+[58]
+
+! LaTeX Error: Environment algorithmic undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 \begin{algorithmic}
+                         [1]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.248 \Procedure
+                {DADMM}{$y_j,M_j,\varepsilon$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.249 \State
+             $x^0 = 0$, $z^0 = 0$, $\theta^0 = 0$, $\eta^0 = 0$, \\  $Q =  \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \algocf@Formain has an extra }.
+<inserted text> 
+                \par 
+l.251 \For
+          {$c = 1, \ldots, C}$
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \algocf@Formain was complete.
+<to be read again> 
+                   \par 
+l.251 \For
+          {$c = 1, \ldots, C}$
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten $.
+l.251 \For{$c = 1, \ldots, C}
+                             $
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.252 \State
+             $x^{k+1} \gets Q\left(w_j+  z^k - \theta^{kT} -\nu^{kT}\right)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.253 \State
+              $z^{k+1} \gets S_{\beta/\rho}\left(x_j^{k+1} \right) $
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.254 \State
+             $\theta^{k+1}\gets \theta_j^{k} + \rho \left(x^{k+1}-z^{k+1}\ri...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.255 \EndFor
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.257   \State
+               $\nu_j^{k+1} \gets \nu_j^k + \rho\left(\sum_{m \in N_j} z_m^k...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.258 \EndWhile
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.259 \State
+             \textbf{return} $z^{k+1}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.260 \EndProcedure
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{figure} on input line 246 ended by \end{algorithmic}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.261 \end{algorithmic}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.261 \end{algorithmic}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[59]
+Underfull \vbox (badness 3690) has occurred while \output is active []
+
+ [60]
+
+Package natbib Warning: Citation `chen1998atomic' on page 61 undefined on input
+ line 326.
+
+
+Package natbib Warning: Citation `bazerque2008' on page 61 undefined on input l
+ine 334.
+
+
+Package natbib Warning: Citation `bazerque2008' on page 61 undefined on input l
+ine 334.
+
+[61]
+
+Package natbib Warning: Citation `DADMMconvergence' on page 62 undefined on inp
+ut line 338.
+
+
+Package natbib Warning: Citation `nishihara2015general' on page 62 undefined on
+ input line 338.
+
+
+Package natbib Warning: Citation `su2014differential' on page 62 undefined on i
+nput line 338.
+
+<signal_and_recovery.jpg, id=278, 562.1pt x 421.575pt>
+File: signal_and_recovery.jpg Graphic file (type jpg)
+
+<use signal_and_recovery.jpg>
+Package pdftex.def Info: signal_and_recovery.jpg used on input line 342.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+<Cent_Vs_Distrib_snr.jpg, id=279, 562.1pt x 421.575pt>
+File: Cent_Vs_Distrib_snr.jpg Graphic file (type jpg)
+
+<use Cent_Vs_Distrib_snr.jpg>
+Package pdftex.def Info: Cent_Vs_Distrib_snr.jpg used on input line 349.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<continuations_errors.jpg, id=280, 562.1pt x 421.575pt>
+File: continuations_errors.jpg Graphic file (type jpg)
+
+<use continuations_errors.jpg>
+Package pdftex.def Info: continuations_errors.jpg used on input line 356.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package natbib Warning: Citation `mokhtari2015dqm' on page 62 undefined on inpu
+t line 362.
+
+
+Package natbib Warning: Citation `ling2014dlm' on page 62 undefined on input li
+ne 362.
+
+[62 <./signal_and_recovery.jpg>]
+
+Package natbib Warning: Citation `goldstein2014fast' on page 63 undefined on in
+put line 366.
+
+) [63 <./Cent_Vs_Distrib_snr.jpg>] [64 <./continuations_errors.jpg>]
+\openout2 = `compressive_filtering_3.aux'.
+
+
+(./compressive_filtering_3.tex
+
+Package natbib Warning: Citation `Candes2006' on page 65 undefined on input lin
+e 3.
+
+
+Package natbib Warning: Citation `donoho2006compressed' on page 65 undefined on
+ input line 3.
+
+[65
+
+
+]
+
+Package natbib Warning: Citation `Candes2006' on page 66 undefined on input lin
+e 53.
+
+
+Package natbib Warning: Citation `donoho2004neighborly' on page 66 undefined on
+ input line 63.
+
+
+Package natbib Warning: Citation `davenport2010signal' on page 66 undefined on 
+input line 75.
+
+
+Package natbib Warning: Citation `davenport2007smashed' on page 66 undefined on
+ input line 75.
+
+[66] [67]
+
+Package natbib Warning: Citation `davenport2010signal' on page 68 undefined on 
+input line 141.
+
+
+Package natbib Warning: Citation `baraniuk2008simple' on page 68 undefined on i
+nput line 153.
+
+
+Package natbib Warning: Citation `Devore09instanceoptimalityin' on page 68 unde
+fined on input line 153.
+
+
+Package natbib Warning: Citation `baraniuk2008simple' on page 68 undefined on i
+nput line 162.
+
+[68]
+
+Package natbib Warning: Citation `levequeMatrices' on page 69 undefined on inpu
+t line 220.
+
+[69] [70] [71]
+Underfull \hbox (badness 10000) in paragraph at lines 370--374
+
+ []
+
+[72] <1spike_legend.jpg, id=317, 562.1pt x 421.575pt>
+File: 1spike_legend.jpg Graphic file (type jpg)
+ <use 1spike_legend.jpg>
+Package pdftex.def Info: 1spike_legend.jpg used on input line 426.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<g.jpg, id=318, 562.1pt x 421.575pt>
+File: g.jpg Graphic file (type jpg)
+ <use g.jpg>
+Package pdftex.def Info: g.jpg used on input line 437.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[73]
+Overfull \hbox (5.72629pt too wide) in paragraph at lines 458--459
+[]\T1/pplx/m/n/10 To find the $\OML/zplm/m/it/10 a[]$\T1/pplx/m/n/10 , we cor-r
+e-late (take the in-ner prod-uct of) the sig-nal against the ba-sis (0.22.2.221
+[]). 
+ []
+
+[74 <./1spike_legend.jpg>] <hhat.jpg, id=325, 562.1pt x 421.575pt>
+File: hhat.jpg Graphic file (type jpg)
+
+<use hhat.jpg>
+Package pdftex.def Info: hhat.jpg used on input line 492.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75 <./g.jpg> <./hhat.jpg>] <ofcom35.jpg, id=329, 562.1pt x 421.575pt>
+File: ofcom35.jpg Graphic file (type jpg)
+ <use ofcom35.jpg>
+Package pdftex.def Info: ofcom35.jpg used on input line 511.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+<ofcom40.jpg, id=330, 562.1pt x 421.575pt>
+File: ofcom40.jpg Graphic file (type jpg)
+ <use ofcom40.jpg>
+Package pdftex.def Info: ofcom40.jpg used on input line 518.
+(pdftex.def)             Requested size: 276.94095pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ofcom55.jpg, id=331, 563.10374pt x 421.575pt>
+File: ofcom55.jpg Graphic file (type jpg)
+ <use ofcom55.jpg>
+Package pdftex.def Info: ofcom55.jpg used on input line 525.
+(pdftex.def)             Requested size: 277.43549pt x 207.7052pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [76 <./ofcom35.jpg>] [77 <./ofcom40.jpg> <./ofcom55.jpg>]
+\openout2 = `root.aux'.
+
+ (./root.tex
+
+Package natbib Warning: Citation `dorfman' on page 78 undefined on input line 4
+.
+
+
+Package natbib Warning: Citation `dorfman' on page 78 undefined on input line 1
+9.
+
+
+Package natbib Warning: Citation `du' on page 78 undefined on input line 20.
+
+
+Package natbib Warning: Citation `malyutov' on page 78 undefined on input line 
+20.
+
+
+Package natbib Warning: Citation `malyutov' on page 78 undefined on input line 
+20.
+
+
+Package natbib Warning: Citation `atia' on page 78 undefined on input line 24.
+
+
+Package natbib Warning: Citation `johnsonc8' on page 78 undefined on input line
+ 24.
+
+
+Package natbib Warning: Citation `johnson33' on page 78 undefined on input line
+ 24.
+
+
+Package natbib Warning: Citation `wadayama' on page 78 undefined on input line 
+24.
+
+
+Package natbib Warning: Citation `li5' on page 78 undefined on input line 28.
+
+
+Package natbib Warning: Citation `atia2' on page 78 undefined on input line 32.
+
+
+
+Package natbib Warning: Citation `dorfman' on page 78 undefined on input line 3
+4.
+
+
+Package natbib Warning: Citation `shental' on page 78 undefined on input line 3
+5.
+
+
+Package natbib Warning: Citation `atia' on page 78 undefined on input line 41.
+
+
+Package natbib Warning: Citation `johnsonc10' on page 78 undefined on input lin
+e 41.
+
+
+Package natbib Warning: Citation `johnson33' on page 78 undefined on input line
+ 41.
+
+
+Package natbib Warning: Citation `tan' on page 78 undefined on input line 41.
+
+
+Package natbib Warning: Citation `atia' on page 78 undefined on input line 42.
+
+
+Package natbib Warning: Citation `tan' on page 78 undefined on input line 42.
+
+
+Package natbib Warning: Citation `johnsonc10' on page 78 undefined on input lin
+e 44.
+
+[78
+
+
+]
+
+Package natbib Warning: Citation `johnsonc10' on page 79 undefined on input lin
+e 67.
+
+
+Package natbib Warning: Citation `li5' on page 79 undefined on input line 67.
+
+
+Package natbib Warning: Citation `johnsonc10' on page 79 undefined on input lin
+e 78.
+
+
+Package natbib Warning: Citation `johnsonc10' on page 79 undefined on input lin
+e 80.
+
+
+Package natbib Warning: Citation `johnsonc10' on page 79 undefined on input lin
+e 86.
+
+
+Package natbib Warning: Citation `hwang' on page 79 undefined on input line 91.
+
+
+
+Package natbib Warning: Citation `du' on page 79 undefined on input line 91.
+
+[79]
+
+Package natbib Warning: Citation `johnsonc10' on page 80 undefined on input lin
+e 97.
+
+
+Package natbib Warning: Citation `wadayama' on page 80 undefined on input line 
+98.
+
+
+Package natbib Warning: Citation `li5' on page 80 undefined on input line 111.
+
+
+Package natbib Warning: Citation `li5' on page 80 undefined on input line 111.
+
+
+Package natbib Warning: Citation `hwang' on page 80 undefined on input line 113
+.
+
+
+Package natbib Warning: Citation `li5' on page 80 undefined on input line 120.
+
+
+Package natbib Warning: Citation `johnsonc10' on page 80 undefined on input lin
+e 135.
+
+[80]
+
+Package natbib Warning: Citation `li5' on page 81 undefined on input line 154.
+
+
+Package natbib Warning: Citation `li5' on page 81 undefined on input line 156.
+
+
+Package natbib Warning: Citation `li5' on page 81 undefined on input line 159.
+
+
+Package natbib Warning: Citation `li5' on page 81 undefined on input line 165.
+
+! Undefined control sequence.
+<recently read> \SetLine 
+                         
+l.172  \SetLine
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[81]
+
+Package natbib Warning: Citation `li5' on page 82 undefined on input line 199.
+
+
+Package natbib Warning: Citation `aksoylar' on page 82 undefined on input line 
+211.
+
+
+Package natbib Warning: Citation `tan' on page 82 undefined on input line 211.
+
+
+Package natbib Warning: Citation `candes' on page 82 undefined on input line 21
+8.
+
+
+Package natbib Warning: Citation `donoho2' on page 82 undefined on input line 2
+18.
+
+
+Package natbib Warning: Citation `candes' on page 82 undefined on input line 21
+9.
+
+
+Package natbib Warning: Citation `donoho2' on page 82 undefined on input line 2
+19.
+
+[82]
+
+! LaTeX Error: Environment IEEEproof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.245 \begin{IEEEproof}
+                        Under the Bounded Ratio Condition, for any $i$ and $...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{IEEEproof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.256 \end{IEEEproof}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[83]
+
+! LaTeX Error: Environment IEEEproof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.277 \begin{IEEEproof}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{IEEEproof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 \end{IEEEproof}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package natbib Warning: Citation `li5' on page 84 undefined on input line 297.
+
+[84]
+
+! LaTeX Error: Environment IEEEproof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 \begin{IEEEproof}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package natbib Warning: Citation `li5' on page 85 undefined on input line 314.
+
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{IEEEproof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.322 so we deduce the result. \end{IEEEproof}
+                                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[85]
+
+! LaTeX Error: Environment IEEEproof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.357 \begin{IEEEproof}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{IEEEproof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 \end{IEEEproof}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment IEEEproof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.396 \begin{IEEEproof}
+                        Given a value of $C$,
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[86]
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{IEEEproof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 \end{IEEEproof}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package natbib Warning: Citation `petrov' on page 87 undefined on input line 43
+0.
+
+[87]
+
+! LaTeX Error: Environment IEEEproof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.464 \begin{IEEEproof}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (0.7702pt too wide) in paragraph at lines 465--469
+[]\T1/pplx/m/n/10 We first prove the suc-cess prob-a-bil-ity bound []. Re-call 
+that our al-go-rithm searches
+ []
+
+[88]
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{IEEEproof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.508 \end{IEEEproof}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment IEEEproof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.510 \begin{IEEEproof}
+                       [Proof of Corollary \ref{cor:main}]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{IEEEproof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.513 \end{IEEEproof}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<ubvslb.png, id=373, 586.8324pt x 442.2924pt>
+File: ubvslb.png Graphic file (type png)
+ <use ubvslb.png>
+Package pdftex.def Info: ubvslb.png used on input line 534.
+(pdftex.def)             Requested size: 212.29312pt x 160.00125pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<variousalpha.png, id=374, 586.8324pt x 442.2924pt>
+File: variousalpha.png Graphic file (type png)
+ <use variousalpha.png>
+Package pdftex.def Info: variousalpha.png used on input line 543.
+(pdftex.def)             Requested size: 212.29312pt x 160.00125pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<nicegraphlaminar.png, id=375, 586.8324pt x 442.2924pt>
+File: nicegraphlaminar.png Graphic file (type png)
+
+<use nicegraphlaminar.png>
+Package pdftex.def Info: nicegraphlaminar.png used on input line 550.
+(pdftex.def)             Requested size: 212.29312pt x 160.00125pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[89]
+
+Package natbib Warning: Citation `li5' on page 90 undefined on input line 562.
+
+[90 <./ubvslb.png> <./variousalpha.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 587.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)) [91 <./nicegraphlaminar.png>] [92
+
+
+]
+
+Package natbib Warning: There were undefined citations.
+
+
+! LaTeX Error: \begin{enumerate} on input line 722 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(./Thesis_draft0.aux (./chapter1.aux) (./reportFINAL2.aux) (./report2015.aux)
+(./cswireless_new_basis.aux) (./cswirelesspaper_new_basis.aux)
+(./compressive_filtering_3.aux) (./root.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 722 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 7878 strings out of 493308
+ 109944 string characters out of 6140091
+ 203414 words of memory out of 5000000
+ 11048 multiletter control sequences out of 15000+600000
+ 81669 words of font info for 159 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 37i,12n,44p,1307b,647s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/us
+r/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo
+/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cyrillic/wncyr10.pfb>
+Output written on Thesis_draft0.pdf (106 pages, 1504980 bytes).
+PDF statistics:
+ 436 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+

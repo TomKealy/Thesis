@@ -1,0 +1,43 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 1.1}{\ignorespaces A digram of current Spectral allocation \cite {Strategy2013}\relax }}{2}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 1.2}{\ignorespaces A snapshot of frequency utilisation in various areas: many frequencies are not used at all, whilst there is significant activity on others \cite {Burbidge2007}\relax }}{2}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 1.3}{\ignorespaces A picture of early 20th century New York: Bandwidth has always been an issue\relax }}{3}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 3.4}{\ignorespaces A digram of the Spectrum Sensing model \cite {Tian}\relax }}{9}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 3.5}{\ignorespaces A visualisation of the Compressive Sensing problem as an under-determined system\relax }}{13}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 3.6}{\ignorespaces Solutions to the Compressive Sensing optimisation problem intersect the \(l_1\) norm the points where all components (but one) of the vector are zero (i.e. it is sparsity promoting) \cite {Tibshirani1996}\relax }}{14}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 3.7}{\ignorespaces The Laplace (\(l_1\)-norm, bold line) and Normal (\(l_2\)-norm, dotted line) densities. Note that the Laplace density is sparsity promoting as it penalises solutions away from zero more than the Gaussian density. \cite {Tibshirani1996}\relax }}{15}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 3.8}{\ignorespaces The hierarchical model for the Bayesian CS formulation \cite {Ji2008}\relax }}{16}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 3.9}{\ignorespaces The Group Testing model: multiplication with a short, fat matrix \cite {Atia2008}\relax }}{18}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 3.10}{\ignorespaces The operation of the Modulated Wideband Converter \cite {Mischali2010}\relax }}{22}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 4.11}{\ignorespaces Group Testing vs Compressive Sensing\relax }}{23}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 9.12}{\ignorespaces An example of a network\relax }}{39}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 9.13}{\ignorespaces The incidence matrix associated with Figure \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {efig:ex-network}\unskip \@@italiccorr )}}\relax }}{39}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 10.14}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers\relax }}{42}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.15}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers\relax }}{46}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.16}{\ignorespaces Mse vs SNR for the sensing model, showing the performance of distributed and centralised solvers\relax }}{47}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.17}{\ignorespaces The progress of the distributed solver as a function of the number of iterations, with different values of the regression parameter \(\lambda \)\relax }}{48}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.18}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{48}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.19}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{49}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.20}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{49}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.21}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{50}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.22}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{50}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.23}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{51}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.24}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{51}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.25}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{52}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 12.26}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{52}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 17.27}{\ignorespaces The algorithm at Node \(j\)\relax }}{59}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 18.28}{\ignorespaces Left to right: (a) The original signal. (b) The gradient \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {def:a}\unskip \@@italiccorr )}} of the original signal. (c) Recovery using DADMM, 1000 iterations, \(\sigma ^2_n = 5\). (d) Recovery using DADMM, 1000 iterations, \(\sigma ^2_n = 20\) \relax }}{62}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 18.29}{\ignorespaces MSE vs SNR for the sensing model showing the performance of distributed and centralised solvers. The performance of DADMM is consistently within \(10^{-2}\) of ADMM, and within the error bars of ADMM at low SNRs. The variance of estimates produced by DADMM is larger than ADMM, due to nodes performing computations on a subset of data. Both estimates are consistently within \(10^{-1}\) of the optimal solution, which is sufficient to classify occupied bands.\relax }}{63}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 18.30}{\ignorespaces The progress of the distributed solver as a function of the number of iterations, with different values of the regression parameter \( \lambda \). For a fixed \( \lambda \) there is a single unique optimal solution, with higher \( \lambda \) favouring sparser solutions. The convergence of DADMM is slowed by smaller \( \lambda \). This is intuitive: solutions with fewer non-zero components should be identified in fewer iterations.\relax }}{64}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 22.31}{\ignorespaces \relax }}{74}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 22.32}{\ignorespaces \relax }}{75}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 22.33}{\ignorespaces \relax }}{75}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 22.34}{\ignorespaces \relax }}{76}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 22.35}{\ignorespaces \relax }}{77}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 22.36}{\ignorespaces \relax }}{77}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 26.37}{\ignorespaces Theoretical lower and upper bounds and empirical Test frequencies as functions of \(\theta \)\relax }}{90}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 26.38}{\ignorespaces Cumulative distribution curves of the modified Hwang algorithm with fixed \(\theta = 0.0001\) and \(\alpha \) varying \relax }}{90}
+\contentsline {figure}{\numberline {\normalfont 0.\normalfont 26.39}{\ignorespaces Cumulative distribution curves for fixed \(\alpha = 1\) and varying \(\theta \)\relax }}{91}

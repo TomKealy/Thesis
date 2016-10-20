@@ -1,0 +1,176 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage[pdftex]{graphicx}
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{}{,}{}
+\usepackage{amssymb,amsmath}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[small,center,it]{caption}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\linespread{1.3}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\DeclareMathOperator{\sgn}{sgn}
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+\vspace*{50 pt}%
+{\setlength{\parindent}{0pt} \raggedright \normalfont
+\Huge
+\ifnum \value{secnumdepth}>1 
+   \if@mainmatter\thechapter\hspace{0.4cm} \fi%
+\fi
+#1\par\nobreak\vspace{40 pt}}}
+\makeatother
+\renewcommand{\bibname}{\normalfont{Bibliography}}
+\newcommand{\schapter}[1]{%
+  \chapter[#1]{\normalfont\rm #1}}
+\newcommand{\ssection}[1]{%
+  \section[#1]{\normalfont\rm #1}}
+\newcommand{\ssubsection}[1]{%
+  \subsection[#1]{\normalfont\itshape #1}}
+\newcommand{\ssubsubsection}[1]{%
+  \subsubsection[#1]{\normalfont\itshape #1}}  \renewcommand{\thesection}{\normalfont\arabic{chapter}.\normalfont\arabic{section}}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{%\chaptername\ 
+\thechapter\hspace{0.1cm} #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\hspace{0.1cm} #1}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[CE,CO]{\thepage}
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[CE,CO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \thispagestyle{plain}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{plain}\cleardoublepage}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+\newenvironment{unnumbered}
+   {\global\chardef\keeplevel=\value{secnumdepth}%
+    \setcounter{secnumdepth}{-1}}
+   {\setcounter{secnumdepth}{\keeplevel}}
+
+\usepackage[titles]{tocloft}
+\renewcommand{\cftchapfont}{\normalfont}
+\renewcommand{\cftchappagefont}{\normalfont}
+\setlength{\cftbeforechapskip}{0.4cm}
+\setlength{\cftbeforesecskip}{0.0cm}
+\setlength{\cftbeforesubsecskip}{0.0cm}
+
+\usepackage{enumerate}
+\input{macros}
+
+\begin{document}
+\frontmatter
+\thispagestyle{empty}
+\begin{center}
+
+\phantom{title}
+
+\vspace{1cm}
+
+\huge{TITLE} 
+
+\vspace{2cm} 
+
+\LARGE{NAME}
+ 
+\vspace{6cm}
+
+\normalsize{A dissertation submitted to the University of Bristol\\in accordance with the requirements for award of\\the degree of Doctor of Philosophy in\\the Faculty of Science}
+
+\vspace{2cm}
+
+\large{School of Mathematics}
+
+\vspace{0.2cm}
+
+September 2013}
+\end{center}
+
+\vspace{0.6cm}
+
+\begin{flushright}
+NUMBER words
+\end{flushright}
+
+\blankpage
+
+\chapter[\vspace{-0.4cm}\emph{Abstract}]{Abstract}
+\begin{singlespace}
+
+\end{singlespace}
+\setcounter{page}{1}
+
+\chapter[\vspace{-0.4cm}\emph{Acknowledgments}]{Acknowledgments}
+
+\chapter[\vspace{-0.4cm}\emph{Author's declaration}]{Author's declaration}
+I declare that the work in this dissertation was carried out in accordance with the requirements of 
+the University's Regulations and Code of Practice for Research Degree Programmes and that it 
+has not been submitted for any other academic award. Except where indicated by specific 
+reference in the text, the work is the candidate's own work. Work done in collaboration with, or with 
+the assistance of, others, is indicated as such. Any views expressed in the dissertation are those of 
+the author.
+
+\vspace{1cm}
+
+\noindent Signed: \hspace{6cm} Date:
+
+\renewcommand\contentsname{\normalfont{Table of contents}}
+\let\stdtoc\tableofcontents
+\renewcommand*\tableofcontents{{%
+\renewcommand*\MakeUppercase[1]{##1}\stdtoc}}
+\tableofcontents
+\addcontentsline{toc}{chapter}{\vspace{-0.4cm}\emph{Table of contents}}
+
+\renewcommand\listtablename{\normalfont{List of tables}}
+\listoftables
+\addcontentsline{toc}{chapter}{\vspace{-0.4cm}\emph{List of tables}}
+
+\renewcommand\listfigurename{\normalfont{List of figures}}
+\let\stdtoc\listoffigures
+\renewcommand*\listoffigures{{%
+\renewcommand*\MakeUppercase[1]{##1}\stdtoc}}
+\listoffigures
+\addcontentsline{toc}{chapter}{\emph{List of figures}}
+
+\mainmatter
+
+\include{chapter1}
+\include{reportFINAL2}
+\include{report2015}
+\include{cswireless_new_basis}
+\include{cswirelesspaper_new_basis}
+\include{compressive_filtering_3}
+\include{root}
+
+\backmatter
+
+\fancyhead[LE]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\nouppercase{\rightmark}}
+
+\bibliographystyle{jfm}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{document}

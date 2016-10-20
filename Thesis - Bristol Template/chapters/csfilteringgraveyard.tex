@@ -1,0 +1,216 @@
+%\section{Preliminaries} \label{sec:prelims}
+\subsection{RIP and Stable Embeddings}
+Given a signal \(x \in \re^n\), a matrix \(A \in \re^{m \times n}\) we can acquire the signal via the set of linear measurements:
+
+\begin{equation}
+y = Ax
+\end{equation}
+
+where in this case \(A\) represents the sampling system. In contrast to classical sensing, which requires that \(m = n\) for there to be no loss of information, it is possible to reconstruct \(x\) from an under-determined set of measurements as long as \(x\) is sparse in some basis. 
+
+To make this precise, we define \(\Sigma_s\) as the set of \(s\)-sparse signals in \(\re^n\):
+
+\begin{definition}
+\begin{equation}
+\Sigma_s = \{ x \in \re^n : \mathrm{supp}\left(x\right) \leq s\}
+\end{equation}
+where \(\mathrm{supp}\left(x\right) \) is the set of indices on which \(x\) is non-zero.
+\end{definition}
+
+\begin{definition}[RIP]
+We say that a matrix \(A\) satisifes the RIP of order \(s\) if there exists a \(\delta \in \left(0, 1\right)\) such that for all \(x \in \Sigma_s\):
+
+\begin{equation}
+\left(1 - \delta\right) \vectornorm{x}_2^2 \leq \vectornorm{Ax}_2^2 \leq \left(1 + \delta\right) \vectornorm{x}_2^2
+\end{equation}
+i.e. \(A\) approximately preserves the lengths of all \(s\)-sparse vectors in \(\re^n\). 
+\label{def:RIP}
+\end{definition}
+
+\begin{remark} [Information Preservation]
+A necessary condition to recover all \(s\)-sparse vectors from the measurements \(Ax\) is that \(Ax_1 \neq Ax_2\) for any pair \( x_ \neq x_2\), \(x_1, x_2 \in \Sigma_s\), which is equivalent to \(\vectornorm{A\left(x_1 - x_2\right)}_2^2 > 0\). 
+
+This is guaranteed as long as \(A\) satisfies the RIP of order 2\(s\) with constant \(\delta\) - as the vector \(x_1 - x_2\) will hve at most \(2s\) non-zero entries, and so will be distinguishable after multiplication with \(A\). To complete the argument take \(x = x_1 - x_2\) in definition \eqref{def:RIP}, guaranteeing \(\vectornorm{A\left(x_1 - x_2\right)}_2^2 > 0 \), and requiring the RIP order of \(A\) to be \(2s\).
+\end{remark}
+
+\begin{remark} [Stability]
+We also require that the dimensionality reduction of compressed sensing is the preservation of relative distances: that is if \(x_1\) and \(x_2\) are far apart in \(\re^n\) then their projections \(Ax_1\) and \(Ax_2\) are far apart in \(\re^m\). This will guarantee that the dimensionality reduction is robust to noise. 
+\end{remark}
+
+A requirement on the matrix \(A\) that satisfies both of these conditions is the following:
+
+\begin{definition}[\(\delta\)-stable embedding]
+We say that a mapping is a \(\delta\)-stable embedding of \(U,V \subset \re^n\) if
+
+\begin{equation}
+\left(1 - \delta \right) \vectornorm{u-v}_2^2 \leq \vectornorm{Au-Av}_2^2 \leq \left(1 + \delta\right) \vectornorm{u-v}_2^2
+\end{equation}
+
+for all \(u \in U\) and \(v \in V\). 
+\label{def:d-stable}
+\end{definition} 
+
+\begin{remark}
+Note that a matrix \(A\), satisfying the RIP of order \(2s\) is a \(\delta\)-stable embedding of \(\Sigma_s, \Sigma_s\). 
+\end{remark}
+
+\begin{remark}
+Definition \ref{def:d-stable} has a simple interpretation: the matrix \(A\) must approximately preserve Euclidean distances between all points in the signal model \(\Sigma_s\).
+\end{remark}
+
+\subsection{Random Matrix Constructions} \label{sec:mtx-contruction}
+
+To construct matrices satisfying definition \ref{def:d-stable}, given \(m, n\) we generate \(A\) by \(A_{ij}\) being i.i.d random variables from distributions with the following conditions \cite{davenport2010signal}
+
+\begin{condition}[Norm preservation]
+\(\ep A_{ij}^2 = \frac{1}{m}\)
+\label{cond:norm-pres}
+\end{condition}
+
+\begin{condition}[sub-Gaussian]
+\(\ep\left( e^{A_{ij}t} \right) \leq e^{C^2 t^2 /2}\)
+\label{cond:sub-Gauss}
+\end{condition}
+
+Random variables \(A_{ij}\) satisfying conditions \eqref{cond:norm-pres} and \eqref{cond:sub-Gauss} satisfy the following concentration inequality \cite{baraniuk2008simple}:
+
+\begin{condition}[sub-Gaussian]
+\begin{equation}
+\pr\left( \mid \vectornorm{Ax}_2^2 - \vectornorm{x}_2^2 \mid \geq \varepsilon  \vectornorm{x}_2^2 \right) \leq 2e^{-cM\varepsilon^2}
+\label{cond:sub-Gauss concetration}
+\end{equation} 
+\end{condition}
+
+Then in \cite{baraniuk2008simple} the following theorem is proved:
+
+\begin{theorem}
+Suppose that \(m\), \(n\) and \(0 < \delta < 1\) are given. If the probability distribution generating \(A\) satisfies condition \eqref{cond:sub-Gauss concetration}, then there exist constants \(c_1, c_2\) depending only on \(\delta\) such that the RIP \eqref{def:RIP} holds for \(A\) with the prescribed \(\delta\) and any  \(s \leq \frac{c_1 n}{\log{n/s}}\) with probability \(\geq 1-2e^{-c_2n}\) 
+\end{theorem}
+
+For example, if we take \(A_{ij} \sim \mathcal{N}\left(0, 1/m\right)\), then the matrix \(A\) will satisfy the RIP 
+
+\subsection{Wishart Matrices}
+
+Let \(\{X_i\}_{i=1}^r\) be a set of i.i.d \(1 \times p\) random vectors drawn from the multivariate normal distribution with mean 0 and covariance matrix \(H\).
+
+\begin{equation}
+X_i = \left(x_1^{(i)}, \ldots , x_p^{(i)}\right) \sim N\left(0, H\right)
+\end{equation}
+
+We form the matrix \(X\) by concatenating the \(r\) random vectors into a \(r \times p\) matrix.
+
+\begin{definition}[Wishart Matrix]
+Let 
+
+\begin{equation}
+W = \sum_{j=1}^r X_j X_j^T =  X X^T
+\end{equation}
+
+Then \(W \in \re^{r \times r}\) has the Wishart distribution with parameters 
+
+\begin{equation}
+W_r\left(H, p\right)
+\end{equation}
+
+where \(p\) is the number of degrees of freedom.
+\end{definition}
+
+\begin{remark}
+This distribution is a generalisation of the Chi-squared distribution: let \(p = H = 1\). 
+\end{remark}
+
+\begin{theorem}[Expected Value]
+\begin{equation}
+\ep\left(W\right) = rH
+\end{equation}
+\end{theorem}
+\begin{proof}
+\begin{align*}
+\ep\left(W\right) &= \ep\left(\sum_{j=1}^r X_j X_j^T\right) \\
+&= \sum_{j=1}^r \ep\left(X_jX_j^T\right) \\
+&= \sum_{j=1}^r \left( \mathrm{Var}(X_j) + \ep(X_j) \ep(X_j^T)   \right) \\
+&= rH 
+\end{align*}
+Where the last line follows as \(X_j\) is drawn from a distribution with zero mean.
+\end{proof}
+
+\begin{remark}
+The matrix \(M = A^TA\), where \(A\) is constructed by the methods from section \ref{sec:mtx-contruction}, will have a Wishart distribution. In particular, it will have \(\ep M = \frac{1}{m}I_n\) 
+\label{remark: exp AtA}
+\end{remark}
+
+The joint distribution of the eigenvalues is given by \cite{levequeMatrices}:
+
+\begin{equation}
+p\left(\lambda_1, \ldots, \lambda_r\right) = c_r \prod_{i=1}^r e^{-\lambda_i}\prod_{i<j}\left(\lambda_i - \lambda_j\right)^2
+\end{equation}
+
+The eigenvectors are uniform on the unit sphere in \(\re^{r}\).
+
+\subsection{Maximum Likelihood estimation: non-compressive case}\label{sec:max-like}
+
+Consider a received signal \(y \in \re^n\), composed of a deterministic signal \(\bar{s} \in \re^n\) corrupted by noise \(n \in \re^n\) (assumed to have zero mean and unit variance), i.e.
+
+\begin{equation}
+y = s + n
+\end{equation}
+
+We assume \(s\left(\Theta\right)\) comes from a fixed class of signals, with parameters indexed by a set \(\Theta\). For example
+
+\begin{itemize}
+\item The signal \(s\) is composed of a single frequency with unit amplitude \(s = e^{i \omega_0 k}\). In this case \( \Theta = \{\omega_j\}_{j=1}^n \) is the set of possible frequencies the signal may take on.
+
+\item The signal \(s\) is a scaled and shifted version of a model signal \(f\): \(s(t) = Cf\left(t - \tau\right)\). In this case \(\Theta = \left(C, \tau \right)\).
+
+\item The signal \(s\) can be expanded in some orthonormal basis, and that we have access to the basis functions \(\{\phi_i\}_{i=1}^n\):
+\begin{equation}
+s = \sum_{i=1}^n \alpha_i \phi_i
+\end{equation}
+
+In this case \(\Theta = \{\alpha_i, \phi_i\}_{i=1}^n\)
+
+\end{itemize}
+
+We can write the likelihood for \(y\) down as, for a given \(\Theta\), \(s\) is deterministic. Therefore y is a Gaussian random variable with mean \(s\):
+
+\begin{equation}
+f\left(y \mid s\right) = \left(\frac{1}{\sqrt{2\pi}} \right)^n \exp{\left( - \frac{\left(y-s(\Theta)\right)^T\left(y-s(\Theta)\right)}{2} \right)}
+\end{equation}
+
+Maximising this is equivalent to maximising:
+
+\begin{equation}
+\ln f\left(\Theta\right) = -\vectornorm{y}_2^2 + 2\langle y, s\left(\Theta\right)\rangle - \vectornorm{s}_2^2
+\end{equation}
+
+Since the terms \(\vectornorm{y}_2^2\) and \(\vectornorm{s}_2^2\) do not change, we can write the ML estimate of \(\Theta\) as:
+
+\begin{equation}
+\hat{\Theta} = \argmax_{\Theta} \langle y, s\left(\Theta\right)\rangle
+\end{equation}
+
+So, for example:
+
+\begin{itemize}
+\item If we receive a single tone corrupted by noise \(y = e^{i \omega_0 k} + n\) then we can estimate \(\omega_0\) by calculating \(\argmax_{\omega_i} \langle y, e^{i \omega_j k}\rangle = e^{i \omega_0 k}\) as the functions \(e^{i \omega_0 j k }\) are orthonormal: \(\langle e^{i \omega_l k}, e^{i \omega_r k} \rangle = \delta_{lr}\).
+
+\item If we receive a signal composed of a sum of orthonormal basis functions we can estimate the coefficients \(\alpha_i\) as:
+
+\begin{align}
+\langle y, \phi_i\rangle\ =& \sum_{j=1}^n \alpha_j \phi_j^T\phi_i + n^T\phi_i \\
+=& \alpha_i + \varepsilon_i
+\end{align}
+
+where \(\varepsilon_i = \langle n^T, \phi_i \rangle \) is some small error. Thus the maximum likelihood estimate of \(s\) is:
+
+\begin{equation}
+\hat{s} = \sum_{i=1}^n \hat{\alpha}_i \phi_i
+\end{equation}
+
+where
+
+\begin{equation}
+\hat{\alpha} = \langle y, \phi_i \rangle
+\end{equation}
+
+\end{itemize}

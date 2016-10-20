@@ -1,0 +1,273 @@
+\label{chap:classical-sensning}
+\section{Introduction}
+This chapter deals with classical, or Nyquist sensing; and, some approaches to spectrum sensing based on this sensing paradigm. This is the sensing paradigm based upon the maximum frequency in a signal. 
+
+A necessary condition for perfect signal recovery, is that the signal be sampled at (or above) a rate equivalent twice the highest frequency contained in the signal. For example, an FM radio at 445 MHz, would need to be sampled at 890MHz, or above. This theorem was established by Nyquist and Shannon in the 20s and has formed the basis for all radio technology since. 
+
+As it relates to TV white spaces, which have a large bandwidth, this means that classical sensing schemes will require a large (and expensive) sampling rate. This chapter discusses some spectrum sensing schemes based upon Nyquist sensing. This is mainly for comparison with Compressive Techniques, described in Chapter \ref{chap:cs}.
+
+The simplest approach to spectrum sensing, is simply to spilt the Wideband channel into a series of contiguous narrowband channels and measure the energy in each channel independently. Should the energy observed exceed a threshold (depending upon the noise variance), the channel is declared occupied; energy below the threshold is declared unoccupied. However simple, this approach has several drawbacks - most notably in the low SNR regime, it is impossible to distinguish between occupied and unoccupied states, no matter how long the channel is observed. Also, for a contiguous set of narrowband channels, a hypothesis test must be done in each to decide whether the channel is occupied, or not. The number of tests grows exponentially with the number of channels, thus rendering obsolete the relative simplicity of single-band energy detection.
+
+There are more sophisticated methods of spectrum sensing, most notably cyclostationary feature detection and Matched Filtering. Cyclostationary feature detection aims to detect periodic signals, in periodless white noise. It is superior to energy detection, in that it can distinguish between primary and secondary user transmissions, but it requires prior knowledge of the periods of the signals it will detect. 
+
+Communication theory tells us that a Matched Filter is the optimum detector for a signal is noise. This comes at a considerable implementational complexity. Matched filtering is subject to similar prior knowledge issues as other feature detection schemes: if there is a mismatch between the expected features and the signal, the scheme performs poorly. Often this difficulty is overcome by having a bank of different filters, and passing the signal through each of them, at the cost of more complexity.
+
+Finally we discuss distributed approaches to wideband spectrum sensing. In particular equal gain combining, where a network of sensors each performing energy detection combines their measurements to gain statistical strength. We discuss several combination rules (in particular the AND and OR rules), as well as centralised and decentrailised approaches to decision making. We show that the probability of false detection goes down exponentially with the number of sensors, but that the SNR-wall phenomenon and exponential number of tests still persists.
+
+\section{Classical Sensing}
+Classically, for perfect signal reconstruction, we must sample a signal such that the sampling rate must be at least twice the maximum frequency in the bandlimited signal. The continuous time signal can then be recovered using an appropriate reconstruction filter (e.g. a sinc filter). For example, we can represent a sampled continuous signal as a multiplication of the signal with a train of Dirac delta functions at multiples of the sampling period T.
+
+Formally, for a bandlimited signal (of bandwidth \(W\)) with compact frequency support on \((-B, B)\)
+
+Working the frequency domain, this multiplication becomes convolution (which is equivalent to shifting):
+
+\begin{equation}
+\hat{X}_{s}\left(f\right) = \sum_{k=-\infty}^\infty x\left(t - kT\right)
+\end{equation}
+
+Thus if the spectrum of the frequency is supported on the interval \(\left(-B, B\right)\) then sampling at intervals \(\frac{1}{2B}\) will contain enough information to reconstruct the signal \(x\left(t\right)\). Multiplying the spectrum by a rectangle function (low-pass filtering), to remove any images caused by the periodicity of the function, and the signal \(x\left(t\right)\) can be reconstructed from its samples:
+
+\begin{equation}
+x\left(t\right) = \sum_{n=-\infty}^\infty x\left(nT\right) \mathrm{sinc}\left(\frac{t_nT}{T}\right)
+\end{equation}
+
+\begin{definition}[Wide-sense Stationary Signal]
+Given a (bandlimited) signal \(x\left(t\right)\), we say it is wide sense stationary, if the following conditions hold:
+
+\begin{itemize}
+\item
+For all \(t\):
+\begin{equation}
+\ep{x\left(t\right)} = \mu \text{ } \forall t
+\end{equation}
+\item 
+For all \(t_1, t_2\) there exists a function \(C_x(\circ)\) such that:
+\begin{equation}
+\ep{\left(x\left(t_1\right) - \mu\right)\left(x\left(t_2\right) - \mu\right)} = C_{x}\left(t_1 - t_2 \right) 
+\end{equation}
+\end{itemize}
+i.e. the mean of the signal must be constant, and the autocorrelation must depend only on the lag.
+\end{definition}
+
+From this we can define the power spectral density of the signal \(x\left(t\right)\):
+
+\begin{definition}[Power Spectral Density]
+\begin{equation}
+S_{xx} \left(\omega\right) = \mid \hat{x}\left(\omega\right) \mid^2
+\end{equation}
+where \(\hat{x}\left(\omega\right)\) is the Fourier transform of \(x\left(t\right)\).
+\end{definition}
+
+\begin{definition}[Autocorrelation]
+The autocorrelation of a signal \(R_{xx}\left(t_1, t_2\right)\) is defined as:
+
+\begin{equation}
+R_{xx}\left(t_1, t_2\right) = \ep{x\left(t_1-\mu\right)x\left(t_2-\mu\right)}
+\end{equation}
+
+For wide sense stationary signals, \( R_{xx}\left(t_1, t_2\right) = R_{xx}\left(t_1 - t_2,0\right) = R_{xx}\left(\tau\right) \)
+
+\end{definition}
+
+The problem of spectrum sensing \cite{yucek2009survey} is to decide whether a particular band is available, or not. That is, we wish to discriminate between the following two hypotheses:
+
+
+\begin{equation}
+H_{0}: y\left[n\right] = w\left[n\right] \text{, } \forall n =  1, \ldots, N 
+\end{equation}
+\label{h1}
+
+\begin{equation}
+H_{1}: y\left[n \right] = x\left[n\right] + w\left[n\right] \text{, } \forall n = 1, \ldots, N 
+\end{equation}
+\label{h2}
+
+where \(x\) is the (deterministic) primary user's signal, having a specific structure which stems from modern coding and modulation techniques, \(w\) is additive white Gaussian noise and \(y\) is the received signal.
+
+Any detection strategy is a function, \(f: \re^n \rightarrow \{0,1\}\), mapping the output of sensing to \(\{0, 1\}\). \(0\) means the received signal is noise, whilst \(1\) means that a Primary User signal is present.
+
+To decide whether the observations \(\textbf{y}\) were generated under \(\textit{H}_{0}\) or \(\textit{H}_{1}\) is accomplished by forming a test statistic \(\Gamma\left(y\right)\) and then comparing this statistic with a predefined threshold \(\lambda\). Both classical methods, where the hypotheses are assumed to be deterministically true and the goal is to minimise the false detection probability, and Bayesian methods, where it is assumed that the source selects the true hypothesis at random according to some prior probabilities, agree that the test statistic should be likelihood ratio:
+
+\begin{equation}
+\Gamma\left(\textbf{y}\right) = \frac{p\left(\textbf{y}\mid H_1\right)}{p\left(\textbf{y}\mid H_0\right)}
+\end{equation}
+\label{likeratio}
+
+where a large value of \(\Gamma\) implies that we accept \(H_0\).
+
+The performance of a detector is quantified in terms of the probability of detection
+
+\begin{equation}
+P_{D} = Pr\left( \Gamma\left(\textbf{y}\right) > \lambda \mid H_1\right)
+\end{equation}
+
+and the probability of false alarm 
+
+\begin{equation}
+P_{FA} = Pr\left( \Gamma\left(\textbf{y}\right) > \lambda \mid H_0\right)
+\end{equation}
+
+By varying \(\lambda\) the operating point of a detector can be chosen anywhere along its receiver operating characteristics curve.
+
+\section{Classical Sensing Techniques}
+
+There are several proposed spectrum sensing methods that enable cognitive radios identify bands and perform dynamic frequency selection. Some of the common (narrowband) spectrum sensing techniques are described below.
+
+\subsection{Energy Detection}\label{sec:energy-detection}
+
+Energy detection is the simplest form of spectrum sensing: this method simply compares the signal energy in a frequency band to a pre-defined threshold. If the threshold is exceeded the band is declared occupied. This method is quite generic as receivers need no knowledge of the primary users signal, and in theory, this form of detection works irrespective of the type of Primary User signalling used. Energy detect ions is a common method for the detection of unknown signals in noise, due to low computational and implementation complexity. 
+
+A typical implementation for energy detection would be to centre a bandpass filter on the band of interest, followed by a squaring device to measure the received energy and an integrator to determine the observation interval. Finally the output of the integrator is compared with a threshold to determine the presence of a signal. This threshold is determined based upon the noise variance of the channel. I.e. we have a decision metric of the following form:
+
+\begin{equation}
+M = \sum_{n=0}^N |y\left[n\right]|^2
+\end{equation}
+
+\begin{theorem}
+Modelling the signal and noise as zero-mean Gaussian random variables with variances \(\sigma_s\), and \(\sigma_n\) respectively, we can derive expressions for the metric, the detection probability and the false alarm probability under the rule \eqref{likeratio} above \cite{yucek2009survey}:
+
+\begin{equation}
+ M =
+  \begin{cases}
+   \frac{\sigma_w^2}{2} \chi^2_{2N} & \text{under }H_0 \\
+   \frac{\sigma_w^2 + \sigma_s^2}{2} \chi^2_{2N} & \text{under } H_1
+  \end{cases}
+\end{equation}
+
+\begin{equation}
+P_D = 1 - \Gamma\left(1, \frac{\lambda}{1 + \frac{ \sigma_s^2 }{ \sigma_w^2 } } \right)
+\end{equation}
+
+\begin{equation}
+P_{FA} = 1 - \Gamma\left(1, \frac{\lambda}{\sigma_w^2} \right)
+\end{equation}
+
+Where \( \Gamma\left(1,x\right)\) is the incomplete gamma function. 
+\end{theorem}
+
+From these equations it's clear to see that the performance of energy detection based sensing faces challenges at low SNR values. See \cite{yucek2009survey} figure 3 for curves quantifying the performance. 
+
+Also energy detectors perform poorly under extreme fading conditions as they are unable to distinguish primary users and noise. Further this type of detector is not efficient at detecting spread spectrum signals. 
+
+For energy detection we wish to maximise \(P_D\) subject to a constraint on \(P_{FA}\). This is done via a threshold \(\lambda\), which trades off these two probabilities.
+
+Choosing \(\lambda\) requires knowledge of the Primary User transmissions, as well as estimates of the noise power. Given these, calculating the optimal \(\lambda\) is straightforward \cite{xie2009optimal}. Estimating the PU power is dependent on the radio environment between the PU transmitter and the CR. Noise power estimation isn't flawless and a small noise power estimation error can cause significant performance loss \cite{hamdi2010impact}, \cite{sahai2004some}.
+
+Noise power uncertainty can be mitigated by using an adaptive algorithm \cite{zhang2011adaptive}, or an a variant of the MUSIC algorithm which separates signal and noise subspaces \cite{olivieri2005scalable}. These significantly increase the complexity of the energy detector, making it less attractive relative to other methods.
+
+A more serious concern for energy detection is the SNR wall \cite{tandra2008snr}: an SNR below which an energy detector will fail to detect the presence of a PU signal no matter how long the detector observes the channel. This is because at low SNRs the PU signal is no longer well separated from the noise. There has been some work in overcoming this wall using cross correlation between multiple antennas \cite{oude2011lowering}.
+
+
+\subsection{Cyclostationary Feature Detection}
+Because the signals used in practical communication systems contain distinctive features that can be exploited for detection, it is possible to achieve a detection performance which substantially surpasses the energy detector \cite{ye2007spectrum}, \cite{kim2007cyclostationary}. This is in contrast to the predictions of information theory where maximum entropy signals will be statistically white and Gaussian (if this were the case, then we could do no better than the energy detector). More importantly, known signal features can be exploited to estimate unknown parameters such as noise power. 
+
+Examples of well known patterns include pilot signals and spreading sequences. Other examples include preambles and midambles: known sequences transmitted before and in the middle of each slot, respectively. Others include redundancy added by coding, modulation and burst formatting used by the transmitter. 
+
+This method of cyclostationary feature detection exploits cyclostationary features of received signals: man made periodicity in the signal (for example symbol rate, chip rate, cyclic prefix etc) or its statistics - mean, autocorrelation. A cyclic correlation function is used instead of PSD (or autocorrelation sequence) for detecting signals present in a given spectrum. This is able to differentiate noise from primary users signals since noise is wide-sense stationary with no correlation but modulated signals are cyclostationary due to the redundancy of signal correlations. 
+
+For clarity, the random processes encountered by a cognitive radio will have a period in both expectation and autocorrelation:
+
+\begin{equation}
+\mathbb{E}\left(t\right) = \mathbb{E}\left(t + mT\right) = \mathbb{E}\left[x\left(t\right)\right]
+\end{equation}
+
+\begin{equation}
+\mathbb{R}\left(\tau\right) = \mathbb{E}\left[x\left(t\right)\conjugate{x\left(\overline{t} +\tau\right)}\right]
+\end{equation}
+
+where \(t\) is time, \(\tau\) is the autocorrelation lag, \(x\left(t\right)\) is the random process we are considering and \(m\) is an integer. 
+
+Due to the periodicity of the autocorrelation, it can be expressed as a Fourier series over integer multiples of the fundamental frequency in the signal as well as integer multiples of sums and differences of this frequency:
+%
+\begin{equation}
+\mathbb{R}\left(\tau\right) = \sum_{\alpha} r\left(\alpha, \tau\right) e^{2\pi j \alpha t}  
+\end{equation}
+\label{cyclic-covarience}
+%
+with Fourier coefficients:
+%
+\begin{equation}
+r\left(\alpha, \tau\right) = \frac{1}{T} \int_{0}^T x\left(t+\frac{\tau}{2}\right)\conjugate{x\left(\overline{t}+\frac{\tau}{2}\right)} e^{-2\pi j \alpha t} dt
+\end{equation}
+%
+where \(\alpha\) is the cyclic frequency
+
+From this we can define the Cyclic Power Spectrum of the signal:
+
+\begin{equation}
+S\left(f\right) = \int_{-\infty}^{\infty} r\left(\alpha, \tau\right) e^{-2 \pi j f \tau} d\tau
+\end{equation}
+
+For a fixed lag \(\tau\), \eqref{cyclic-covarience} can be re-written as:
+%
+\begin{equation}
+R_{xx}\left(t, \tau \right) = R_{xx}\left(\tau\right) + \sum_{\alpha} r\left(\alpha, \tau\right) e^{2\pi j \alpha t}  
+\end{equation}
+%
+i.e. a part dependent on the lag only (the cyclic frequency is zero), and a part which is a periodic function of time. 
+
+Under both hypotheses, \eqref{h1}, \eqref{h2}, the continuous portion of the signal exists, but the cyclo-stationary portion only exists under \eqref{h2} when \(\alpha \neq 0\). Thus we only need to test for the presence of a cyclo-stationary component. 
+
+To this end re-write the hypotheses as:
+
+\begin{equation}
+H_{0}: y\left[n\right] = S_{w}^\alpha \left[n\right] \text{,  n} =  1 \ldots N 
+\end{equation}
+\label{c1}
+
+\begin{equation}
+H_{1}: y\left[n \right] = S_{x}^{\alpha} \left[n\right] + S_{w}^{\alpha} \left[n\right] \text{,  n} =  1 \ldots N 
+\end{equation}
+\label{c2}
+
+where \(S_{x}^{\alpha}\) is the CPS of white noise which is zero for \(\alpha \neq 0 \).  Using the test statistic:
+
+\begin{equation}
+\chi = \sum_{\alpha \neq 0} \sum_{n} S_{x}^{\alpha} \overline{S_{x}^{\alpha}}
+\end{equation}
+
+we can formulate the cyclo-stationary detector as:
+
+\begin{equation}
+ d =
+  \begin{cases}
+   0 & \chi < \lambda  \\
+   1 & \chi \geq \lambda
+  \end{cases}
+\end{equation}
+
+where \(\lambda\) is some pre-determined threshold \cite{Ghozzi2006}. 
+
+The advantages of this type of sensing over energy detection are that its possible to distinguish primary user transmissions (as well as distinguish between different PU signals) \cite{lunden2007spectrum}. It is also possible to distinguish noise from PU signals as the noise spectrum has no cyclic correlation \cite{cabric2004implementation}, \cite{vcabric2005physical}. However, cyclic frequencies have to be assumed to be known \cite{Ghozzi2006}. 
+
+\subsection{Matched Filtering}
+If all the probability distributions and parameters  - noise variance, signal variance, channel coefficients etc - are known under both hypotheses, and the signal to be detected is perfectly known then the optimal test statistic is a matched filter \cite{cabric2004implementation}, \cite{yucek2009survey}.
+
+A matched filter is the convolution of a test signal with a template signal (or window) and detects the presence of the template in the unknown signal (as the convolution measures the overlap of two signals).
+
+For example: for a given TV signal, \(r\left(t\right)\) defined over \(0 \leq t \leq T\) the corresponding matched filter is \(h\left(t\right) = r\left(T - t\right)\). 
+
+A test statistic can be formed by sampling the output of the filter every \(nT\) seconds and choosing \ref{h1} if the statistic is below some threshold and \ref{h2} otherwise.
+
+When compared to other methods, matched filtering takes a shorter time to achieve a threshold probability of false alarm. However, matched filtering requires that radios demodulate received signals, and so requires perfect knowledge of primary users signalling features. Matched filtering also requires a prohibitively large power consumption, as various algorithms need to be executed for detection.
+
+The paper \cite{bhargavi2010performance}, compares the performance of Energy Detection, Matched Filtering and Cyclostationary detection. It concludes that cyclostationarity based detection has the best performance (based on a lower \(P_{FA}\) for a given \(P_D\)), as this for of detection is naturally insensitive to noise uncertainty as the test statistic for cyclic detection doesn't require knowledge of the noise variance.
+
+\subsection{Distributed Approaches to Spectrum Sensing}
+Spectrum sensing can also be achieved with multiple nodes, co-operating on the sensing task to efficiently decide which part of the spectrum to use. 
+
+There are several advantages to considering distributed approaches to spectrum sensing. As the received spectrum is highly variable geographically, a device caught in a deep fade may inadvertently decide that a frequency which is occupied by a \gls{pu} is unoccupied. By performing sensing with a geographically distributed network of nodes, the estimate can be improved via spatial diversity. Observing the signal through multiple independent channels mitigates the effect of multipath fading and shadowing for any single node. This improved statistical accuracy is paid for by the increased system complexity and communication overhead between nodes and/or a fusion centre. 
+
+By utilising multiple sensors, the problem of multiple hypothesis testing (described in section \ref{subsec:central-sensing}) may be alleviated. It may be more practical to divide the band into multiple sub-bands which are sensed individually, this allows for simpler and lower powered sensor architectures. In \cite{oksanen2010characterization} Oksanen et al propose a measure of spatial diversity as the maximum slope of the probability of missed diction curve on the logarithmic scale. This definition is insensitive to the number of samples used, and is low for correlated channels. This definition allows the system designer to avoid a policy of all sensors sensing all sub-bands, whilst also avoiding the problem of having only a single sensor on each sub-band. 
+
+In the previous section \eqref{subsec:central-sensing}, we described several techniques with which a single sensor could decide whether a \gls{pu} was present, or not. Any of these techniques can be used by the sensors in a network, and either the results are combined via a data fusion technique or local decisions are made based upon communication between neighbouring nodes. For example in \cite{cho2015weighted}, Cho and Narieda describe a weighted liner combing method cooperative cyclostationary feature detection. The technique involves individual nodes estimating the cyclic autocorrelation function of the spectrum, and these estimated correlation functions are then combined - as opposed to the estimates of the signal being combined. 
+
+However, far more common is simple energy detection at each node. followed by a voting rule. This system is described by Ma et al in \cite{ma2008soft}. In this scenario each sensor takes energy measurements as described in section \eqref{sec:energy-detection} and either are combined at a \gls{fc}, or shared locally between neighbouring nodes. A simple, and low communication complexity data fusion method is Hard Combining. Here, each node simply transmits a binary decision for each sub-channel it senses, and a voting rule is applied to decide on sub-band occupancy. 
+
+Let \(u_i \in \{0,1\}\) be the decision made by \gls{cr}, and \(u \in \{0,1\}\) be the global decision. A \(0\) indicates \gls{pu} absence. Two common voting rules are the AND rule, where a sub-band is declared occupied if \(u_i = 1\) for all \(i\), and the OR rule, where a band is declared occupied if \(u_i = 1\) for any \(i\).
+
+\subsection{Limitations}
+The methods described above, are appropriate for sensing whether a single channel is available for transmission, based upon the result of measurements of that channel. However, Cognitive Radios aim to exploit spectral holes in a wide band spectrum (i.e. a channel whose frequency response is not flat over the bandwidth) and will usually have to make a decision regarding transmission from measurements from this type of channel.
+
+There are two proposed approaches to this: Multiband sensing and Compressive Sensing. Multiband sensing splits the wideband spectrum into a number of independent (not necessarily contiguous) sub-channels (whose frequency response is flat), and performs the hypothesis test for each sub-channel. However, in practice, there are correlations across sub-channels that this method fails to address. For example, digital TV signals are transmitted as spread spectrum signals so that primary user occupancy is correlated across channels. A related issue is that noise variance could be unknown but correlated across bands. Binary hypothesis testing then fails in this case, needing to be replaced by composite hypothesis tests which grow exponentially with the number of sub-channels. Such problems are typically non-convex and require prohibitively complex detectors. We will describe Compressive Sensing in Chapter \ref{chap:cs}
+

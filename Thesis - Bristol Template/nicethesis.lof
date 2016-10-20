@@ -1,0 +1,66 @@
+\select@language {english}
+\par \penalty \@M \textbf {{\scshape Figure} \hfill Page}\par \penalty \@M 
+\addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces A digram of current Spectral allocation \cite {Strategy2013}}}{6}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces A snapshot of frequency utilisation in various areas: many frequencies are not used at all, whilst there is significant activity on others \cite {Burbidge2007}}}{7}{figure.1.2}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A visualisation of the Compressive Sensing problem as an under-determined system}}{27}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Solutions to the Compressive Sensing optimisation problem intersect the \(l_1\) norm the points where all components (but one) of the vector are zero (i.e. it is sparsity promoting) \cite {Tibshirani1996}}}{33}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The Iterative Soft Thresholding Algorithm}}{35}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The OMP recovery algorithm}}{36}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces An illustration of the orthognalisation step of OMP. \cite {blumensath2007difference}}}{36}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The AMP recovery algorithm}}{37}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The Laplace (\(l_1\)-norm, bold line) and Normal (\(l_2\)-norm, dotted line) densities. Note that the Laplace density is sparsity promoting as it penalises solutions away from zero more than the Gaussian density. \cite {Tibshirani1996}}}{38}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The hierarchical model for the Bayesian CS formulation \cite {Ji2008}}}{39}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers}}{40}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces The hierarchical model for the Bayesian CS formulation \cite {Ji2008}}}{43}{figure.3.10}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of a network}}{68}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The incidence matrix associated with Figure \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {efig:ex-network}\unskip \@@italiccorr )}}}}{69}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers}}{72}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Mse vs SNR for the sensing model, showing the performance of distributed and centralised solvers}}{73}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces The progress of the distributed solver as a function of the number of iterations, with different values of the regression parameter \(\lambda \)}}{73}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{74}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{74}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{75}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{75}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{76}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{76}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{77}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{77}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces The progress of DADMM (blue) vs DBP (red) solvers as a function of the number of iterations. }}{78}{figure.5.14}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces The solutions produced by DADMM and DBP}}{78}{figure.5.15}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces The progress of a DADMM (blue) and DBP (red) }}{79}{figure.5.16}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{79}{figure.5.17}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{80}{figure.5.18}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{80}{figure.5.19}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces The algorithm at Node \(j\)}}{88}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Left to right: (a) The original signal. (b) The gradient \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {def:a}\unskip \@@italiccorr )}} of the original signal. (c) Recovery using DADMM, 1000 iterations, \(\sigma ^2_n = 5\). (d) Recovery using DADMM, 1000 iterations, \(\sigma ^2_n = 20\) }}{90}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces MSE vs SNR for the sensing model showing the performance of distributed and centralised solvers. The performance of DADMM is consistently within \(10^{-2}\) of ADMM, and within the error bars of ADMM at low SNRs. The variance of estimates produced by DADMM is larger than ADMM, due to nodes performing computations on a subset of data. Both estimates are consistently within \(10^{-1}\) of the optimal solution, which is sufficient to classify occupied bands.}}{91}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces The progress of the distributed solver as a function of the number of iterations, with different values of the regression parameter \( \lambda \). For a fixed \( \lambda \) there is a single unique optimal solution, with higher \( \lambda \) favouring sparser solutions. The convergence of DADMM is slowed by smaller \( \lambda \). This is intuitive: solutions with fewer non-zero components should be identified in fewer iterations.}}{92}{figure.6.4}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces }}{99}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces }}{99}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces }}{101}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces ROC for synthetic data, midly noisy}}{101}{figure.7.4}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces ROC for synthetic data, very noisy}}{102}{figure.7.5}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of classification with OFCOM data, 35 changepoints}}{104}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Example of classification with OFCOM data, 55 changepoints}}{104}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Example of classification with OFCOM data, 35 changepoints}}{105}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Example of classification with OFCOM data, 55 changepoints}}{105}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Example of classification with OFCOM data, 35 changepoints}}{106}{figure.8.5}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Example of classification with OFCOM data, 55 changepoints}}{106}{figure.8.6}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Example of classification with OFCOM data, 35 changepoints}}{107}{figure.8.7}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Example of classification with OFCOM data, 55 changepoints}}{107}{figure.8.8}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Example of classification with OFCOM data, 35 changepoints}}{108}{figure.8.9}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Example of classification with OFCOM data, 55 changepoints}}{108}{figure.8.10}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces The Group Testing model: multiplication with a short, fat matrix \cite {atia2}}}{111}{figure.9.1}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Algorithm for the non-iid group testing problem}}{118}{figure.9.2}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Theoretical lower and upper bounds and empirical Test frequencies as functions of \(\theta \)}}{126}{figure.9.3}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Cumulative distribution curves of the modified Hwang algorithm with fixed \(\theta = 0.0001\) and \(\alpha \) varying }}{126}{figure.9.4}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Cumulative distribution curves for fixed \(\alpha = 1\) and varying \(\theta \)}}{127}{figure.9.5}

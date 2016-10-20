@@ -1,0 +1,675 @@
+\begin{thebibliography}{100}
+
+\bibitem{akan2009cognitive}
+Ozgur~B Akan, O~Karli, and Ozgur Ergul.
+\newblock Cognitive radio sensor networks.
+\newblock {\em Network, IEEE}, 23(4):34--40, 2009.
+
+\bibitem{aksoylar}
+Cem Aksoylar, George Atia, and Venkatesh Saligrama.
+\newblock Sparse signal processing with linear and non-linear observations: A
+  unified shannon theoretic approach.
+\newblock In {\em Information Theory Workshop (ITW), 2013 IEEE}, pages 1--5.
+  IEEE, 2013.
+
+\bibitem{johnson33}
+Matthew Aldridge, Leonardo Baldassini, and Oliver Johnson.
+\newblock Group testing algorithms: bounds and simulations.
+\newblock {\em Information Theory, IEEE Transactions on}, 60(6):3671--3687,
+  2014.
+
+\bibitem{Aldridge2013}
+Matthew Aldridge, Leonardo Baldassini, and I~T Jun.
+\newblock {Group testing algorithms : bounds and simulations}.
+\newblock 2013.
+
+\bibitem{atia2}
+George Atia, Shuchin Aeron, Erhan Ermis, and Venkatesh Saligrama.
+\newblock On throughput maximization and interference avoidance in cognitive
+  radios.
+\newblock In {\em Consumer Communications and Networking Conference, 2008. CCNC
+  2008. 5th IEEE}, pages 963--967. IEEE, 2008.
+
+\bibitem{atia}
+George~K Atia and Venkatesh Saligrama.
+\newblock Boolean compressed sensing and noisy group testing.
+\newblock {\em Information Theory, IEEE Transactions on}, 58(3):1880--1901,
+  2012.
+
+\bibitem{Baldassini2013}
+Leonardo Baldassini.
+\newblock {The Capacity of Adaptive Group Testing}.
+\newblock pages 2676--2680, 2013.
+
+\bibitem{johnsonc10}
+Leonardo Baldassini, Oliver Johnson, and Matthew Aldridge.
+\newblock The capacity of adaptive group testing.
+\newblock In {\em Information Theory Proceedings (ISIT), 2013 IEEE
+  International Symposium on}, pages 2676--2680. IEEE, 2013.
+
+\bibitem{baraniuk2008simple}
+Richard Baraniuk, Mark Davenport, Ronald DeVore, and Michael Wakin.
+\newblock A simple proof of the restricted isometry property for random
+  matrices.
+\newblock {\em Constructive Approximation}, 28(3):253--263, 2008.
+
+\bibitem{Baron2010}
+Dror Baron.
+\newblock {Bayesian compressive sensing via belief propagation}.
+\newblock {\em Signal Processing, IEEE \ldots}, 58(1):269--280, 2010.
+
+\bibitem{bazerque2008}
+G~B Bazerque, J.A~Giannakis.
+\newblock Distributed spectrum sensing for cognitive radios by exploiting
+  sparsity.
+\newblock {\em Proc. of 42nd Asilomar Conf. on Signals, Systems, and
+  Computers}, 2008.
+
+\bibitem{Beck2009}
+Amir Beck and Marc Teboulle.
+\newblock {A Fast Iterative Shrinkage-Thresholding Algorithm for Linear Inverse
+  Problems}.
+\newblock {\em SIAM Journal on Imaging Sciences}, 2(1):183--202, January 2009.
+
+\bibitem{bhargavi2010performance}
+Deepa Bhargavi and Chandra~R Murthy.
+\newblock Performance comparison of energy, matched-filter and
+  cyclostationarity-based spectrum sensing.
+\newblock In {\em Signal Processing Advances in Wireless Communications
+  (SPAWC), 2010 IEEE Eleventh International Workshop on}, pages 1--5. IEEE,
+  2010.
+
+\bibitem{blumensath2009iterative}
+Thomas Blumensath and Mike~E Davies.
+\newblock Iterative hard thresholding for compressed sensing.
+\newblock {\em Applied and Computational Harmonic Analysis}, 27(3):265--274,
+  2009.
+
+\bibitem{Boyd2010a}
+Stephen Boyd.
+\newblock {Distributed Optimization and Statistical Learning via the
+  Alternating Direction Method of Multipliers}.
+\newblock {\em Foundations and Trends® in Machine Learning}, (1):1--122.
+
+\bibitem{Bristow2014}
+Hilton Bristow and Simon Lucey.
+\newblock {Optimization Methods for Convolutional Sparse Coding}.
+\newblock June 2014.
+
+\bibitem{Burbidge2007}
+Paul Burbidge, Eddie~Levine.
+\newblock Cognitive radio technology a study for ofcom – summary report.
+\newblock Technical report, 2007.
+
+\bibitem{vcabric2005physical}
+Danijela {\v{C}}abri{\'c} and Robert~W Brodersen.
+\newblock Physical layer design issues unique to cognitive radio systems.
+\newblock In {\em Personal, Indoor and Mobile Radio Communications, 2005. PIMRC
+  2005. IEEE 16th International Symposium on}, volume~2, pages 759--763. IEEE,
+  2005.
+
+\bibitem{cabric2004implementation}
+Danijela Cabric, Shridhar~Mubaraq Mishra, and Robert~W Brodersen.
+\newblock Implementation issues in spectrum sensing for cognitive radios.
+\newblock In {\em Signals, systems and computers, 2004. Conference record of
+  the thirty-eighth Asilomar conference on}, volume~1, pages 772--776. IEEE,
+  2004.
+
+\bibitem{Candes2007}
+Emmanuel Cand\`{e}s and Justin Romberg.
+\newblock {Sparsity and incoherence in compressive sampling}.
+\newblock {\em Inverse Problems}, 23(3):969--985, June 2007.
+
+\bibitem{Emma}
+Emmanuel Cand\`{e}s and Terence Tao.
+\newblock {Decoding by Linear Programming}.
+\newblock {\em IEEE Transactions on Information Theory}, 51(12):4203--4215,
+  2005.
+
+\bibitem{candes2007dantzig}
+Emmanuel Candes and Terence Tao.
+\newblock The dantzig selector: statistical estimation when p is much larger
+  than n.
+\newblock {\em The Annals of Statistics}, pages 2313--2351, 2007.
+
+\bibitem{candes2011probabilistic}
+Emmanuel~J Candes and Yaniv Plan.
+\newblock A probabilistic and ripless theory of compressed sensing.
+\newblock {\em Information Theory, IEEE Transactions on}, 57(11):7235--7254,
+  2011.
+
+\bibitem{Candes2006}
+Emmanuel~J Candes, Justin Romberg, and Terence Tao.
+\newblock {Robust Uncertainty Principles : Exact Signal Frequency Information}.
+\newblock 52(2):489--509, 2006.
+
+\bibitem{Chan2011}
+Chun~Lam Chan, Pak~Hou Che, Sidharth Jaggi, and Venkatesh Saligrama.
+\newblock {Non-adaptive probabilistic group testing with noisy measurements:
+  Near-optimal bounds with efficient algorithms}.
+\newblock In {\em 2011 49th Annual Allerton Conference on Communication,
+  Control, and Computing (Allerton)}, pages 1832--1839. Ieee, September 2011.
+
+\bibitem{chen2016direct}
+Caihua Chen, Bingsheng He, Yinyu Ye, and Xiaoming Yuan.
+\newblock The direct extension of admm for multi-block convex minimization
+  problems is not necessarily convergent.
+\newblock {\em Mathematical Programming}, 155(1-2):57--79, 2016.
+
+\bibitem{Chen1998}
+Scott~Shaobing Chen, David~L. Donoho, and Michael~a. Saunders.
+\newblock {Atomic Decomposition by Basis Pursuit}.
+\newblock {\em SIAM Journal on Scientific Computing}, 20(1):33--61, January
+  1998.
+
+\bibitem{Chen1998a}
+Scott~Shaobing Chen, David~L. Donoho, and Michael~a. Saunders.
+\newblock {Atomic Decomposition by Basis Pursuit}.
+\newblock {\em SIAM Journal on Scientific Computing}, 20(1):33--61, January
+  1998.
+
+\bibitem{Dahlman2014}
+Eirk Dahlman.
+\newblock 5{G} wireless acces: Requirements and realization.
+\newblock {\em {IEEE} Communications Magazine}, (December):42--47, 2014.
+
+\bibitem{davenport2010signal}
+Mark Davenport, Petros~T Boufounos, Michael~B Wakin, Richard~G Baraniuk, et~al.
+\newblock Signal processing with compressive measurements.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
+  4(2):445--460, 2010.
+
+\bibitem{davenport2007smashed}
+Mark~A Davenport, Marco~F Duarte, Michael~B Wakin, Jason~N Laska, Dharmpal
+  Takhar, Kevin~F Kelly, and Richard~G Baraniuk.
+\newblock The smashed filter for compressive classification and target
+  recognition.
+\newblock In {\em Electronic Imaging 2007}, pages 64980H--64980H. International
+  Society for Optics and Photonics, 2007.
+
+\bibitem{davenport2010wideband}
+Mark~A Davenport, Stephen~R Schnelle, JP~Slavinsky, Richard~G Baraniuk,
+  Michael~B Wakin, and Petros~T Boufounos.
+\newblock A wideband compressive radio receiver.
+\newblock In {\em MILITARY COMMUNICATIONS CONFERENCE, 2010-MILCOM 2010}, pages
+  1193--1198. IEEE, 2010.
+
+\bibitem{DavenportSinglePixel}
+Mark~A Davenport, Dharmpal Takhar, Jason~N Laska, Ting Sun, Kevin~F Kelly, and
+  Richard~G Baraniuk.
+\newblock {Single-Pixel Imaging via Compressive Sampling [}.
+\newblock {\em IEEE Signal Processing Magazine}, (March 2008):83--91.
+
+\bibitem{Donoho2006}
+D~L Donoho.
+\newblock {Compressed sensing}.
+\newblock {\em IEEE Transactions on Information Theory}, 52(4):1289--1306,
+  2006.
+
+\bibitem{donoho2004neighborly}
+David~L Donoho.
+\newblock Neighborly polytopes and sparse solution of underdetermined linear
+  equations.
+\newblock 2004.
+
+\bibitem{donoho2}
+David~L Donoho.
+\newblock Compressed sensing.
+\newblock {\em Information Theory, IEEE Transactions on}, 52(4):1289--1306,
+  2006.
+
+\bibitem{Donoho2006a}
+David~L Donoho.
+\newblock {For Most Large Underdetermined Systems of Linear Equations Is Also
+  the Sparsest Solution}.
+\newblock {\em Communications on Pure and Applied Mathematics}, 59:797--829,
+  2006.
+
+\bibitem{donoho2009message}
+David~L Donoho, Arian Maleki, and Andrea Montanari.
+\newblock Message-passing algorithms for compressed sensing.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  106(45):18914--18919, 2009.
+
+\bibitem{Donoho}
+David~L Donoho, Juan~M Santos, and John~M Pauly.
+\newblock {Compressed Sensing MRI}.
+\newblock (March 2008):72--82.
+
+\bibitem{dorfman}
+Robert Dorfman.
+\newblock The detection of defective members of large populations.
+\newblock {\em The Annals of Mathematical Statistics}, 14(4):436--440, 1943.
+
+\bibitem{Dorfman1943}
+Robert Dorfman.
+\newblock {The Detection of Defective Members of Large Populations}.
+\newblock {\em The Annals of Mathematical Statistics}, 14(4):436--440, 1943.
+
+\bibitem{douglas1956numerical}
+Jim Douglas and Henry~H Rachford.
+\newblock On the numerical solution of heat conduction problems in two and
+  three space variables.
+\newblock {\em Transactions of the American mathematical Society},
+  82(2):421--439, 1956.
+
+\bibitem{du}
+Ding-Zhu Du and Frank~K Hwang.
+\newblock {\em Combinatorial group testing and its applications}, volume~12.
+\newblock World Scientific, 1999.
+
+\bibitem{Duarte2008}
+M.F. Duarte, M.a. Davenport, D.~Takhar, J.N. Laska, K.F. Kelly, and R.G.
+  Baraniuk.
+\newblock {Single-Pixel Imaging via Compressive Sampling}.
+\newblock {\em IEEE Signal Processing Magazine}, 25(2):83--91, March 2008.
+
+\bibitem{eckstein1992douglas}
+Jonathan Eckstein and Dimitri~P Bertsekas.
+\newblock On the douglas—rachford splitting method and the proximal point
+  algorithm for maximal monotone operators.
+\newblock {\em Mathematical Programming}, 55(1-3):293--318, 1992.
+
+\bibitem{eftekhari2013matched}
+Armin Eftekhari, Justin Romberg, and Michael~B Wakin.
+\newblock Matched filtering from limited frequency samples.
+\newblock {\em Information Theory, IEEE Transactions on}, 59(6):3475--3496,
+  2013.
+
+\bibitem{figueiredo2003algorithm}
+M{\'a}rio~AT Figueiredo and Robert~D Nowak.
+\newblock An em algorithm for wavelet-based image restoration.
+\newblock {\em Image Processing, IEEE Transactions on}, 12(8):906--916, 2003.
+
+\bibitem{foucart2013mathematical}
+Simon Foucart and Holger Rauhut.
+\newblock {\em A mathematical introduction to compressive sensing}, volume~1.
+\newblock Springer.
+
+\bibitem{ghadimi2015optimal}
+Euhanna Ghadimi, Andr{\'e} Teixeira, Iman Shames, and Mikael Johansson.
+\newblock Optimal parameter selection for the alternating direction method of
+  multipliers (admm): quadratic problems.
+\newblock {\em Automatic Control, IEEE Transactions on}, 60(3):644--658, 2015.
+
+\bibitem{Ghozzi2006}
+Mohamed Ghozzi, Francois Marx, Mischa Dohler, and Jacques Palicot.
+\newblock {Cyclostatilonarilty-Based Test for Detection of Vacant Frequency
+  Bands}, 2006.
+
+\bibitem{goldstein2014fast}
+Tom Goldstein, Brendan O'Donoghue, Simon Setzer, and Richard Baraniuk.
+\newblock Fast alternating direction optimization methods.
+\newblock {\em SIAM Journal on Imaging Sciences}, 7(3):1588--1623, 2014.
+
+\bibitem{hamdi2010impact}
+Karama Hamdi, Xiang~Nian Zeng, Ali Ghrayeb, and Khaled Letaief.
+\newblock Impact of noise power uncertainty on cooperative spectrum sensing in
+  cognitive radio systems.
+\newblock In {\em Global Telecommunications Conference (GLOBECOM 2010), 2010
+  IEEE}, pages 1--5. IEEE, 2010.
+
+\bibitem{heredia2015consensus}
+Juan Heredia~Juesas, Gregory Allan, Ali Molaei, Luis Tirado, William Blackwell,
+  Martinez Lorenzo, and A~Jose.
+\newblock Consensus-based imaging using admm for a compressive reflector
+  antenna.
+\newblock In {\em Antennas and Propagation \& USNC/URSI National Radio Science
+  Meeting, 2015 IEEE International Symposium on}, pages 1304--1305. IEEE, 2015.
+
+\bibitem{Hwang1972}
+F~K Hwang.
+\newblock {Method for Detecting All Defective by Members Group in a
+  Population}.
+\newblock {\em Journal of the American Statistical Association},
+  67(339):605--608, 1972.
+
+\bibitem{hwang}
+FK~Hwang.
+\newblock A method for detecting all defective members in a population by group
+  testing.
+\newblock {\em Journal of the American Statistical Association},
+  67(339):605--608, 1972.
+
+\bibitem{Ji2008}
+Shihao Ji, Ya~Xue, and Lawrence Carin.
+\newblock {Bayesian Compressive Sensing}.
+\newblock {\em IEEE Transactions on Signal Processing}, 56(6):2346--2356, June
+  2008.
+
+\bibitem{kim2007cyclostationary}
+Kyouwoong Kim, Ihsan~A Akbar, Kyung~K Bae, Jung-Sun Um, Chad~M Spooner, and
+  Jeffrey~H Reed.
+\newblock Cyclostationary approaches to signal detection and classification in
+  cognitive radio.
+\newblock In {\em New frontiers in dynamic spectrum access networks, 2007.
+  DySPAN 2007. 2nd IEEE international symposium on}, pages 212--215. IEEE,
+  2007.
+
+\bibitem{levequeMatrices}
+Oliver Leveque.
+\newblock Random matrices and communication systems an unexpected journey:
+  There and back again.
+
+\bibitem{li5}
+Tongxin Li, Chun~Lam Chan, Wenhao Huang, Tarik Kaced, and Sidharth Jaggi.
+\newblock Group testing with prior statistics.
+\newblock In {\em Information Theory (ISIT), 2014 IEEE International Symposium
+  on}, pages 2346--2350. IEEE, 2014.
+
+\bibitem{ling2015dlm}
+Qing Ling, Wei Shi, Gang Wu, and Alejandro Ribeiro.
+\newblock Dlm: Decentralized linearized alternating direction method of
+  multipliers.
+\newblock {\em Signal Processing, IEEE Transactions on}, 63(15):4051--4064,
+  2015.
+
+\bibitem{lunden2007spectrum}
+Jarmo Lund{\'e}n, Visa Koivunen, Anu Huttunen, and H~Vincent Poor.
+\newblock Spectrum sensing in cognitive radios based on multiple cyclic
+  frequencies.
+\newblock In {\em Cognitive Radio Oriented Wireless Networks and
+  Communications, 2007. CrownCom 2007. 2nd International Conference on}, pages
+  37--43. IEEE, 2007.
+
+\bibitem{malyutov}
+Mikhail Malyutov.
+\newblock Search for sparse active inputs: a review.
+\newblock In {\em Information Theory, Combinatorics, and Search Theory}, pages
+  609--647. Springer-Verlag, 2013.
+
+\bibitem{metzler2014denoising}
+Christopher~A Metzler, Arian Maleki, and Richard~G Baraniuk.
+\newblock From denoising to compressed sensing.
+\newblock {\em arXiv preprint arXiv:1406.4175}, 2014.
+
+\bibitem{Mishali2010}
+Moshe Mishali and YC~Eldar.
+\newblock {From theory to practice: Sub-Nyquist sampling of sparse wideband
+  analog signals}.
+\newblock {\em Selected Topics in Signal Processing, \ldots}, 4(2):375--391,
+  2010.
+
+\bibitem{Mishali2009}
+Moshe Mishali and Yonina~C. Eldar.
+\newblock {From Theory to Practice: Sub-Nyquist Sampling of Sparse Wideband
+  Analog Signals}.
+\newblock page~17, February 2009.
+
+\bibitem{mishali2010theory}
+Moshe Mishali and Yonina~C Eldar.
+\newblock From theory to practice: Sub-nyquist sampling of sparse wideband
+  analog signals.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
+  4(2):375--391, 2010.
+
+\bibitem{Mishali2010a}
+Moshe Mishali and Yonina~C. Eldar.
+\newblock {Wideband Spectrum Sensing at Sub-Nyquist Rates}.
+\newblock page~12, September 2010.
+
+\bibitem{Mishali2011}
+Moshe Mishali and Yonina~C. Eldar.
+\newblock {Xampling: Compressed Sensing of Analog Signals}.
+\newblock page~58, March 2011.
+
+\bibitem{mokhtari2015dqm}
+Aryan Mokhtari, Wei Shi, Qing Ling, and Alejandro Ribeiro.
+\newblock Dqm: Decentralized quadratically approximated alternating direction
+  method of multipliers.
+\newblock {\em arXiv preprint arXiv:1508.02073}, 2015.
+
+\bibitem{moreau1965proximite}
+Jean-Jacques Moreau.
+\newblock Proximit{\'e} et dualit{\'e} dans un espace hilbertien.
+\newblock {\em Bulletin de la Soci{\'e}t{\'e} math{\'e}matique de France},
+  93:273--299, 1965.
+
+\bibitem{mota2013d}
+Jo{\~a}o~FC Mota, Jo{\~a}o~MF Xavier, Pedro~MQ Aguiar, and Markus Puschel.
+\newblock D-admm: A communication-efficient distributed algorithm for separable
+  optimization.
+\newblock {\em Signal Processing, IEEE Transactions on}, 61(10):2718--2723.
+
+\bibitem{nesterov2005smooth}
+Yu~Nesterov.
+\newblock Smooth minimization of non-smooth functions.
+\newblock {\em Mathematical programming}, 103(1):127--152, 2005.
+
+\bibitem{Ukmobil}
+BBC News.
+\newblock {UK mobile phone auction nets billions}.
+
+\bibitem{nishihara2015general}
+Robert Nishihara, Laurent Lessard, Benjamin Recht, Andrew Packard, and
+  Michael~I Jordan.
+\newblock A general analysis of the convergence of admm.
+\newblock {\em arXiv preprint arXiv:1502.02009}, 2015.
+
+\bibitem{o2013splitting}
+Brendan O'Donoghue, Giorgos Stathopoulos, and Stephen Boyd.
+\newblock A splitting method for optimal control.
+\newblock {\em Control Systems Technology, IEEE Transactions on},
+  21(6):2432--2442, 2013.
+
+\bibitem{olivieri2005scalable}
+Marc~P Olivieri, Greg Barnett, Alex Lackpour, Albert Davis, and Phuong Ngo.
+\newblock A scalable dynamic spectrum allocation system with interference
+  mitigation for teams of spectrally agile software defined radios.
+\newblock In {\em New Frontiers in Dynamic Spectrum Access Networks, 2005.
+  DySPAN 2005. 2005 First IEEE International Symposium on}, pages 170--179.
+  IEEE, 2005.
+
+\bibitem{oude2011lowering}
+Mark~S Oude~Alink, Andr{\'e}~BJ Kokkeler, Eric~AM Klumperink, Gerard~JM Smit,
+  and Bram Nauta.
+\newblock Lowering the snr wall for energy detection using cross-correlation.
+\newblock {\em Vehicular Technology, IEEE Transactions on}, 60(8):3748--3757,
+  2011.
+
+\bibitem{parikh2014proximal}
+Neal Parikh and Stephen~P Boyd.
+\newblock Proximal algorithms.
+\newblock {\em Foundations and Trends in optimization}, 1(3):127--239, 2014.
+
+\bibitem{petrov}
+V.~V. Petrov.
+\newblock {\em Limit Theorems of Probability Theory}.
+\newblock Oxford University Press, Oxford, U.K., 1995.
+
+\bibitem{polo2009compressive}
+Yvan~Lamelas Polo, Ying Wang, Ashish Pandharipande, and Geert Leus.
+\newblock Compressive wide-band spectrum sensing.
+\newblock In {\em Acoustics, Speech and Signal Processing, 2009. ICASSP 2009.
+  IEEE International Conference on}, pages 2337--2340. IEEE, 2009.
+
+\bibitem{rockafellar1976monotone}
+R~Tyrrell Rockafellar.
+\newblock Monotone operators and the proximal point algorithm.
+\newblock {\em SIAM journal on control and optimization}, 14(5):877--898, 1976.
+
+\bibitem{sahai2004some}
+Anant Sahai, Niels Hoven, and Rahul Tandra.
+\newblock Some fundamental limits on cognitive radio.
+\newblock In {\em in Forty-second Allerton Conference on Communication,
+  Control, and Computing}, 2004.
+
+\bibitem{sawatzky2014proximal}
+Alex Sawatzky, Qi~Xu, Carsten~O Schirra, and Mark~A Anastasio.
+\newblock Proximal admm for multi-channel image reconstruction in spectral
+  x-ray ct.
+\newblock {\em Medical Imaging, IEEE Transactions on}, 33(8):1657--1668, 2014.
+
+\bibitem{schnelle2012compressive}
+Stephen~R Schnelle, John~P Slavinsky, Petros~T Boufounos, Mark~A Davenport, and
+  Richard~G Baraniuk.
+\newblock A compressive phase-locked loop.
+\newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE
+  International Conference on}, pages 2885--2888. IEEE, 2012.
+
+\bibitem{Sejdinovic2010}
+Dino Sejdinovic and Oliver Johnson.
+\newblock {Note on noisy group testing: Asymptotic bounds and belief
+  propagation reconstruction}.
+\newblock {\em 2010 48th Annual Allerton Conference on Communication, Control,
+  and Computing (Allerton)}, pages 998--1003, September 2010.
+
+\bibitem{johnsonc8}
+Dino Sejdinovic and Oliver Johnson.
+\newblock Note on noisy group testing: asymptotic bounds and belief propagation
+  reconstruction.
+\newblock In {\em Communication, Control, and Computing (Allerton), 2010 48th
+  Annual Allerton Conference on}, pages 998--1003. IEEE, 2010.
+
+\bibitem{shental}
+Noam Shental, Amnon Amir, and Or~Zuk.
+\newblock Identification of rare alleles and their carriers using compressed se
+  (que) nsing.
+\newblock {\em Nucleic acids research}, page gkq675, 2010.
+
+\bibitem{shi2014linear}
+Wei Shi, Qing Ling, Kun Yuan, Gang Wu, and Wotao Yin.
+\newblock On the linear convergence of the admm in decentralized consensus
+  optimization.
+\newblock {\em Signal Processing, IEEE Transactions on}, 62(7):1750--1761.
+
+\bibitem{Shi2013}
+Wei Shi, Qing Ling, Kun Yuan, Gang Wu, and Wotao Yin.
+\newblock {On the Linear Convergence of the ADMM in Decentralized Consensus
+  Optimization}.
+\newblock pages 1--25, July 2013.
+
+\bibitem{stevenson2009ieee}
+Carl~R Stevenson, Gerald Chouinard, Zhongding Lei, Wendong Hu, Stephen~J
+  Shellhammer, and Winston Caldwell.
+\newblock {IEEE} 802.22: The first cognitive radio wireless regional area
+  network standard.
+\newblock {\em IEEE Communications Magazine}, 47(1):130--138, 2009.
+
+\bibitem{su2014differential}
+Weijie Su, Stephen Boyd, and Emmanuel Candes.
+\newblock A differential equation for modeling nesterov’s accelerated
+  gradient method: Theory and insights.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  2510--2518, 2014.
+
+\bibitem{tan}
+Vincent~YF Tan and George~K Atia.
+\newblock Strong impossibility results for sparse signal processing.
+\newblock {\em Signal Processing Letters, IEEE}, 21(3):260--264, 2014.
+
+\bibitem{tandra2008snr}
+Rahul Tandra and Anant Sahai.
+\newblock Snr walls for signal detection.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
+  2(1):4--17, 2008.
+
+\bibitem{Thompson2011}
+Andrew Thompson.
+\newblock {Compressive Single-Pixel Imaging}.
+\newblock 2011.
+
+\bibitem{Tian}
+Zhi Tian and Georgios~B Giannakis.
+\newblock {A Wavelet Approach to W ' ideband Spectrum Sensilng for Cognit ' ive
+  Rad ' ios Known \~{} Bni1}.
+\newblock In {\em Cognitive Radio Oriented Wireless Networks and
+  Communications, 2006. 1st International Conference on}.
+
+\bibitem{tian2006wavelet}
+Zhi Tian and Georgios~B Giannakis.
+\newblock A wavelet approach to wideband spectrum sensing for cognitive radios.
+\newblock In {\em Cognitive radio oriented wireless networks and
+  communications, 2006. 1st international conference on}, pages 1--5. IEEE,
+  2006.
+
+\bibitem{Tibshirani1996}
+R~Tibshirani.
+\newblock {Regression shrinkage and selection via the lasso}.
+\newblock {\em Journal of the Royal Statistical Society. Series B ( \ldots},
+  58(1):267--288, 1996.
+
+\bibitem{tropp2006relax}
+Joel~A Tropp.
+\newblock Just relax: Convex programming methods for identifying sparse signals
+  in noise.
+\newblock {\em Information Theory, IEEE Transactions on}, 52(3):1030--1051,
+  2006.
+
+\bibitem{tropp2007signal}
+Joel~A Tropp and Anna~C Gilbert.
+\newblock Signal recovery from random measurements via orthogonal matching
+  pursuit.
+\newblock {\em Information Theory, IEEE Transactions on}, 53(12):4655--4666,
+  2007.
+
+\bibitem{Tropp2007}
+Joel~A Tropp and Anna~C Gilbert.
+\newblock {Via Orthogonal Matching Pursuit}.
+\newblock 53(12):4655--4666, 2007.
+
+\bibitem{tropp2010beyond}
+Joel~A Tropp, Jason~N Laska, Marco~F Duarte, Justin~K Romberg, and Richard~G
+  Baraniuk.
+\newblock Beyond nyquist: Efficient sampling of sparse bandlimited signals.
+\newblock {\em Information Theory, IEEE Transactions on}, 56(1):520--544, 2010.
+
+\bibitem{Wadayama}
+Tadashi Wadayama.
+\newblock An analysis on non-adaptive group testing based on sparse pooling
+  graphs.
+\newblock In {\em Information Theory Proceedings (ISIT), 2013 IEEE
+  International Symposium on}, pages 2681--2685. IEEE, 2013.
+
+\bibitem{wakin2006architecture}
+Michael~B Wakin, Jason~N Laska, Marco~F Duarte, Dror Baron, Shriram Sarvotham,
+  Dharmpal Takhar, Kevin~F Kelly, and Richard~G Baraniuk.
+\newblock An architecture for compressive imaging.
+\newblock In {\em Image Processing, 2006 IEEE International Conference on},
+  pages 1273--1276. IEEE, 2006.
+
+\bibitem{wen2013improved}
+Jinming Wen, Xinen Zhu, and Di-Jie Li.
+\newblock Improved bounds on restricted isometry constant for orthogonal
+  matching pursuit.
+\newblock {\em Electronics Letters}, 49(23):1487--1489, 2013.
+
+\bibitem{xie2009optimal}
+Shujing Xie, Lianfeng Shen, and Jishun Liu.
+\newblock Optimal threshold of energy detection for spectrum sensing in
+  cognitive radio.
+\newblock In {\em Wireless Communications \& Signal Processing, 2009. WCSP
+  2009. International Conference on}, pages 1--5. IEEE, 2009.
+
+\bibitem{ye2007spectrum}
+Zhuan Ye, John Grosspietsch, and Gokhan Memik.
+\newblock Spectrum sensing using cyclostationary spectrum density for cognitive
+  radios.
+\newblock In {\em Signal processing systems, 2007 IEEE workshop on}, pages
+  1--6. IEEE, 2007.
+
+\bibitem{Yedidia2011}
+Jonathan~S. Yedidia.
+\newblock {Message-Passing Algorithms for Inference and Optimization}.
+\newblock {\em Journal of Statistical Physics}, 145(4):860--890, October 2011.
+
+\bibitem{yucek2009survey}
+Tevfik Y{\"u}cek and H{\"u}seyin Arslan.
+\newblock A survey of spectrum sensing algorithms for cognitive radio
+  applications.
+\newblock {\em Communications Surveys \& Tutorials, IEEE}, 11(1):116--130.
+
+\bibitem{Zhang2011b}
+Huazi Zhang, Zhaoyang Zhang, and Yuen Chau.
+\newblock {Distributed compressed wideband sensing in Cognitive Radio Sensor
+  Networks}.
+\newblock In {\em 2011 IEEE Conference on Computer Communications Workshops,
+  INFOCOM WKSHPS 2011}, pages 13--17, 2011.
+
+\bibitem{zhang2011adaptive}
+Shibing Zhang and Zhihua Bao.
+\newblock An adaptive spectrum sensing algorithm under noise uncertainty.
+\newblock In {\em Communications (ICC), 2011 IEEE International Conference on},
+  pages 1--5. IEEE, 2011.
+
+\end{thebibliography}

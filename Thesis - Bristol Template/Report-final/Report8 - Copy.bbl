@@ -1,0 +1,135 @@
+\begin{thebibliography}{10}
+
+\bibitem{Aldridge2013}
+M.~Aldridge, L.~Baldassini, and I.~T. Jun.
+\newblock {Group testing algorithms : bounds and simulations}.
+\newblock 2013.
+
+\bibitem{Aldroubi}
+A.~Aldroubi, H.~Wang, and K.~Zarringhalam.
+\newblock {Sequential adaptive compressed sampling via huffman codes}.
+\newblock pages 1--19.
+
+\bibitem{Baldassini2013}
+L.~Baldassini.
+\newblock {The Capacity of Adaptive Group Testing}.
+\newblock pages 2676--2680, 2013.
+
+\bibitem{Baron2010}
+D.~Baron.
+\newblock {Bayesian compressive sensing via belief propagation}.
+\newblock {\em Signal Processing, IEEE \ldots}, 58(1):269--280, 2010.
+
+\bibitem{Burbidge2007}
+E.~Burbidge and P.~Levine.
+\newblock {Cognitive Radio Technology A Study for Ofcom – Summary Report}.
+\newblock (1):1--24, 2007.
+
+\bibitem{Candes2007}
+E.~Cand\`{e}s and J.~Romberg.
+\newblock {Sparsity and incoherence in compressive sampling}.
+\newblock {\em Inverse Problems}, 23(3):969--985, June 2007.
+
+\bibitem{Emma}
+E.~Cand\`{e}s and T.~Tao.
+\newblock {Decoding by Linear Programming}.
+\newblock {\em IEEE Transactions on Information Theory}, 51(12):4203--4215,
+  2005.
+
+\bibitem{Candes2006}
+E.~J. Candes, J.~Romberg, and T.~Tao.
+\newblock {Robust uncertainty principles: exact signal reconstruction from
+  highly incomplete frequency information}.
+\newblock {\em IEEE Transactions on Information Theory}, 52(2):489--509, 2006.
+
+\bibitem{Chan2011}
+C.~L. Chan, P.~H. Che, S.~Jaggi, and V.~Saligrama.
+\newblock {Non-adaptive probabilistic group testing with noisy measurements:
+  Near-optimal bounds with efficient algorithms}.
+\newblock In {\em 2011 49th Annual Allerton Conference on Communication,
+  Control, and Computing (Allerton)}, pages 1832--1839. Ieee, Sept. 2011.
+
+\bibitem{Chen1998}
+S.~S. Chen, D.~L. Donoho, and M.~a. Saunders.
+\newblock {Atomic Decomposition by Basis Pursuit}.
+\newblock {\em SIAM Journal on Scientific Computing}, 20(1):33--61, Jan. 1998.
+
+\bibitem{Donoho2006}
+D.~L. Donoho.
+\newblock {Compressed sensing}.
+\newblock {\em IEEE Transactions on Information Theory}, 52(4):1289--1306,
+  2006.
+
+\bibitem{Donoho2006a}
+D.~L. Donoho.
+\newblock {For Most Large Underdetermined Systems of Linear Equations Is Also
+  the Sparsest Solution}.
+\newblock {\em Communications on Pure and Applied Mathematics}, 59:797--829,
+  2006.
+
+\bibitem{Donoho}
+D.~L. Donoho, J.~M. Santos, and J.~M. Pauly.
+\newblock {Compressed Sensing MRI}.
+\newblock (March 2008):72--82.
+
+\bibitem{Dorfman1943}
+R.~Dorfman.
+\newblock {The Detection of Defective Members of Large Populations}.
+\newblock {\em The Annals of Mathematical Statistics}, 14(4):436--440, 1943.
+
+\bibitem{Duarte2008}
+M.~Duarte, M.~Davenport, D.~Takhar, J.~Laska, K.~Kelly, and R.~Baraniuk.
+\newblock {Single-Pixel Imaging via Compressive Sampling}.
+\newblock {\em IEEE Signal Processing Magazine}, 25(2):83--91, Mar. 2008.
+
+\bibitem{Ghozzi2006}
+M.~Ghozzi, F.~Marx, M.~Dohler, and J.~Palicot.
+\newblock {Cyclostatilonarilty-Based Test for Detection of Vacant Frequency
+  Bands}, 2006.
+
+\bibitem{Hwang1972}
+F.~K. Hwang.
+\newblock {Method for Detecting All Defective by Members Group in a
+  Population}.
+\newblock {\em Journal of the American Statistical Association},
+  67(339):605--608, 1972.
+
+\bibitem{Ji2008}
+S.~Ji, Y.~Xue, and L.~Carin.
+\newblock {Bayesian Compressive Sensing}.
+\newblock {\em IEEE Transactions on Signal Processing}, 56(6):2346--2356, June
+  2008.
+
+\bibitem{Manor}
+R.~Manor.
+\newblock uk-frequency-allocations.pdf.
+
+\bibitem{Ukmobil}
+B.~News.
+\newblock {UK mobile phone auction nets billions}.
+
+\bibitem{Tian}
+Z.~Tian and G.~B. Giannakis.
+\newblock {A Wavelet Approach to W ' ideband Spectrum Sensilng for Cognit ' ive
+  Rad ' ios Known \~{} Bni1}.
+\newblock In {\em Cognitive Radio Oriented Wireless Networks and
+  Communications, 2006. 1st International Conference on}.
+
+\bibitem{Tibshirani1996}
+R.~Tibshirani.
+\newblock {Regression shrinkage and selection via the lasso}.
+\newblock {\em Journal of the Royal Statistical Society. Series B ( \ldots},
+  58(1):267--288, 1996.
+
+\bibitem{Tropp2007}
+J.~A. Tropp and A.~C. Gilbert.
+\newblock {Via Orthogonal Matching Pursuit}.
+\newblock 53(12):4655--4666, 2007.
+
+\bibitem{Yucek2009}
+T.~Yucek and H.~Arslan.
+\newblock {A survey of spectrum sensing algorithms for cognitive radio
+  applications}.
+\newblock {\em IEEE Communications Surveys Tutorials}, 11(1):116--130, 2009.
+
+\end{thebibliography}

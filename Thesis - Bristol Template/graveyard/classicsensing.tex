@@ -1,0 +1,24 @@
+\subsection{Classical Sensing}
+Classically, for perfect signal reconstruction, we must sample a signal such that the sampling rate must be at least twice the maximum frequency in the bandlimited signal. The continuous time signal can then be recovered using an appropriate reconstruction filter (e.g. a sinc filter). For example, we can represent a sampled continuous signal as a multiplication of the signal with a train of Dirac delta functions at multiples of the sampling period T.
+%
+\begin{equation}
+x\left(nT\right) = \Sh\left(t-nT\right)x\left(t\right)
+\end{equation}
+%
+where
+%
+\begin{equation}
+\Sh\left(t-nT\right) = \sum_{k=-\infty}^{\infty} \delta\left(t - kT\right)
+\end{equation}
+
+Working the frequency domain, this multiplication becomes convolution (which is equivalent to shifting):
+
+\begin{equation}
+\hat{X}_{s}\left(f\right) = \sum_{k=-\infty}^\infty x\left(t - kT\right)
+\end{equation}
+
+Thus if the spectrum of the frequency is supported on the interval \(\left(-B, B\right)\) then sampling at intervals \(\frac{1}{2B}\) will contain enough information to reconstruct the signal \(x(\left(t\right)\). Multiplying the spectrum by a rectangle function (low-pass filtering), to remove any images caused by the periodicity of the function, and the signal \(x(\left(t\right)\) can be reconstructed from its samples:
+
+\begin{equation}
+x\left(t\right) = \sum_{n=-\infty}^\infty x\left(nT\right) sinc\left(\frac{t_nT}{T}\right)
+\end{equation}

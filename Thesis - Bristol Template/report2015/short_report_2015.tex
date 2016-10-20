@@ -1,0 +1,194 @@
+\documentclass{article}
+\bibliographystyle{plain}
+\input{macros}
+\usepackage[toc,page]{appendix}
+
+\title{End of Year Report}
+\author{Tom Kealy}
+
+\begin{document}
+\maketitle
+\section{Summary}
+\begin{itemize}
+\item Extending the DADMM algorithm to composite functions. We extended the framework of \cite{mota2013d} to functions of the form \(l\left(x\right) + r\left(x\right)\) by applying making use of dummy variables at each node. This led to a considerably faster algorithm, and allowed many results from centralised algorithms to be applied directly.
+\item Providing new, clearer, proofs of the edge decomposition of the Lagrangian from \cite{mota2013d}. 
+\item De-noising OFCOM spectrum data. We have applied centralised ADMM to data supplied by OFCOM, and found that Haar wavelets did make an appropriate model for the signal.
+\item Extending the Modulated Wideband Converter to model signals composed of rectangles. This has not been a straightforward success - we have used various transforms to sprasify the signal (including Haar Wavelet and discrete derivative). we have had only limited success with the convergence of DADMM to Haar wavelets, but it does perform well with discrete derivatives and spline coefficients. 
+\end{itemize}
+
+\section{Results} \label{sec:results}
+We have chosen a distributed model, based upon the Modulated Wideband Converter \cite{mishali2010theory} \cite{Zhang2011b}, 
+
+\begin{equation}
+\textbf{y} = \textbf{A}\textbf{x} + \vec{w}
+\label{system}
+\end{equation}
+
+where \(\textbf{y}\) contains the output of the measurement process, and \(\textbf{A}\) is a product matrix of the mixing functions, their Fourier coefficients, a partial Fourier Matrix, and a matrix of channel coefficients. \(\textbf{x}\) is the vector of unknown samples of \(x\left(t\right)\). 
+
+i.e. \(\textbf{A}\) can be written: 
+
+\begin{equation}
+\textbf{A}^{m\times L} = \textbf{S}^{m\times L} \textbf{F}^{L\times L} \textbf{D}^{L \times L} \textbf{H}^{L \times L}
+\end{equation}
+
+The system  \ref{system} can then be solved (in the sense of finding the sparse vector \(\vec{x}\) by convex optimisation via minimising the objective function:
+
+\begin{equation}
+\frac{1}{2}\|\textbf{Ax}-\textbf{y}\|_2^2 + \lambda \|\textbf{x}\|_1
+\label{opt}
+\end{equation}
+
+where \(\lambda\) is a parameter chosen to promote sparsity. Larger \(\lambda\) means sparser \(\vec{x}\). 
+
+We model the network of sensors as an undirected graph \(G = \left(V,E\right)\), where \(V = \{1 \ldots J\}\) is the set of vertices, and \(E = V \times V\) is the set of edges. An edge between nodes \(i\) and \(j\) implies that the two sensors can communicate. The set of nodes that node \(i\) can communicate with is written \(\mathcal{N}_i\) and the degree of node \(i\) is \(D_i = |\mathcal{N}_i|\). 
+
+Individually nodes make the following measurements (as discussed in section \ref{sec:sensingmodel}):
+
+\begin{equation}
+\vec{y}_p = \vec{A}_p\vec{x} + \vec{n}_p
+\end{equation}
+
+where \(\vec{A}_p\) is the \(p^{th} \) row of the sensing matrix from \eqref{system}, and the system \eqref{system} is formed by concatenating the individual nodes' measurements together.
+
+We assume that a proper colouring of the graph is available: that is, each node is assigned a number from a set \(C = \{1 \ldots c \} \), and no node shares a colour with any neighbour. This is so that nodes may communicate in colour order, as opposed to communicating individually thus reducing the total number of communication rounds required. 
+
+To find the minimum of \ref{opt}, we used the following program:
+
+\begin{thm}
+\begin{align}
+x_j^{k+1} &:= \left(A_j^TA_j + (\rho D_J + 1) I\right)^{-1}\left(A_j^Ty_j +  z^k - \nu^{kT}\right)\\
+z_j^{k+1} &:= S_{\beta/\rho}\left(x_j^{k+1} \right)
+ \\
+\theta_j^{k+1} &:= \theta_j^{k} + \rho \left(x^{k+1}-z^{k+1}\right) \\
+\eta_j^{k+1} &:= \eta_j^k + \rho\left(\sum_{m \in N_j} z_m^k - z_j^k\right)
+\label{dadmm_algo_lasso}
+\end{align}
+\end{thm}
+
+ We simulated \eqref{system} with a wideband signal of 201 channels and a network of 50 nodes (i.e. the signal will be sampled at a 1/4 of rate predicted by Nyquist theory). The mixing patterns were generated from iid Gaussian sources (i.e the matrix S had each entry drawn from an iid Gaussian source). Monte Carlo simulations were performed at SNR values ranging from 5 to 20, and the expected Mean Squared Error (MSE) of solutions of a centralised solver (spgl1) and a distributed solver (ADMM) were calculated over 10 simulations per SNR value. The results can be seen in fig (\ref{msevssnr1}). 
+
+The MSE was calculated as follows:
+
+\begin{equation}
+\frac{\vectornorm{Z^k - Z*}}{\vectornorm{Z*}}
+\end{equation}
+
+where \(Z^k\) is the result of the algorithm at iteration \(k\), and \(Z^*\) is the optimal solution.
+
+These results indicate that for both centralised and distributed solvers, adding noise to the system results in a degrading of performance. Interestingly note, that the distributed solver seems to (slightly) outperform the centralised solver at all SNRs. This is counter-intuitive, as it would be expected that centralised solvers knowing \textit{all} the available information would outperform distributed solutions. We conjecture that the updates described in section \eqref{sec:opt-on-graphs}, take into account differences in noise across the network. The distributed averaging steps, which form the new prior for each node, then penalise updates from relatively more noisy observations. This corroborates observations from \cite{bazerque2008}.
+
+This observation is (partially) confirmed in figure (\ref{erroriterations}), which plots the progress of the centralised and distributed solvers (as a function of iterations) towards the optimum solution. The SNR is 0.5 (i.e the signal is twice as strong as the noise). Note that after around 300 iterations, the MSE of the distributed solver is consistently below that of the centralised solver.
+
+We have also extended the framework of \cite{mishali2010theory} to linear transforms \(z = Tx\), where \(T\) is a Wavelet transform (Haar), Spline, discrete derivative 
+
+\section{Conclusions}
+We have demonstrated an alternating direction algorithm for distributed optimisation with closed forms for the computation at each step, and discussed the statistical properties of the estimation. 
+
+We have simulated the performance of this distributed algorithm for the distributed estimation of frequency spectra, in the presence of additive (white, Gaussian) and multiplicative (frequency flat) noise. We have shown that the algorithm is robust to a variety of SNRs and converges to the same solution as an equivalent centralised algorithm (in relative mean-squared-error).
+
+We plan to work on larger, more detailed, models for the frequency spectra and to accelerate the convergence via Nesterov type methods to smooth the convergence of the distributed algorithm \cite{goldstein2014fast}. Specifically, we seek to dampen the ringing seen in Figure \ref{fig:erroriterations}
+
+\section{Further Work}
+
+\begin{itemize}
+\item Inference via non-reconstruction of signals. 
+Following \cite{davenport2010signal}, we aim to make inferences about the radio spectrum from compressive measurements without ever performing the inversion. This is done by constructing an appropriate projection matrix and then computing the inner product of the result with a known dictionary.
+We aim to do this inference over a network, with distributed measurements as in \ref{system} in the Results section. The main difficulty will be in constructing an appropriate projection matrix, and an appropriate dictionary for the spectrum sensing problem.
+\item Referees comments. There are still some comments from the Referees report from our submission to GLOBECOM which need to be addressed.
+\end{itemize}
+
+\begin{appendices}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{ebn0bbvsmse10ppnoH1logs.jpg}
+\caption{Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers}
+\label{msevssnr0}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{ebn0bbvsmse100ppwithH.jpg}
+\caption{Mse vs SNR for the sensing model, showing the performance of distributed and centralised solvers}
+\label{msevssnr1}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{different_lambda.jpg}
+\caption{The progress of the distributed solver as a function of the number of iterations, with different values of the regression parameter \(\lambda\)}
+\label{fig:differentLambda}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{mse_iterations.jpg}
+\caption{The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}
+\label{fig:erroriterations}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{recon_spline.jpg}
+\caption{The reconstruction of spline coefficients from compressive measurements (cyan) against the true spectrum.}
+\label{fig:spline_recon}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{steps.jpg}
+\caption{The progress of a distributed solver reconstructing Haar wavelet coefficients as a function of the number of iterations. The value of \( \lambda = \sqrt{40*\log{256}}\)}
+\label{fig:steps_wavelets}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{recon170815.jpg}
+\caption{One reconstruction of a simulated spectra from estimated Haar wavelet coefficients.}
+\label{fig:wavelet_recon}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{recon_new_bar.jpg}
+\caption{Another reconstruction of a simulated spectra from estimated Haar wavelet coefficients. This spectra does not have a band edge at a power of 2, and so the reconstruction is qualitatively worse.}
+\label{fig:wavelet_recon_no_pwer_2}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{recon_difference.jpg}
+\caption{Reconstruction of the discrete derivative of the a simulated signal. Original signal in blue and reconstruction in cyan.}
+\label{fig:erroriterations}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{steps_difference.jpg}
+\caption{The progress of a distributed solver reconstructing the discrete derivative as a function of the number of iterations. The value of \( \lambda = 10\sqrt{2*\log{256}}\)}
+\label{fig:steps_difference}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{steps_splines.jpg}
+\caption{The progress of a distributed solver reconstructing the spline coefficients as a function of the number of iterations. The value of \( \lambda = 2.5\sqrt{2*\log{256}}\)}
+\label{fig:steps_splines}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{real_reconstruction.jpg}
+\caption{The de-noising of Ofcom spectrum data. In blue is the noisy data, and red the reconstruction from Haar wavelets.}
+\label{fig:steps_splines}
+\end{figure}
+
+\end{appendices}
+
+\bibliography{cswireless2}
+
+
+
+\end{document}

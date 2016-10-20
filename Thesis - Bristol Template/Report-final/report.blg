@@ -1,0 +1,33 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: report.aux
+The style file: abbrv.bst
+White space in argument---line 9 of file report.aux
+ : \citation{BBC
+ :               News}
+I'm skipping whatever remains of this command
+Database file #1: SummerProject.bib
+Repeated entry---line 357 of file SummerProject.bib
+ : @article{Candes2006
+ :                    ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Y"
+Warning--I didn't find a database entry for "singlepixelimaging"
+Warning--I didn't find a database entry for "Atia2008"
+Warning--I didn't find a database entry for "Mishchali2010"
+Warning--I didn't find a database entry for "Mischali2010"
+Warning--I didn't find a database entry for "Aldrouobi"
+Warning--I didn't find a database entry for "Wadayma2013"
+Warning--empty journal in Aldridge2013
+Warning--empty journal in Aldroubi
+Warning--empty year in Aldroubi
+Warning--empty journal in Baldassini2013
+Warning--empty journal in Burbidge2007
+Warning--there's a number but no volume in Burbidge2007
+Warning--empty journal in Candes2006
+Warning--empty journal in Donoho
+Warning--there's a number but no volume in Donoho
+Warning--empty year in Donoho
+Warning--empty journal in Strategy2013
+Warning--there's a number but no volume in Strategy2013
+Warning--empty year in Tian
+Warning--empty journal in Tropp2007
+(There were 2 error messages)

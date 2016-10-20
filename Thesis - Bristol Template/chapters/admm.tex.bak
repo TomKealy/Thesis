@@ -1,0 +1,732 @@
+\section{Introduction}\label{chap:admm}
+
+This chapter surveys the Alternating Direction Method of Multipliers (ADMM). This is an efficient convex algorithm for inference in high dimensional problems and can be applied to inverting the compressive samples, producing accurate estimates of the original signal. 
+
+We begin (in section \eqref{sec:admm}) by introducing the algorithm, the type of problem for which it is an appropriate tool, and the algorithm's history. In particular we make connections with MAP estimation in high dimensional statistics. We discuss two worked examples: finding the minimal norm solution of a set of linear equations, and the Least Absolute Shrinkage and Selection Operator. The first example is to give a simple introduction to ADMM via a well known result, whilst the second is particularly relevant to compressive sensing. 
+
+In section \eqref{sec:prox}, We move on from the examples, to a more advanced discussion where we formalise the proximity operator. The Prox operator is a generalisation of the Euclidean projection, and can be evaluated for a variety of common optmisation objectives. The evaluation is either directly in closed form, or via a simple to evaluate component-wise algorithm. The proximity operator moves the objective in the direction of the minimiser, and thus can be thought of a generalisation of gradient descent. WE show some examples of how to compute the proximity operator, for functions which appear in statistical estimation. We also show its connection to ADMM - the algorithm proceeds by iteratively computing the Prox operators (see definition \eqref{def:prox_operator}) of the two functions comprising the objective. This is why it is such an useful algorithm: if the relevant proximity operators are easy to evaluate, then ADMM is an inexpensive and relatively fast algorithm.
+
+Finally, we discuss acceleration techniques for ADMM, in section \eqref{sec:accel}. In particular, we discuss schemes by Nesterov for non-smooth functions. We show that generalised gradient descent can be thought of as constructing an approximating polynomial to the objective term by term. By considering Chebyshev polynomials, we can improve the speed of approximation accuracy and that this is the reason that Nesterov acceleration works.
+
+\section{ADMM}\label{sec:admm}
+
+ADMM is a convex optimisation algorithm which splits large, and typically non-smooth, problems into smaller pieces which are easier to handle. At heart, the algorithm involves finding a zero of a convex objective function, by evaluating proximal operators \cite{parikh2014proximal}, see definition \ref{def:prox_operator}. 
+
+ADMM has a long history, first being investigated by Rockarfellar \cite{rockafellar1976monotone}, in the context of minimisation in Hilbert spaces - finite and infinite dimensional vector spaces equipped with an inner product and a metric induced by the inner product, typical examples include \(\re^n\), the space of \(n\)-dimensional Euclidean vectors, and \(\mathbb{L}^2\left(\re\right)\), the space of square-integrable functions over the reals. Douglas and Rachford \cite{douglas1956numerical} also investigated ADMM as a method for solving the heat equation. Subsequently the theory was generalised and extended by Eckstein and Bersekas \cite{eckstein1992douglas}.
+
+ADMM has found applications in Sparse Coding \cite{Bristow2014}, Compressive Radar Imaging \cite{heredia2015consensus}, Medical Imaging \cite{sawatzky2014proximal}, and Optimal Control \cite{o2013splitting}. This is because many optimisation objective functions can be formulated as a sum of simpler convex functions, and casting the problem in an alternating minimisation framework is straightforward for practitioners.
+
+ADMM also has explicit convergence rates, 
+(see \cite{Shi2013}, and \cite{nishihara2015general}), which both show (through different methods), that in every step of the algorithm, the iterates moves towards the optimum by a factor of \(1-1/k\), where \(k\) is iteration number.
+
+ADMM as lo has well understood methodologies for tuning and acceleration, \cite{ghadimi2015optimal} shows how to choose optimal step-sizes from  and \cite{goldstein2014fast} extends the algorithm to an accelerated version and gives quantitative guarantees on the convergence properties. 
+
+However, care must be taken when the problem is posed as the sum of more than two convex functions - the direct extension is not necessarily convergent: the paper of Chen\cite{chen2016direct}, shows that ADMM applied to the sum of three functions will not necessarily converge.
+
+We begin by defining closed proper convex functions:
+
+\begin{definition}[Convexity]
+We say that a function \(f\) is \textbf{convex} is it satisfies the following inequality:
+
+\begin{equation}
+f\left(\lambda x_1 + \left(1-\lambda\right)x_2\right) \leq \lambda f\left(x_1\right) + \left(1-\lambda\right) f\left(x_2\right)
+\end{equation}
+
+This can be rephrased as:
+
+\begin{equation}
+f\left(\ep{x}\right) \leq \ep{f\left(x\right)}
+\end{equation}
+
+An intuitive physical metaphor for convexity can be found in MacKay \cite{mackay2003information}: if a collection of masses \(x_i\) are placed on a convex curve \(f\), then the centre of gravity of those masses, which lies at \(\left(\ep{x}, \ep{f\left(x\right)}\right)\) lies above the curve.
+\end{definition}
+
+A slightly stronger condition is that of strong convexity:
+
+\begin{definition}[Strong convexity]
+A function \(f: \re^n \rightarrow \re\) is said to be \(l\)-strongly convex if for some \(l > 0\) it satisfies:
+
+\begin{equation}
+f\left(y\right) \geq f\left(x\right) + \nabla f\left(x\right)^T \left(y-x\right) + \frac{l}{2}\vectornorm{x-y}^2
+\end{equation}
+
+\end{definition}
+
+\begin{definition}[Closed function]
+A function \(f: \re^n \rightarrow \re\) is said to be \textbf{closed} if \(\forall \alpha\) the sublevel set
+
+\begin{equation}
+\{x \in \mathrm{dom} f \mid f\left(x\right)\leq \alpha\}
+\end{equation}
+
+is closed
+
+\end{definition}
+
+\begin{definition}[Proper function]
+A function \(f\) is said to be \textbf{proper}, if \(f\) has the property  that\(f\left(x\right) < \infty\) for at least one \(x\) and \(f\left(x\right)>-\infty\) for all \(x\).
+\end{definition}
+
+\begin{definition}[Closed, Proper convex function]
+A function is said to be a \textbf{closed, proper convex function} is it is covex, proper and closed.
+\end{definition}
+
+In this thesis the type of functions we are minimising, are closed, proper convex with Lipchitz continuous gradients. 
+
+\begin{definition}
+A function is said to have \textbf{Lipchitz continuous gradients} if its derivative satisfies:
+\begin{equation}
+\vectornorm{\nabla f\left(x\right) - \nabla f\left(y\right)} \leq L \vectornorm{x - y}
+\end{equation}
+
+\end{definition}
+
+We will make use of the following definitions in passing in the following text, so it is useful to have them here:
+
+\begin{definition}[Convex conjugate]
+
+The function \(f^*: \re^n \rightarrow \re\) is the \textbf{convex conjugate} of the function \(f: \re^n \rightarrow \re\) is:
+
+\begin{equation}
+f^*\left(y\right) = \sup_{x \in \mathrm{dom} f} \left(y^Tx - f\left(x\right)\right)
+\end{equation}
+
+\end{definition}
+
+and finally we define the condition number of \(f\):
+
+\begin{definition}[Condition number]
+The \textbf{condition number} of a closed, proper, and convex function \(f\) is defined to be:
+
+\begin{equation}
+\kappa = \frac{L}{l}
+\end{equation}
+
+where \(L\) is the Lipchitz constant, and \(l\) is the strong convexity constant.
+
+\end{definition}
+
+ADMM is concerned with minimising a the sum of two functions, subject to a constraint:
+
+\begin{align}
+\argmin_{x} f\left( x \right) + g\left(z\right) \nonumber
+\\
+\text{s.t } Ux + Vz = c
+\label{admm}
+\end{align}
+
+where \(f\) and \(g\) are assumed to be convex functions with range in \(\re\), \(U \in \re^{p \times n}\) and \(V\in \re^{p \times m}\) are matrices (not assumed to have full rank), and \(c \in \re^p\).
+
+\begin{definition}[Lagrangian]
+In constrained optimisiation, where a smooth function is minimised subject to constraints:
+
+\begin{eqnarray}
+\min_x f\left(x\right) \\
+\text{s.t } g\left(x\right) = b
+\end{eqnarray}
+
+we define the Lagrangian to be the function:
+
+\begin{equation}
+L\left(x, \eta\right) = f\left(x\right) + \eta^T\left(b-g\left(x\right)\right)
+\end{equation}
+
+The variable \(x\) is refereed to as the primal variable.
+
+\end{definition}
+
+\begin{definition}[Lagrange Dual]
+The Lagrange dual function is defined to be:
+
+\begin{equation}
+H\left(\eta\right) = \inf_x L\left(x, \eta\right)
+\end{equation}
+
+\end{definition}
+
+\begin{definition}[Lagrange Multiplier]
+The Lagrange multiplier \(\eta\) is defined as:
+
+\begin{equation}
+\frac{\partial L}{\partial b} = \eta
+\end{equation}
+
+That is the Lagrange multiplier is the rate of change of the quantity being optimised as a function of the constraint parameter.
+
+\end{definition}
+
+\begin{example}[One dimensional contrained optimisation \cite{Boyd2010a}]
+For the minimisation problem 
+
+\begin{eqnarray}
+\min_x f\left(x\right) \\
+\text{s.t } Ax = b
+\end{eqnarray}
+
+The Lagrangian is:
+
+\begin{equation}
+L\left(x, \eta\right) = f\left(x\right) + \eta^T\left(Ax - b\right)
+\end{equation}
+
+and the dual function is:
+
+\begin{equation}
+H\left(\eta\right) = -f^*\left(-A^T\eta\right) = b^Ty
+\end{equation}
+
+where \(f^*\) is the convex conjugate of \(f\).
+
+\end{example}
+
+ADM consists of iteratively minimising the augmented Lagrangian 
+
+\begin{align*}
+L_p\left(x, z, \eta\right) = f\left( x\right) +& g\left(z\right)+\eta^T\left(Ux+Vz-c\right) + \frac{\rho}{2}\|Ux+Vz-c\|_2^2
+\label{admm_aug_lagrangian}
+\end{align*}
+
+where, \(x,z\) are the primal variables, \(\eta\) is a Lagrange multiplier (or dual variable), and \(\rho\) is a parameter we can choose to make \(g(z)\) smooth \cite{nesterov2005smooth}.
+
+To perform the minimisiation of the Lagrangian we use the following iterations:
+
+\begin{align}
+x^{k+1} &:= \argmin_{x} L_\rho\left(x,z^k,\eta^k\right)\\
+z^{k+1} &:= \argmin_{z} L_\rho\left(x^{k+1},z,\eta^k\right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(Ux^{k+1} + Vz^{k+1} - c\right)
+\label{admm_algo}
+\end{align}
+
+The first two steps are primal variable updates, and the second step is a dual variable update. We illustrate this second step again with a one dimensional example:
+
+\begin{example}[Dual Ascent]
+
+For the minimisation problem 
+
+\begin{eqnarray}
+\min_x f\left(x\right) \\
+\text{s.t } Ax = b
+\end{eqnarray}
+
+The Lagrangian is:
+
+\begin{equation}
+L\left(x, \eta\right) = f\left(x\right) + \eta^T\left(Ax - b\right)
+\end{equation}
+
+and the dual function is:
+
+\begin{equation}
+H\left(\eta\right) = -f^*\left(-A^T\eta\right) = b^Ty
+\end{equation}
+
+where \(f^*\) is the convex conjugate of \(f\).
+
+The dual problem is:
+
+\begin{equation}
+\max_{\eta} H\left(\eta\right)
+\end{equation}
+
+We can find an optimum pair of points by gradient ascent. First we find a point \(x^+ = \argmin_x L\), and then we have \(\nabla g = Ax^+ - b\), which is the residual for the equality constraint. The dual ascent method is:
+
+\begin{align}
+x^{k+1} &:= \argmin_x L\\
+\eta^{k+1} &:= \eta^{k} + \alpha \left(Ax^{k+1} -b \right)
+\label{dual-ascent}
+\end{align}
+
+where \(\alpha\) is a step size.
+
+The \(\eta\) variable can be interpreted as a vector of prices, that an agent must pay in order to satisfy the optimisation problem. Thus the second step in dual ascent (and the final step in ADMM) can be interpreted as a price update.
+
+\end{example}
+
+The alternating minimisation works because of the decomposability of the objective function: the \(x\) minimisation step is independent of the \(z\) minimisation step and vice versa.  
+
+\begin{example}[Minimum norm solution of a Linear Equation]
+Consider the following problem, of finding the minimum norm solution of a linear system:
+
+\begin{eqnarray}
+\min_x \vectornorm{x}_2\\
+\text{s.t } Ax = y
+\end{eqnarray}
+
+where \(x \in \re^n\), \(y \in \re^n\), \(A \in \re^{n \times n}\) and we implicitly assume that \( y = Ax\) has a solution and thay \(y\) is in the range of \(A\). 
+
+This problem has the well known optimal solution:
+
+\begin{equation}
+x^{\star} = A^T \left(AA^T\right)^{-1}y
+\end{equation}
+
+This problem can be formulated as
+
+\begin{eqnarray}
+\min_x \vectornorm{x}_2 + \mathbb{I}\left(y\right) \\
+\text{s.t } Ax - y = 0
+\end{eqnarray}
+
+The Lagrangian for this example, is then:
+
+\begin{align*}
+L_p\left(x, y, \eta\right) = \vectornorm{x}_2 + \mathbb{I}\left(y\right)+\eta^T\left(Ax-y\right) + \frac{\rho}{2}\vectornorm{Ax-y}_2^2
+\label{minl2_aug_lagrangian}
+\end{align*}
+
+and the ADMM iterations are:
+
+\begin{align}
+x^{k+1} &:= \left(1-\frac{\rho}{\vectornorm{x^{k}}_2}\right)x^{k}\\
+z^{k+1} &:= \Pi\left(x^{k+1}\right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(Ax^{k+1} + y^{k+1}\right)
+\label{minl2_algo}
+\end{align}
+\end{example}
+
+We now illustrate the theory with a more involved example, the LASSO.
+
+\begin{example}[LASSO]
+Given a set of measurements of the form
+
+\begin{equation}
+y = Ax + n 
+\end{equation}
+
+where \(x \in \re^n\) is an \(s\)-sparse vector we wish to recover, \(y \in \re^m\) is a set of noisy measurements, \(A \in \re^{m \times n}\) is a design or measurement matrix such that \(x\) is not in the null-space of \(A\), and \(z \in \re^m\) is AGWN. The signal \(x\) can be recovered by  minimising the objective function:
+
+\begin{equation}
+L = \frac{1}{2} \vectornorm{Ax-y}_2^2 + \lambda\vectornorm{x}_1
+\label{LASSO}
+\end{equation}
+
+where \(\lambda\) is a parameter which trades off the reconstruction accuracy and sparsity of \(x\): larger \(\lambda\) means sparser \(x\). 
+
+We also consider the problem:
+
+\begin{equation}
+L = \frac{1}{2} \vectornorm{Ax-y}_2^2 + \lambda\vectornorm{x}_0
+\label{LASSO-L0}
+\end{equation}
+
+where \( \vectornorm{t}_0 = \{ |t| \mid t_i \neq 0 \} \).
+
+The ADMM iterations for LASSO, which can be found by alternately differentiating \eqref{eq:lasso-lagrangian} with respect to \(x\),\(z\) and \(\eta\), are (in closed form):
+
+\begin{align}
+x^{k+1} &:= \left(A^TA + \rho I\right)^{-1}\left(A^Ty +\rho\left( z^k - \eta^k/\rho\right)\right)\\
+z^{k+1} &:= S_{\lambda/\rho}\left(x^{k+1} + \eta^k/\rho\right)
+ \\
+\eta^{k+1} &:= \eta^{k} + \rho\left(x^{k+1}-z^{k+1}\right)
+\label{admm_algo_lasso}
+\end{align}
+
+where \(S_{\lambda/\rho}\left(\circ\right)\) is the soft thresholding operator: \(S_\gamma\left(x\right)_i = \mathrm{sign}(x_i)\left(|x_i| - \gamma\right)^+\).
+
+The individual steps in \eqref{admm_algo_lasso} can be found differentiating \eqref{eq:lasso-lagrangian} with respect to \(x\) and \(z\) as follows:
+
+\begin{align*}
+\frac{\partial L}{\partial x } = -A^T\left(y-Ax\right) + \rho (x-z) + \eta
+\end{align*}
+
+as 
+
+\begin{equation}
+\frac{\partial}{\partial x} \vectornorm{F(x)}_2^2 = 2\left(\frac{\partial}{\partial x} F(x)\right) F(x) 
+\label{dellx}
+\end{equation}
+
+by the chain rule, and \(\partial/\partial x (Ax) = -A^T\) (see the Matrix Cookbook, \cite{petersen2008matrix}) as differentiation exchanges a linear operator with its adjoint.
+
+Setting \eqref{dellx} to zero and collecting like terms:
+
+\begin{equation}
+\left(A^TA + \rho I\right)x = A^Ty + \rho z - \eta
+\end{equation}
+
+so we find the optimal \(x\) is:
+
+\begin{equation}
+x = \left(A^T A + \rho I\right)^{-1}\left(A^Ty + \rho \left( z - \eta/\rho\right)\right)
+\label{optx}
+\end{equation}
+
+note that this estimator is a weighted average of the ordinary least squares estimate (\(A^Ty\)) and a Gaussian prior. This is to be expected, as the minimisation problem w.r.t x is an \(l_2\)-regularised MAP problem.
+
+for \(z > 0\)
+
+\begin{equation}
+\frac{\partial L} {\partial z} = \lambda + \rho (x-z) - \eta
+\label{dellz-positive}
+\end{equation}
+
+from which we obtain:
+
+\begin{equation*}
+z = x + \frac{1}{\rho} ( \eta - \lambda )
+\end{equation*}
+
+since \(z>0\) then \(x + \frac{1}{\rho} ( \eta - \lambda I) > 0\) when \(x + \frac{\eta}{\rho} > \frac{\lambda}{\rho}\).
+
+Similarly for \(z < 0\):
+
+\begin{equation}
+\frac{\partial L} {\partial z} = -\lambda + \rho (x-z) 
+\label{dellz-negative}
+\end{equation}
+
+setting \eqref{dellz-negative} to zero we obtain:
+
+\begin{equation*}
+z = x + \frac{1}{\rho}(\eta + \lambda)
+\end{equation*}
+
+since \(z<0\) then \(x + \frac{1}{\rho} ( \eta + \lambda ) < 0\) when \(x + \frac{\eta}{\rho} < - \frac{\lambda}{\rho}\).
+
+at \(z=0\) we find:
+
+\begin{equation*}
+-\frac{\lambda}{\rho} \leq x + \frac{\eta}{\rho} \leq \frac{\lambda}{\rho}
+\end{equation*}
+
+i.e.
+
+\begin{equation}
+\mid x+ \frac{\eta}{\rho}\mid \leq \frac{\lambda}{\rho}
+\label{zbounds}
+\end{equation}
+
+combining \eqref{dellz-negative}, \eqref{dellz-positive}, \eqref{zbounds} together we find the optimal \(z\) is:
+
+\begin{equation}
+z = \mathrm{sign}(x+\frac{\eta}{\rho})\text{ }\mathrm{max}\left( \mid x+\frac{\eta}{\rho} \mid - \frac{\lambda}{\rho} ,0\right)
+\label{optz}
+\end{equation}
+
+Together \eqref{optx}, \eqref{optz} and the third step of \eqref{admm_algo_lasso} constitute the steps of the ADMM algorithm.
+
+\end{example}
+
+This algorithm has a nice statistical interpretation: it iteratively performs ridge regression, followed by shrinkage towards zero. This is the MAP estimate for \(x\) under a Laplace prior.
+
+The soft-thresholding operator can be derived by considering the MAP estimate of the following model:
+
+\begin{example}
+\begin{equation}
+y = Ax + w
+\end{equation}
+
+where \(x\) is some (sparse) signal, and \(w\) is additive white Gaussian noise. We seek
+
+\begin{equation}
+\hat{x} = \arg\max_x \pr_{x|y}{\left(x|y\right)}
+\end{equation}
+
+This can be recast in the following form by using Bayes rule, noting that the denominator is independent of \(x\) and taking logarithms:
+
+\begin{equation}
+\hat{x} = \arg\max_x \left[\log{\pr_{w}{\left(y-x\right)}}+\log{\pr{\left(x\right)}}\right]
+\label{hatx}
+\end{equation}
+
+The term \(\pr_{n}{\left(y-x\right)}\) arises because we are considering \(x+w\) with \(w\) zero mean Gaussian, with variance \(\sigma_n^2\). So, the conditional distribution of \(y\) (given \(x\)) will be a Gaussian centred at \(x\).
+
+We will take \(\pr{\left(x\right)}\) to be a Laplacian distribution:
+
+\begin{equation}
+\pr{\left(x\right)} = \frac{1}{\sqrt{2}\sigma}\exp{-\frac{\sqrt{2}}{\sigma}|x|}
+\end{equation}
+
+Note that \( f\left(x\right) = \log{\pr_x{ \left( x \right)}} ~ -\frac{\sqrt{2}}{\sigma} |x| \), and so by differentiating \( f'\left(x\right) = -\frac{\sqrt{2}}{\sigma} \mathrm{sign}\left(x\right) \)
+
+Taking the maximum of \ref{hatx} we obtain:
+
+\begin{equation}
+\frac{y-\hat{x}}{\sigma^2_n}-\frac{\sqrt{2}}{\sigma}sign(x) = 0
+\end{equation}
+
+Which leads the soft thresholding operation defined earlier, with \(\gamma = \frac{\sqrt{2}\sigma^2_n}{\sigma}\) as (via rearrangement):
+
+$$
+y =  \hat{x} + \frac{\sqrt{2}\sigma^2_n}{\sigma}\mathrm{sign}\left(x\right)
+$$
+
+or
+
+$$
+\hat{x}\left(y\right) = \mathrm{sign}(y)\left(y - \frac{\sqrt{2}\sigma^2_n}{\sigma}\right)_+
+$$
+
+i.e \(S_\gamma(y)\).
+\end{example}
+
+\section{The Proximity Operator}\label{sec:prox}
+
+In this section we introduce the proximity operator of a closed and proper convex function. We discuss the existence of the operator, and some properties. We then motivate the operator from the perspective of ADMM, before giving some examples.
+
+The Proximity Operator for a closed, convex, and proper function \(f\) (the set of all such functions will be denoted \(\Gamma\) in a Hilbert space \(\mathcal{H}\) is defined as \cite{moreau1965proximite}:
+
+\begin{definition}[Proximity Operator]\label{def:prox_operator}
+\begin{equation}
+\mathrm{Prox}_f\left(y\right) :=  \argmin_{y \in \mathcal{H} } f\left(y\right) + \frac{1}{2}\vectornorm{y-x}^2
+\end{equation}
+\end{definition}
+
+Intuitively the Proximity Operator approximates a point \(x\) by another point \(y\), that is close in the mean-square sense under the penalty \(f\).
+
+The \(\mathrm{Prox}\left(\circ\right)\) operator exists for closed and convex \(f\) as \(\left(y\right) + \frac{1}{2}\vectornorm{y-x}^2\) is closed with compact level sets and is unique as \(\left(y\right) + \frac{1}{2}\vectornorm{y-x}^2\) is strictly convex.
+
+The corresponding Moreau envelope is defined as 
+
+\begin{definition}[Moreau Envelope]
+\begin{equation}
+\mathrm{M}_f\left(y\right) :=  \min_{y \in \mathcal{H}} f\left(y\right) + \frac{1}{2}\vectornorm{y-x}^2
+\end{equation}
+\end{definition}
+
+The Moreau envelope is a strict generalisation of the squared distance function. \(\mathrm{M}_f\) is real valued - even when \(f\) takes the value \(\infty\), whilst \(\mathrm{Prox}_f \) is \(\mathcal{H}\)-valued. 
+
+\subsubsection{Properties}
+\begin{theorem}[Moreau '65]
+Let \(f \in \Gamma\) and \(f^*\) be its Fenchel conjugate. Then the following are equivalent:
+\begin{itemize}
+\item \(z = x+y, y \in \partial f\left(x\right)\)
+\item \(x = \mathrm{Prox}_f\left(z\right), y = \mathrm{Prox}_{f^*}\left(z\right)  \)
+\end{itemize}
+\end{theorem}
+
+\begin{theorem}[\cite{moreau1965proximite}]
+Let \(f \in \Gamma\). Then for all \(z \in \mathcal{H}\)
+\begin{itemize}
+\item \( \mathrm{Prox}_f\left(z\right) + \mathrm{Prox}_{f^*}\left(z\right) = z   \)
+\item \( \mathrm{M}_f\left(z\right)  + \mathrm{M}_{f^*}\left(z\right)  = \frac{1}{2}\vectornorm{z}^2 \)
+\end{itemize}
+\end{theorem}
+
+\begin{theorem}[\cite{moreau1965proximite}]
+The Moreau envelope is (Frechet) differentiable, with 
+\begin{equation}
+\nabla \mathrm{M}_f = Id - \mathrm{Prox}_{f} = \mathrm{Prox}_{f^*}
+\end{equation}
+\end{theorem}
+
+\begin{theorem}[\cite{moreau1965proximite}]
+\( \mathrm{Prox}_f : \left(\mathcal{H}, \vectornorm{\circ}\right) \leftarrow \left(\mathcal{H}, \vectornorm{\circ}\right) \) is 1-Lipchitz continuous.
+\end{theorem}
+
+\subsubsection{Motivation}
+We are solving problems of the following form:
+
+\begin{align}
+&\min_{x \in \mathcal{H}} f\left(x\right) + g\left(z\right)\\
+&\text{s.t } x - z = 0
+\end{align}
+
+with \(f, g \in \Gamma\). To solve this problem we form the augmented Lagrangian: 
+
+\begin{align*}
+L_p\left(x, z, \eta\right) = f\left( x\right) +& g\left(z\right)+\eta^T\left(Ux+Vz-c\right) + \frac{\rho}{2}\|Ux+Vz-c\|_2^2
+\end{align*}
+
+and then performing the following iterative minimisation:
+
+\begin{align}
+x^{k+1} &:= \argmin_{x} L_\rho\left(x,z^k,\eta^k\right)\\
+z^{k+1} &:= \argmin_{z} L_\rho\left(x^{k+1},z,\eta^k\right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
+\end{align}
+
+i.e. 
+
+\begin{align}
+x^{k+1} &:= \argmin_{x} \left( f\left(x\right) + \eta^{kT}x + \frac{\rho}{2}\vectornorm{x - z^k}^2 \right) \\
+z^{k+1} &:= \argmin_{z} \left( g\left(z\right) - \eta^{kT}z + \frac{\rho}{2}\vectornorm{x^{k+1} - z}^2 \right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
+\end{align}
+
+pulling the linear terms into the quadratic ones we get:
+
+\begin{align}
+x^{k+1} &:= \argmin_{x} \left( f\left(x\right) +  \frac{\rho}{2}\vectornorm{x - z^k + \left(1/\rho\right)\eta^k}^2 \right) \\
+z^{k+1} &:= \argmin_{z} \left( g\left(z\right) +  \frac{\rho}{2}\vectornorm{x^{k+1} - z - \left(1/\rho\right)\eta^k}^2 \right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
+\end{align}
+
+i.e.
+
+\begin{align}
+x^{k+1} &:= \mathrm{Prox}_f \left( z^k - u^k\right)\\
+z^{k+1} &:= \mathrm{Prox}_f \left(x^{k+1} + u^k\right)  \\
+u^{k+1} &:= u^{k} + \left(x^{k+1} + z^{k+1}\right)
+\end{align}
+
+with \(u^k = \left(1/\rho\right) \eta^k\).
+
+The motivation for the Proximal operator should now be clear: to perform the minimisation we simply calculate the proximal operator of each of the functions at each step. For many functions found in Statistics (e.g. the \(l_p\) norms, this can be found in closed form, and so ADMM presents a particularly attractive method for finding MAP solutions to regularised statistical problems.
+
+\subsubsection{Examples}
+
+\begin{example}[Indicator]
+From the definition 
+
+\begin{align}
+\mathrm{Prox}_I\left(x\right) &:=  \argmin_y I_C(y) + \frac{1}{2}\vectornorm{y-x}^2 \\
+& = \argmin_{y \in C} \frac{1}{2}\vectornorm{y-x}^2 \\
+& = P_C\left(x\right)
+\end{align}
+
+where \(I_C(y)\) is the indicator of some set \(C\) and \(P_C\) is the projection operator onto that set.
+\end{example} 
+
+\begin{example}[\(l_2\) norm]
+For \(f(y) = \frac{\mu}{2}\vectornorm{y}^2\) the \(\mathrm{Prox}\) operator is:
+
+\begin{align}
+\mathrm{Prox}_f\left(x\right) &:=  \argmin_y \frac{\mu}{2}\vectornorm{y}^2 + \frac{1}{2}\vectornorm{y-x}^2 \\
+& = \frac{1}{1+\mu}x
+\end{align}
+\end{example}
+
+\begin{example}[\(l_1\) norm]
+\(f = \|x\|_1\)
+
+\begin{equation}
+\mathrm{Prox}_f\left(x\right) := \mathrm{sign}(x_i)\left(|x_i| - \gamma\right)^+ = S_\gamma\left(x\right)_i 
+\end{equation}
+\end{example}
+
+\begin{example}[Elastic Net]
+Consider
+
+\begin{equation}
+f(x) = \lambda\|x\|_1 + \mu \vectornorm{x} 
+\end{equation}
+
+\begin{equation}
+\mathrm{Prox}_f\left(x\right) := \frac{\lambda}{1+\mu} S_\gamma\left(x\right)_i 
+\end{equation}
+\end{example}
+
+\begin{example}[Fused Lasso]
+Consider
+
+\begin{equation}
+f(x) = \|x\|_1 + \sum_{i=1}^{d-1} \left( x_i - x_{i-1} \right) 
+\end{equation}
+
+i.e the sum of the \(l_1\) and \(TV\) norms
+
+\begin{equation}
+\mathrm{Prox}_f\left(x\right) := \mathrm{Prox}_{l_1} \circ \mathrm{Prox}_{TV} =  S_\gamma\left(\mathrm{Prox}_{TV}\right)_i 
+\end{equation}
+\end{example}
+
+\begin{example}[Consensus]
+
+Suppose we want to solve a problem such as:
+
+\begin{equation*}
+\begin{aligned}
+& \underset{x}{\text{minimise}}
+& & \sum_i f_i\left( x \right) \\
+\label{consensus}
+\end{aligned}
+\end{equation*}
+
+this could arise in statistical computing where \(f_i\) would be the loss function for the \(i^th\) block of training data. We can write the problem for distributed optimisation as:
+
+\begin{equation*}
+\begin{aligned}
+& \underset{x}{\text{minimise}}
+& & \sum_i f_i\left( x_i \right) \\
+& \text{subject to}
+& & x_i - z = 0
+\label{admm_consensus}
+\end{aligned}
+\end{equation*}
+
+where \(x_i\) are local variables (for example local to each node in a spectrum sensing) and \(x_i - z = 0\) are the consensus constraints. Consensus and regularisation can be achieved by adding a regularisation term \(g\left(z\right)\) - for example \(g\left(z\right) = \lambda||x||_1\) corresponds to the LASSO, and the \(f_i\) would be \(f_i = ||A_ix_i - b||_2^2\). 
+
+As per the previous sections, we form the Augmented Lagrangian:
+
+\begin{equation}
+L_\rho\left(x,y\right) = \sum_i^n \left(f_i\left( x_i \right) + y_i^T\left(x_i-z\right) + \frac{\rho}{2}\|x_i-z\|_2^2\right)
+\end{equation}
+
+The ADMM iterations for this Lagrangian are:
+
+\begin{align}
+x_i^{k+1} &:= \argmin{x_i} \left(f_i\left( x_i \right) + y_i^{kT}\left(x_i-z\right) + \frac{\rho}{2}\|x_i-z\|_2^2\right)\\
+z^{k+1} &:= \frac{1}{n}\sum_i^n \left(x_i^{k+1} + \left(1\rho\right)y_i^k\right)\\
+y_i^{k+1} &:= y_i^{k} + \rho \left(x_i^{k+1} - z^{k+1} \right)
+\label{consensus_iterations}
+\end{align}
+
+The \(z^{k+1}\) iteration is analytic as we're minimising the squared norm of \(x_i - z\) - so we average. With \(\|x\|_1\) regularisation we perform soft-thresholding after the \(z\) update.
+
+At each iteration the sum of the dual variables \(y_i\) is zero, so the algorithm can be simplified to:
+
+\begin{align}
+x_i^{k+1} &:= \argmin{x_i} \left(f_i\left( x_i \right) + y_i^{kT}\left(x_i-\bar{x}^k\right) + \frac{\rho}{2}\|x_i-\bar{x}^k\|_2^2\right)\\
+y_i^{k+1} &:= y_i^{k} + \rho \left(x_i^{k+1} - z^{k+1} \right)
+\label{simple_consensus_iterations}
+\end{align}
+ 
+where
+
+\begin{equation}
+\bar{x}^k = \frac{1}{n} \sum_i^n x_i^k
+\end{equation}
+
+This algorithm can be summarised as follows: in each iteration
+
+\begin{itemize}
+\item gather \(x^k\) and average to get \(\bar{x}^k\)
+\item scatter the average to nodes
+\item update \(y_i^k\) locally
+\item update \(x_i\) locally
+\end{itemize}
+
+Each agent is minimising its own function, plus a quadratic term (the squared norm) which penalises the agent from moving too far from the previous average.
+
+Note that the 'gather' stage doesn't require a central processor - this can be done in a distributed manner also.
+\end{example}
+
+\section{Acceleration}\label{sec:accel}
+
+In the previous sections we have considered un-accelerated ADMM – with this method it is possible to achieve a \(1/k\) convergence rate to an optimal solution (should such a solution exist). This means that after \(k\) iterations:
+
+\begin{equation}
+\frac{\vectornorm{x^k - x^{\star}}}{\vectornorm{x^{\star}}} \leq \mathcal{O}\left(\frac{1}{k}\right)
+\end{equation}
+
+In this section, we describe acceleration methods (due to Nesterov, and introduced to signal processing by Beck and Teboule) which allow a modified ADMM to achieve a \(1/k^2\) convergence, at a modest increase in algorithmic complexity.
+
+The key insight, due to Nesterov and applied to smooth optimisation problems, was that gradient descent may move in the direction of steepest descent at each step - this direction might not be in the same direction as the previous step. Thus, by including a 'momentum' term, the iteration path can be forced in the direction of the previous step and the algorithm will converge much faster.
+
+For acceleration, the ADMM algorithm can be modified into the following form:
+
+\begin{align}
+x^{k+1} &:= \mathrm{Prox}_f \left( z^k - u^k\right)\\
+z^{k+1/2} &:= \mathrm{Prox}_f \left(x^{k+1} + u^k\right)  \\
+u^{k+1/2} &:= u^{k} + \left(x^{k+1} + z^{k+1}\right) \\
+a^{k+1} &= \frac{1+\sqrt{1+4(a^k)^2}}{2} \\
+z^{k+1} &= z^k + \frac{a^{k}-1}{a^{k+1}}\left(z^{k+1/2} - z^{k}\right) \\
+u^{k+1} &= u^k + \frac{a^{k}-1}{a^{k+1}}\left(u^{k+1/2} - u^{k}\right) \\	
+\end{align}
+
+The terms \( \left(z^{k+1/2} - z^{k}\right) \) and \(\left(u^{k+1/2} - u^{k}\right) \), represent the momentum of the iterations. Conceptually, in this modification, we are not just taking a step in the direction of the gradient - we are taking a step in the same direction as the previous step.
+
+In \cite{goldstein2014fast} it was shown that for strongly convex objectives (objective functions which are the sum of two functions, which are both strongly convex), this algorithm converges to optimally at a rate \( \mathcal{O}\left( \frac{1}{k^2} \right) \).
+
+There are several interpretations as to why this method accelerates gradient descent type algorithms. This method works, for any strongly convex and twice differentiable function, as gradient descent is computing a degree \(k\) approximation to the inverse function.  
+
+\begin{equation}
+\frac{1}{x} = \sum_{k=0}^{\infty} \left(1-x\right)^k
+\end{equation}
+
+By optimising over the creation of this polynomial using Chebyshev polynomials, we can improve upon the convergence rate of naïve gradient descent (or generalised gradient descent). 
+
+Another view of Nesterov acceleration was given by (Su, Candes and Boyd in \cite{su2014differential}) . In that paper, they show how Nesterov acceleration is a discretisation of a second order ODE. This work explains much of the qualitative behaviour of the accelerations scheme. In particular the damped oscillation phenomena (a process of progressively under and over-shooting the optimum) . This behaviour is perhaps why the acceleration method is relatively less robust in practice when compared to vanilla gradient descent: terminating after a fixed number of iterations could produce an output which wildly overshoots the optimum. 
+
+Modelling the scheme as a differential equation also gives insight to which functions would benefit from acceleration – in particular functions which are well conditioned (the ratio of  their convexity constant to their Lipchitz  constant is small).  This is because the behaviour modelled in the ODE is different in different friction regimes: in particular poorly conditioned functions (low friction) will be subject to more oscillations and thus take longer to converge to equilibrium.

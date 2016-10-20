@@ -1,0 +1,41 @@
+\select@language {english}
+\contentsline {chapter}{Declaration of Authorship}{iii}{Doc-Start}
+\contentsline {chapter}{Abstract}{vii}{Doc-Start}
+\contentsline {chapter}{Acknowledgements}{ix}{Doc-Start}
+\contentsline {chapter}{\numberline {1}The Probabilistic group testing problem}{1}{chapter.6}
+\contentsline {subsection}{\numberline {1.0.1}Group testing capacity}{2}{subsection.7}
+\contentsline {subsection}{\numberline {1.0.2}Main results}{2}{subsection.15}
+\contentsline {section}{\numberline {1.1}Algorithms and existing results}{3}{section.19}
+\contentsline {subsection}{\numberline {1.1.1}Upper bounds on success probability}{3}{subsection.20}
+\contentsline {subsection}{\numberline {1.1.2}Binary search algorithms}{3}{subsection.23}
+\contentsline {subsection}{\numberline {1.1.3}Summary of our contribution}{4}{subsection.25}
+\contentsline {subsection}{\numberline {1.1.4}Wider context: sparse inference problems}{5}{subsection.33}
+\contentsline {section}{\numberline {1.2}Analysis and new bounds}{5}{section.34}
+\contentsline {subsection}{\numberline {1.2.1}Searching a set of bounded ratio}{5}{subsection.35}
+\contentsline {subsection}{\numberline {1.2.2}Discarding low probability items}{7}{subsection.46}
+\contentsline {subsection}{\numberline {1.2.3}Searching the entire set}{7}{subsection.50}
+\contentsline {subsection}{\numberline {1.2.4}Bounding the expected number of tests}{9}{subsection.60}
+\contentsline {subsection}{\numberline {1.2.5}Controlling the error probabilities}{9}{subsection.65}
+\contentsline {section}{\numberline {1.3}Results}{11}{section.75}
+\contentsline {section}{\numberline {1.4}Discussion}{12}{section.79}
+\contentsline {chapter}{\numberline {2}Constrained Optimisation on Graphs}{15}{chapter.82}
+\contentsline {section}{\numberline {2.1}Introduction}{15}{section.83}
+\contentsline {section}{\numberline {2.2}ADMM}{16}{section.84}
+\contentsline {subsection}{\numberline {2.2.1}The Proximity Operator}{20}{subsection.108}
+\contentsline {subsubsection}{Properties}{20}{section*.113}
+\contentsline {subsubsection}{Motivation}{20}{section*.119}
+\contentsline {subsubsection}{Examples}{21}{section*.134}
+\contentsline {subsection}{\numberline {2.2.2}Statistical Interpretation}{23}{subsection.158}
+\contentsline {subsection}{\numberline {2.2.3}Acceleration}{24}{subsection.159}
+\contentsline {section}{\numberline {2.3}Constrained Optimisation on Graphs}{24}{section.160}
+\contentsline {chapter}{\numberline {3}Compressive Sensing Architechtures}{29}{chapter.183}
+\contentsline {subsection}{\numberline {3.0.1}Modulated Wideband Converter}{29}{subsection.184}
+\contentsline {subsection}{\numberline {3.0.2}Random Demodulator}{30}{subsection.192}
+\contentsline {section}{\numberline {3.1}Joint Space-Frequency Model}{31}{section.198}
+\contentsline {section}{\numberline {3.2}Results}{32}{section.207}
+\contentsline {section}{\numberline {3.3}Conclusions}{34}{section.221}
+\contentsline {chapter}{\numberline {4}Rectangular basis}{41}{chapter.222}
+\contentsline {section}{\numberline {4.1}Preliminaries}{41}{section.223}
+\contentsline {section}{\numberline {4.2}Spectrum Sensing}{42}{section.238}
+\contentsline {section}{\numberline {4.3}Results}{44}{section.261}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{49}{appendix.269}

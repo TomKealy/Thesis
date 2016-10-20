@@ -1,0 +1,31 @@
+\select@language {english}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.3.1}{\ignorespaces Theoretical lower and upper bounds and empirical Test frequencies as functions of \(\theta \)\relax }}{12}{figure.caption.76}
+\contentsline {figure}{\numberline {1.3.2}{\ignorespaces Cumulative distribution curves of the modified Hwang algorithm with fixed \(\theta = 0.0001\) and \(\alpha \) varying \relax }}{12}{figure.caption.77}
+\contentsline {figure}{\numberline {1.3.3}{\ignorespaces Cumulative distribution curves for fixed \(\alpha = 1\) and varying \(\theta \)\relax }}{13}{figure.caption.78}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.3.1}{\ignorespaces An example of a network\relax }}{26}{figure.caption.170}
+\contentsline {figure}{\numberline {2.3.2}{\ignorespaces The incidence matrix associated with Figure \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {efig:ex-network}\unskip \@@italiccorr )}}\relax }}{26}{figure.caption.171}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.0.1}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers\relax }}{29}{figure.caption.185}
+\contentsline {figure}{\numberline {3.2.2}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers\relax }}{33}{figure.caption.209}
+\contentsline {figure}{\numberline {3.2.3}{\ignorespaces Mse vs SNR for the sensing model, showing the performance of distributed and centralised solvers\relax }}{33}{figure.caption.210}
+\contentsline {figure}{\numberline {3.2.4}{\ignorespaces The progress of the distributed solver as a function of the number of iterations, with different values of the regression parameter \(\lambda \)\relax }}{34}{figure.caption.211}
+\contentsline {figure}{\numberline {3.2.5}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{35}{figure.caption.212}
+\contentsline {figure}{\numberline {3.2.6}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{35}{figure.caption.213}
+\contentsline {figure}{\numberline {3.2.7}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{36}{figure.caption.214}
+\contentsline {figure}{\numberline {3.2.8}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{36}{figure.caption.215}
+\contentsline {figure}{\numberline {3.2.9}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{37}{figure.caption.216}
+\contentsline {figure}{\numberline {3.2.10}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{37}{figure.caption.217}
+\contentsline {figure}{\numberline {3.2.11}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{38}{figure.caption.218}
+\contentsline {figure}{\numberline {3.2.12}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{38}{figure.caption.219}
+\contentsline {figure}{\numberline {3.2.13}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)\relax }}{39}{figure.caption.220}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.3.1}{\ignorespaces \relax }}{44}{figure.caption.262}
+\contentsline {figure}{\numberline {4.3.2}{\ignorespaces \relax }}{44}{figure.caption.263}
+\contentsline {figure}{\numberline {4.3.3}{\ignorespaces \relax }}{45}{figure.caption.264}
+\contentsline {figure}{\numberline {4.3.4}{\ignorespaces \relax }}{45}{figure.caption.265}
+\contentsline {figure}{\numberline {4.3.5}{\ignorespaces \relax }}{46}{figure.caption.266}
+\contentsline {figure}{\numberline {4.3.6}{\ignorespaces \relax }}{46}{figure.caption.267}
+\contentsline {figure}{\numberline {4.3.7}{\ignorespaces \relax }}{47}{figure.caption.268}
+\addvspace {10\p@ }

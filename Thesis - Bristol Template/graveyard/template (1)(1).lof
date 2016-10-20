@@ -1,0 +1,39 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {0.1.1}{\ignorespaces A digram of current Spectral allocation \cite {Strategy2013}}}{2}
+\contentsline {figure}{\numberline {0.1.2}{\ignorespaces A snapshot of frequency utilisation in various areas: many frequencies are not used at all, whilst there is significant activity on others \cite {Burbidge2007}}}{3}
+\contentsline {figure}{\numberline {0.1.3}{\ignorespaces A picture of early 20th century New York: Bandwidth has always been an issue}}{4}
+\contentsline {figure}{\numberline {0.4.4}{\ignorespaces A digram of the Spectrum Sensing model \cite {Tian}}}{15}
+\contentsline {figure}{\numberline {0.4.5}{\ignorespaces A visualisation of the Compressive Sensing problem as an under-determined system}}{21}
+\contentsline {figure}{\numberline {0.4.6}{\ignorespaces Solutions to the Compressive Sensing optimisation problem intersect the \(l_1\) norm the points where all components (but one) of the vector are zero (i.e. it is sparsity promoting) \cite {Tibshirani1996}}}{22}
+\contentsline {figure}{\numberline {0.4.7}{\ignorespaces The Laplace (\(l_1\)-norm, bold line) and Normal (\(l_2\)-norm, dotted line) densities. Note that the Laplace density is sparsity promoting as it penalises solutions away from zero more than the Gaussian density. \cite {Tibshirani1996}}}{24}
+\contentsline {figure}{\numberline {0.4.8}{\ignorespaces The hierarchical model for the Bayesian CS formulation \cite {Ji2008}}}{25}
+\contentsline {figure}{\numberline {0.4.9}{\ignorespaces The Group Testing model: multiplication with a short, fat matrix \cite {Atia2008}}}{27}
+\contentsline {figure}{\numberline {0.4.10}{\ignorespaces The operation of the Modulated Wideband Converter \cite {Mischali2010}}}{32}
+\contentsline {figure}{\numberline {0.5.11}{\ignorespaces Group Testing vs Compressive Sensing}}{33}
+\contentsline {figure}{\numberline {0.8.12}{\ignorespaces An example of a network}}{53}
+\contentsline {figure}{\numberline {0.8.13}{\ignorespaces The incidence matrix associated with Figure \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {efig:ex-network}\unskip \@@italiccorr )}}}}{53}
+\contentsline {figure}{\numberline {0.9.14}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers}}{56}
+\contentsline {figure}{\numberline {0.11.15}{\ignorespaces Mse vs SNR for the sensing model, with AWGN only, showing the performance of distributed and centralised solvers}}{63}
+\contentsline {figure}{\numberline {0.11.16}{\ignorespaces Mse vs SNR for the sensing model, showing the performance of distributed and centralised solvers}}{64}
+\contentsline {figure}{\numberline {0.11.17}{\ignorespaces The progress of the distributed solver as a function of the number of iterations, with different values of the regression parameter \(\lambda \)}}{64}
+\contentsline {figure}{\numberline {0.11.18}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{65}
+\contentsline {figure}{\numberline {0.11.19}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{65}
+\contentsline {figure}{\numberline {0.11.20}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{66}
+\contentsline {figure}{\numberline {0.11.21}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{66}
+\contentsline {figure}{\numberline {0.11.22}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{67}
+\contentsline {figure}{\numberline {0.11.23}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{67}
+\contentsline {figure}{\numberline {0.11.24}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{68}
+\contentsline {figure}{\numberline {0.11.25}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{68}
+\contentsline {figure}{\numberline {0.11.26}{\ignorespaces The progress of a distributed (blue) and a centralised (green) solver as a function of the number of iterations. The value of \(\lambda = 0.1\)}}{69}
+\contentsline {figure}{\numberline {0.15.27}{\ignorespaces }}{82}
+\contentsline {figure}{\numberline {0.15.28}{\ignorespaces }}{83}
+\contentsline {figure}{\numberline {0.15.29}{\ignorespaces }}{84}
+\contentsline {figure}{\numberline {0.15.30}{\ignorespaces }}{85}
+\contentsline {figure}{\numberline {0.15.31}{\ignorespaces }}{86}
+\contentsline {figure}{\numberline {0.15.32}{\ignorespaces }}{86}
+\contentsline {figure}{\numberline {0.19.33}{\ignorespaces Theoretical lower and upper bounds and empirical Test frequencies as functions of \(\theta \)}}{104}
+\contentsline {figure}{\numberline {0.19.34}{\ignorespaces Cumulative distribution curves of the modified Hwang algorithm with fixed \(\theta = 0.0001\) and \(\alpha \) varying }}{104}
+\contentsline {figure}{\numberline {0.19.35}{\ignorespaces Cumulative distribution curves for fixed \(\alpha = 1\) and varying \(\theta \)}}{105}

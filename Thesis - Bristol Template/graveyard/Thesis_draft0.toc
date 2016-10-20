@@ -1,0 +1,74 @@
+\select@language {english}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Abstract}}{i}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Acknowledgments}}{iii}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Author's declaration}}{v}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Table of contents}}{viii}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {List of tables}}{ix}
+\contentsline {chapter}{\emph {List of figures}}{xii}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 1}Introduction}{1}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 2}Narrowband Spectrum Sensing}{4}
+\contentsline {subsubsection}{Energy Detection}{5}
+\contentsline {subsubsection}{Cyclostationary Feature Detection}{6}
+\contentsline {subsubsection}{Matched Filtering}{8}
+\contentsline {subsubsection}{Limitations}{8}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 3}Wideband Spectrum Sensing}{9}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 3.1}Classical Sensing}{9}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 3.2}Compressed Sensing}{10}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 3.3}RIPless Theory}{13}
+\contentsline {subsubsection}{Short, Fat matrices}{13}
+\contentsline {subsubsection}{Bayesian Compressive Sensing}{14}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 3.4}Group Testing}{16}
+\contentsline {subsubsection}{Comparison to Compressive Sensing}{20}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 3.5}Sub-Nyquist Sampling techniques}{21}
+\contentsline {subsubsection}{Wideband Modulated Converter}{21}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 4}Results and Simulations}{22}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 5}Further Work and Project Plan}{23}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 6}Summary}{26}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 7}Introduction}{26}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 8}ADMM}{28}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 8.1}The Proximity Operator}{32}
+\contentsline {subsubsection}{Properties}{32}
+\contentsline {subsubsection}{Motivation}{33}
+\contentsline {subsubsection}{Examples}{34}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 8.2}Statistical Interpretation}{36}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 8.3}Acceleration}{36}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 9}Constrained Optimisation on Graphs}{36}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 10}Compressive Sensing Architechtures}{41}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 10.1}Modulated Wideband Converter}{41}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 10.2}Random Demodulator}{43}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 11}Joint Space-Frequency Model}{44}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 12}Results}{45}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 13}Conclusions}{47}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 14}Introduction}{53}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 15}Signal Model}{54}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 16}Sensing Model}{55}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 17}Constrained Optimisation on Graphs}{56}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 18}Results}{61}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 19}Conclusions}{62}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 20}Introduction}{65}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 21}Preliminaries}{67}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 21.1}RIP and Stable Embeddings}{67}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 21.2}Random Matrix Constructions}{68}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 21.3}Wishart Matrices}{68}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 21.4}Maximum Likelihood estimation: non-compressive case}{69}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 22}Compressive Estimation}{71}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 22.1}Example: Single Spike}{73}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 22.2}Estimating a single rectangle}{73}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 22.3}Estimating Frequency spectra}{76}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 23}Introduction and notation}{78}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 23.1}The Probabilistic group testing problem}{78}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 23.2}Group testing capacity}{79}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 23.3}Main results}{79}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 24}Algorithms and existing results}{80}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 24.1}Upper bounds on success probability}{80}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 24.2}Binary search algorithms}{81}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 24.3}Summary of our contribution}{81}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 24.4}Wider context: sparse inference problems}{82}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 25}Analysis and new bounds}{83}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 25.1}Searching a set of bounded ratio}{83}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 25.2}Discarding low probability items}{84}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 25.3}Searching the entire set}{85}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 25.4}Bounding the expected number of tests}{86}
+\contentsline {subsection}{\numberline {\normalfont 0.\normalfont 25.5}Controlling the error probabilities}{87}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 26}Results}{89}
+\contentsline {section}{\numberline {\normalfont 0.\normalfont 27}Discussion}{90}

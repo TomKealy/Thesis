@@ -1,0 +1,82 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: nicethesis.aux
+The style file: plain.bst
+Database file #1: thesis2.bib
+Repeated entry---line 27512 of file thesis2.bib
+ : @article{taylor1979deconvolution
+ :                                 ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Strategy2013"
+Warning--I didn't find a database entry for "ma2008soft"
+Warning--I didn't find a database entry for "Donoho2006"
+Warning--I didn't find a database entry for "Hwang1972"
+Warning--I didn't find a database entry for "Aldridge2013"
+Warning--I didn't find a database entry for "Baldassini2013"
+Warning--I didn't find a database entry for "dorfman"
+Warning--empty journal in blumensath2007difference
+Warning--there's a number but no volume in Boyd2010a
+Warning--empty year in Boyd2010a
+Warning--empty booktitle in braun2009signal
+Warning--empty journal in Bristow2014
+Warning--empty institution in Burbidge2007
+Warning--empty journal in Candes2006
+Warning--empty journal in Davenport2007
+Warning--empty journal in donoho2004neighborly
+Warning--empty journal in Donoho
+Warning--there's a number but no volume in Donoho
+Warning--empty year in Donoho
+Warning--empty year in Duarte
+Warning--empty journal in Elad2010
+Warning--can't use both volume and number fields in hastie2005elements
+Warning--empty journal in Ma2014b
+Warning--empty year in mota2013d
+Warning--empty journal in petersen2008matrix
+Warning--empty year in petersen2008matrix
+Warning--empty year in shi2014linear
+Warning--empty journal in Shi2013
+Warning--there's a number but no volume in Slavinsky2011
+Warning--empty journal in Sundman2013a
+Warning--empty year in yucek2009survey
+You've used 140 entries,
+            2118 wiz_defined-function locations,
+            1263 strings with 29956 characters,
+and the built_in function-call counts, 54572 in all, are:
+= -- 5586
+> -- 2458
+< -- 51
++ -- 990
+- -- 826
+* -- 3913
+:= -- 8646
+add.period$ -- 452
+call.type$ -- 140
+change.case$ -- 826
+chr.to.int$ -- 0
+cite$ -- 164
+duplicate$ -- 2061
+empty$ -- 4183
+format.name$ -- 826
+if$ -- 11610
+int.to.chr$ -- 0
+int.to.str$ -- 140
+missing$ -- 142
+newline$ -- 700
+num.names$ -- 280
+pop$ -- 874
+preamble$ -- 1
+purify$ -- 690
+quote$ -- 0
+skip$ -- 1537
+stack$ -- 0
+substring$ -- 4023
+swap$ -- 596
+text.length$ -- 51
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 550
+warning$ -- 24
+while$ -- 556
+width$ -- 143
+write$ -- 1533
+(There was 1 error message)

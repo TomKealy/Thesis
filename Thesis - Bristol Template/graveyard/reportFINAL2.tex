@@ -1,0 +1,768 @@
+\section{Introduction}
+Despite the ubiquity, capacity and apparent efficacy, modern communication systems are wasteful, inefficient and in need of reform. Most of the bits of data collected by our sensing systems are unessential, and only serve to necessitate data compression wasting computation time before transmission. For example, people regularly use a camera with a resolution of several megapixels only to upload a file of a few kilobytes to Facebook. Devices are unable to make dynamic decisions about how to transmit this data, leading to both spectral exhaustion on some frequencies whilst much of the available radio spectrum lies fallow. 
+
+This project addresses these issues, by reviewing a novel acquisition and decompression framework for data: a way in which we need only sense the most informative bits of data. This framework is then applied to the problem of sensing spectral opportunities dynamically, to make better use of available spectrum. 
+
+The key uniting both these applications is that data and spectra are \textit{sparse}: that is they have a representations which are 'smaller' than their respective dimension. For example, images and audio can be compressed into file formats much smaller than when initially recorded (compare the relative sizes of bitmap and JPEG images).
+
+The sole focus of this research is to use the sparsity of the spectrum to uncover transmission opportunities, allowing better use of spectrum more generally. 
+
+We are motivated by the need to send more data over wireless networks, whilst at the same time having a constrained frequency set over which to transmit this information. This issue could be alleviated by users dynamically allocating spectrum on a per-transmission basis: without the ability to gain knowledge of spectral conditions this can never become a reality however. 
+
+The requirement for increasing bandwidth isn't just a pressing issue for today: in the next decade it is forecast that network operators will need to provide for three-orders of magnitude (1000 times) more capacity. Demand is continually outstripping supply - motivated by the ubiquity of smart-phones, and the consumers appetites for media. 
+
+At the same time as this demand for ever more data, there is an increasing scarcity of radio spectrum over which to transmit. New frequencies are rarely cleared for commercial purposes, and when they are they go for high prices.  A decade ago the UK auction for 3g spectrum licenses raised an estimated £22.4 billion \cite{Ukmobil} for the UK treasury, indicating the seriousness of the market players requirements for new spectrum. The recent 4g spectrum auction raised £2.3 billion \cite{Ukmobi}- with initial networks being rolled out by the end of 2013.
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm]{uk-spectrum-allocation-chart1-640x445.jpg}
+\caption{A digram of current Spectral allocation \cite{Strategy2013}}
+\label{spectrumalloc}
+\end{figure*}
+
+However, a closer inspection of the frequency allocation suggests this scarcity is artificial, it's more a product of regulatory oversight over time. As the constraints on spectrum requirement became more complex, so did the solutions to that problem - at the cost of leaving much of the spectrum idle for most of the time. 
+
+For example: much of the spectrum is allocated to TV broadcast, radio broadcast and mobile. However, if we look closer, the allocations aren't even for specific companies - they're simply categories. Within these, OFCOM may have many licensees within each category.
+
+Also interesting to note is how much frequency the Government allocates to itself (the red bar underneath the blocks indicates Government use). Compare this to the actual utilisation of spectrum: much of it is not used at all. Figure \ref{frequtil} shows a snapshot of frequency utilisation in three diverse locations in the UK over te radio specturm, note that many frequencies are not utilised (coloured blue) whilst others have significant activity (coloured yellow). Note that the plot for Southwark (central London) is barely different from Braddock - a rural area. 
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm, width=0.5\textwidth]{cr2.jpg}
+\caption{A snapshot of frequency utilisation in various areas: many frequencies are not used at all, whilst there is significant activity on others \cite{Burbidge2007}}
+\label{frequtil}
+\end{figure*}
+
+How do we then go about solving this issue - how can we obtain the most significant bits of information from our sensing mechanism, whilst obviating the need to compress the data once we are done? How do we dynamically assign spectrum? The work of Candes, Tao \cite{Candes2006} and Donoho \cite{Donoho2006}, has shown that instead of measuring the information we require directly (and then compressing it), we can measure 'holographic' and non-linear random projections between our measurement space and the space where our data is sparse. This requires only the knowledge that the signal is compressible via some transform - both the acquisition protocol and the reconstruction algorithm are agnostic to the type of signal. What is surprising is that the sampling kernels are fixed independently of the signal, are non-adaptive and these projections are sufficient to reconstruct the signal - as if we had an Oracle to tell us where the non-zero components of our signal are. 
+
+This work has had a large impact in medical imaging since it's inception: for example, it's now possible to take an image of a patient's heart within a single breath, as well as dynamic imaging of the heart (\cite{Donoho} figures 7 and 9).
+
+Modern digital signal processing techniques (such as modulation techniques) are far more spectrally efficient than their historic analogue counterparts, which has in part contributed to the spectrum crisis. All this is changing though: from the beginning of 2013 all TV in the UK will transmitted digitally. Historically, television in the UK was broadcast using analogue signals requiring 32 multiplexes. Digital TV requires 6 multiplexes, on the other hand. 
+
+This freeing up of TV frequencies represents an opportunity: these frequencies have good propagation characteristics (they suffer less with free space path loss relative to higher frequencies), whilst sill providing good bandwidth for data transmission. These TV frequencies are being opened up to civilian and  commercial users: spectral holes will be able to be exploited opportunistically by devices, so long as they don't interfere with the reception of TV. Historically, this is the single largest gift of new spectrum, and because there is no requirement for licensing this spectrum is free.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\centering
+\includegraphics[width=0.48\textwidth, height = 7cm]{cablesnewyork.jpg}
+\caption{A picture of early 20th century New York: Bandwidth has always been an issue}
+\label{newyork}
+\end{wrapfigure}
+
+As with all technological innovations, this will not only improve existing infrastructure but also new classes of devices to transmit, for instance; applications such as passive sensor networks) which only need spectrum intermittently to transmit monitoring results), inter-vehicle communication for real time traffic monitoring and wireless internet at broadband data rates have all been proposed.
+
+Despite all of this hype, dynamic spectrum access won't become a reality unless spectral holes can be robustly detected. The requirement that secondary users exploit the new spectrum politely, without interference to primary user makes spectrum sensing essential to TV white-space (TVWS) technologies. The realisation of any Cognitive Radio standard (such as IEEE 802.22), requires the co-existence of primary (TV users) and secondary (everybody else who wants to use TVWS spectrum) users of the frequency spectrum to ensure proper interference mitigation and appropriate network behaviour. 
+
+Users of TVWS (Cognitive Radios) must sense whether spectrum is available, and must be able to detect very weak primary user signals. Furthermore they must sense over a wide bandwidth (due to the amount of TVWS spectrum proposed), which challenges traditional Nyquist sampling techniques, because the sampling rates required are not technically feasible with current RF or Analogue-to-Digital conversion technology.
+
+Sensing should enable devices to detect the presence of TV signals in a band and provide smart and adaptive (and possibly distributed) solutions to band identification.
+
+Spectrum sensing should involve:
+
+\begin{enumerate}
+\item Sensing to detect white spaces.
+\item Co-existence with similar devices.
+\item Frequency monitoring of other devices.
+\item Interference management. 
+\item Spectrum mobility and transmission power control when needed.
+\end{enumerate}
+
+As described earlier, the available spectrum is highly underutilised, and can be thought of as a collection of narrowband transmissions over a wideband channel. As such, the spectrum we're sensing is sparse. This makes it an ideal candidate for sparse recovery techniques such as Compressive Sensing.  
+
+The structure of the report is as follows: first a few methods for sensing narrowband signals (i.e. channels where the frequency response is approximately flat, and where the bandwidth is smaller than the coherence bandwidth of the channel) are discussed and the limitations of these are highlighted for the problem of sensing spectrum for Cognitive Radios. Then (more appropriate) wideband sensing techniques are discussed. 
+
+Compressive Sensing, and Group Testing are then introduced and it is argued that they offer appropriate solutions to the sensing problems for cognitive radios. Sampling schemes married to these reconstruction algorithms are discussed. 
+
+Finally the results and simulations performed over the time-frame of the project are discussed, with reference to further work. 
+
+\section{Introduction}
+
+There is an almost ubiquitous growing demand for mobile and wireless data, with consumers demanding faster speeds and better quality connections in more places. Consequently 4G is now being rolled out in the UK and US and with 5G being planned for 2020 and beyond \cite{Dahlman2014}.  
+
+However, there is constrained amount of frequencies over which to transmit this information; and demand for frequencies that provide sufficient bandwidth, good range and in-building penetration is high.
+
+Not all spectrum is used in all places and at all times, and judicious spectrum management, by developing approaches to use white spaces where they occur, would likely be beneficial.
+
+Broadly, access to spectrum is managed in two, complementary ways, namely through licensed and licence exempt access. Licensing authorises a particular user (or users) to access a specific frequency band. Licence exemption allows any user to access a band provided they meet certain technical requirements intended to limit the impact of interference on other spectrum users.
+
+A licence exempt approach might be particularly suitable for managing access to white spaces. Devices seeking to access white spaces need a robust mechanism for learning of the frequencies that can be used at a particular time and location. One approach is to refer to a database, which maps the location of white spaces based on knowledge of existing spectrum users. An alternative approach is for devices to detect white spaces by monitoring spectrum use. 
+
+The advantages of spectrum monitoring \cite{akan2009cognitive} over maintaining a database of space-frequency data are the ability of networks to make use of low-cost low-power devices, only capable of making local (as opposed to national) communications, keeping the cost of the network low and  opportunistic channel usage for bursty traffic, reducing channel collisions in dense networks.
+
+The realisation of any Cognitive Radio standard (such as IEEE 802.22 \cite{stevenson2009ieee}), requires the co-existence of primary (e.g. TV users) and secondary (everybody else who wants to use TVWS spectrum) users of the frequency spectrum to ensure proper interference mitigation and appropriate network behaviour. We note, that whereas TVWS bands are an initial step towards dynamic spectrum access, the principles and approaches we describe are applicable to other frequency bands - in particular it makes ultra-wideband spectrum sensing possible.
+
+The challenges of this technology are that Cognitive Radios (CRs) must sense whether spectrum is available, and must be able to detect very weak primary user signals. Furthermore they must sense over a wide bandwidth (due to the amount of TVWS spectrum proposed), which challenges traditional Nyquist sampling techniques, because the sampling rates required are not technically feasible with current RF or Analogue-to-Digital conversion technology.
+
+Due to the inherent sparsity of spectral utilisation, Compressive Sensing (CS) \cite{Candes2006} is an appropriate formalism within which to tackle this problem. CS has recently emerged as a new sampling paradigm allowing images to be taken from a single pixel camera for example. Applying this to wireless communication, we are able to reconstruct sparse signals at sampling rates below what would be required by Nyquist theory, for example the works \cite{mishali2010theory}, and \cite{tropp2010beyond} detail how this sampling can be achieved. 
+
+However, even with CS, spectrum sensing from a single machine will be costly as the proposed TVWS band will be over a large frequency range (for instance in the UK the proposed TVWS band is from 470 MHz to 790 MHz, requiring traditional sampling rates of \textasciitilde 600 MHz). CS at a single sensor would still require high sampling rates. In this report we propose a distributed model, which allows a sensing budget at each node far below what is required by centralised CS.
+
+\section{Narrowband Spectrum Sensing}
+
+The problem of spectrum sensing is to decide whether a particular band is available, or not \cite{Yucek2009}. That is, we wish to discriminate between the following two hypotheses:
+
+\begin{equation}
+H_{0}: y\left[n\right] = w\left[n\right] \text{, n} =  1 \ldots N 
+\end{equation}
+\label{h1}
+
+\begin{equation}
+H_{1}: y\left[n \right] = x\left[n\right] + w\left[n\right] \text{, n} =  1 \ldots N 
+\end{equation}
+\label{h2}
+
+Where \(x\) is the primary users signal (in the case of this thesis these signals are from TV broadcasts), having a specific structure stemming from modern coding and modulation techniques, \(w\) is additive white Gaussian noise and \(y\) is the received signal.
+
+Spectrum detection methods rely on assumptions about the signal. The more detailed, and and accurate, the assumptions, the better the sensing performance. However, this entails a trade off: signals which do not meet the assumptions may not be detected by these schemes, even though they are a valid transmission. More complex assumptions also require a complex implementations, and as such are more expensive to deploy.
+
+To decide whether the observations \(\textbf{y}\) were generated under \(\textit{H}_{0}\) or \(\textit{H}_{1}\) is accomplished by forming a test statistic \(\Gamma\left(y\right)\) and then comparing this statistic with a predefined threshold \(\lambda\). 
+
+Both classical methods, where the hypotheses are assumed to be deterministically true and the goal is to minimise the false detection probability, and Bayesian methods, where it is assumed that the source selects the true hypothesis at random according to some prior probabilities, agree that the test statistic should be likelihood ratio:
+
+\begin{equation}
+\Gamma\left(\textbf{y}\right) = \frac{p\left(\textbf{y}\mid H_0\right)}{p\left(\textbf{y}\mid H_1\right)}
+\end{equation}
+
+The performance of a detector is quantified in terms of the probability of detection
+
+\begin{equation}
+P_{D} = Pr\left( \Gamma\left(\textbf{y}\right) > \lambda \mid H_1\right)
+\end{equation}
+
+and the probability of false alarm 
+
+\begin{equation}
+P_{FA} = Pr\left( \Gamma\left(\textbf{y}\right) > \lambda \mid H_0\right)
+\end{equation}
+
+By varying \(\lambda\) the operating point of a detector can be chosen anywhere along its receiver operating characteristics curve.
+
+There are several proposed spectrum sensing methods that enable cognitive radios identify bands and perform dynamic frequency selection. Some of the common (narrowband) spectrum sensing techniques are described below.
+
+\subsubsection{Energy Detection}
+This is a common method for the detection of unknown signals in noise, due to low computational and implementation complexity. This method is quite generic as receivers need no knowledge of the primary users signal. 
+
+A typical method would be a bandpass filter with a centre frequency \(f_{s}\) and a bandwidth \(W\). This is followed by a squaring device to measure the received energy and an integrator to determine the observation interval. Finally the output of the integrator is compared with a threshold to determine the presence of a signal. This threshold is determined based upon the noise variance of the channel. I.e. we have a decision metric of the following form:
+
+\begin{equation}
+M = \sum_{n=0}^N |y\left[n\right]|^2
+\end{equation}
+
+As we are interested only in the power of the signal and the signal has an unknown form, it can be modelled as a \(N\left(0, \sigma_s^2\right)\) random variable. Because of this assumption we can derive expressions for the metric, the detection probability and the false alarm probability:
+
+\begin{equation}
+ M =
+  \begin{cases}
+   \frac{\sigma_w^2}{2} & H_0 \\
+   \frac{\sigma_w^2 + \sigma_s^2}{2} & H_1
+  \end{cases}
+\end{equation}
+
+\begin{equation}
+P_D = 1 - \Gamma\left(1, \frac{\lambda}{1 + \frac{ \sigma_s^2 }{ \sigma_w^2 } } \right)
+\end{equation}
+
+\begin{equation}
+P_{FA} = 1 - \Gamma\left(1, \frac{\lambda}{\sigma_w^2} \right)
+\end{equation}
+
+Where \( \Gamma\left(1,x\right)\) is the incomplete gamma function: 
+
+\begin{equation}
+ \Gamma\left(s,x\right) = \int_x^{\infty} t^{s-1}e^{-t}dt
+\end{equation}
+
+From these equations we see that the performance of energy detection based sensing degrades at low SNRs. See \cite{Yucek2009}[figure 3] for curves quantifying the performance. 
+
+Despite the simplicity of implementation, and the paucity of assumptions energy detectors make about the signal, they suffer from several practical drawbacks. 
+
+The threshold used to make the decision is based on the noise variance \(\sigma_w^2\), any error in the noise power estimation can cause significant performance loss. Various algorithms have been proposed to estimate this variance adaptively. However, the presence of any interfering signals in-band leads to significant false alarm rates: as the detector will be detecting incorrect signals.
+
+Energy detectors perform poorly under fading conditions, as in this case it's not clear how to set the detection threshold in the presence of channel notches. 
+
+Energy detectors are unable to distinguish between modlated signals, interference and noise. As such, it can't make use of adaptive signal processing techniques such as interference cancellation to improve performance. 
+
+Further this type of detector is not efficient at detecting spread spectrum signals, as the signal power is spread over many frequencies.
+
+\subsubsection{Cyclostationary Feature Detection}
+Signals used in practical communication systems contain distinctive features that can be exploited for detection, thus it is possible to achieve a detection performance which substantially surpasses the energy detector. This is in contrast to the predictions of information theory where maximum entropy signals will be statistically white and Gaussian, and the energy detector is the optimal detector in AWGN.
+
+Known signal features can be exploited to estimate unknown parameters such as noise power, carrier frequency offset etc. Examples of well known patterns include pilot signals and spreading sequences. Other examples include preambles and midambles: known sequences transmitted before and in the middle of each slot, respectively. Others include redundancy added by coding, modulation and burst formatting used by the transmitter. 
+
+Cyclostationary Feature Detection exploits cyclostationary features of received signals: man made periodicity in the signal (for example symbol rate, chip rate, cyclic prefix etc) or its statistics - mean, autocorrelation. A cyclic correlation function is used instead of Power Spectral Density (or autocorrelation sequence) for detecting signals present in a given spectrum. Cyclic correlations are able to differentiate noise from primary users' signals - noise will have no periodic correlation, in contrast to PU signals.
+
+For clarity, the random processes generated by a PU and encountered by a cognitive radio will have a period in both expectation and autocorrelation:
+
+\begin{equation}
+\mathbb{E}x\left(t\right) = \mathbb{E}x\left(t + mT\right) 
+\end{equation}
+
+\begin{equation}
+\mathbb{R} \left( t, \tau \right) = \mathbb{R}\left(t + mT, \tau \right) = \mathbb{E} \left[ x \left(t \right)\conj{x \left(t_+\tau \right)} \right]
+\end{equation}
+
+where \(t\) is time, \(\tau\) is the autocorrelation lag, \(x\left(t\right)\) is the random process we are considering and \(m\) is an integer. 
+
+Due to the periodicity of the autocorrelation, it can be expressed as a Fourier series over integer multiples of the fundamental frequency in the signal as well as integer multiples of sums and differences of this frequency:
+%
+\begin{equation}
+\mathbb{R}\left(t, \tau\right) = \sum_{\alpha} r\left(\alpha, \tau\right) e^{2\pi j \alpha t}  
+\end{equation}
+\label{cyclic-covarience}
+%
+with Fourier coefficients:
+%
+\begin{equation}
+r\left(\alpha, \tau\right) = \frac{1}{T} \int_{T} x\left(t+\frac{\tau}{2}\right)\conj{x\left(t+\frac{\tau}{2}\right)} e^{-2\pi j \alpha t} dt
+\end{equation}
+%
+where \(\alpha\) is the cyclic frequency
+
+From this we can define the Cyclic Power Spectrum of the signal:
+
+\begin{equation}
+S\left(f\right) = \int_{-\infty}^{\infty} r\left(\alpha, \tau\right) e^{-2 \pi j f \tau} d\tau
+\end{equation}
+
+For a fixed lag \(\tau\), \ref{cyclic-covarience} can be re-written as:
+%
+\begin{equation}
+R_{xx}\left(t, \tau \right) = R_{xx}\left(\tau\right) + \sum_{\alpha} r\left(\alpha, \tau\right) e^{2\pi j \alpha t}  
+\end{equation}
+%
+i.e. a part dependent on the lag only (the cyclic frequency is zero), and a part which is a periodic function of time. 
+
+Under both hypotheses, (\ref{h1}, \ref{h2}), the continuous portion of the signal exists, but the cyclo-stationary portion only exists under \ref{h2} when \(\alpha \neq 0\). Thus we only need to test for the presence of a cyclo-statrionary component. 
+
+To this end re-write the hypotheses as:
+
+\begin{equation}
+H_{0}: y\left[n\right] = S_{w}^\alpha \left[n\right] \text{, n} =  1 \ldots N 
+\end{equation}
+\label{c1}
+
+\begin{equation}
+H_{1}: y\left[n \right] = S_{x}^{\alpha} \left[n\right] + S_{w}^{\alpha} \left[n\right] \text{, n} =  1 \ldots N 
+\end{equation}
+\label{c2}
+
+where \(S_{x}^{\alpha}\) is the CPS of white noise which is zero for \(\alpha \neq 0 \).  Using the test statistic:
+
+\begin{equation}
+\chi = \sum_{\alpha \neq 0} \sum_{n} S_{x}^{\alpha} \conj{S_{x}^{\alpha}}
+\end{equation}
+
+we can formulate the cyclo-stationary detector as:
+
+\begin{equation}
+ d =
+  \begin{cases}
+   0 & \chi < \lambda  \\
+   1 & \chi \geq \lambda
+  \end{cases}
+\end{equation}
+
+where \(\lambda\) is some pre-determined threshold \cite{Ghozzi2006}. 
+
+\subsubsection{Matched Filtering}
+If all the probability distributions and parameters  - noise variance, signal variance, channel coefficients etc - are known under both hypotheses, and the signal to be detected is perfectly known then the optimal test statistic is a matched filter.
+
+A matched filter is the convolution of a test signal with a template signal (or window) and detects the presence of the template in the unknown signal (as the convolution measures the overlap of two signals).
+
+For example: for a given TV signal, \(r\left(t\right)\) defined over \(0 \leq t \leq T\) the corresponding matched filter is \(h\left(t\right) = r\left(T - t\right)\). 
+
+A test statistic can be formed by sampling the output of the filter every \(nT\) seconds and choosing \ref{h1} if the statistic is below some threshold and \ref{h2} otherwise.
+
+When compared to other methods, matched filtering takes a shorter time to achieve a threshold probability of false alarm. However, matched filtering requires that radios demodulate received signals, and so requires perfect knowledge of primary users signalling features. Matched filtering also requires a prohibitively large power consumption, as various algorithms need to be executed for detection.
+
+\subsubsection{Limitations}
+The methods described above, are appropriate for sensing whether a single channel is available for transmission, based upon the result of measurements of that channel. However, Cognitive Radios aim to exploit spectral holes in a wide band spectrum (i.e. a channel whose frequency response is not flat over the bandwidth) and will usually have to make a decision regarding transmission from measurements from this type of channel.
+
+There are two proposed approaches to this: Multiband sensing and Compressive Sensing. Multiband sensing splits the wideband spectrum into a number of independent (not necessarily contiguous) sub-channels (whose frequency response is flat), and performs the hypothesis test for each sub-channel. However, in practice, there are correlations across sub-channels that this method fails to address. For example, digital TV signals are transmitted as spread spectrum signals so that primary user occupancy is correlated across channels. A related issue is that noise variance could be unknown but correlated across bands. Binary hypothesis testing then fails in this case, needing to be replaced by composite hypothesis tests which grow exponentially with the number of sub-channels. Such problems are typically non-convex and require prohibitively complex detectors.
+
+\section{Wideband Spectrum Sensing}
+This section presents a new method of sensing sparse signals, and its application to the problem of sensing over wideband spectra in Cognitive Radios. Initially we introduce Classical Sensing and then give an overview of both Compressive Sensing and Group Testing. Finally, we discuss some sub-Nyquist sampling techniques.
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm]{bands.png}
+\caption{A digram of the Spectrum Sensing model \cite{Tian}}
+\label{widebandspectra}
+\end{figure*}
+
+\subsection{Classical Sensing}
+Classically, for perfect signal reconstruction, we must sample a signal such that the sampling rate must be at least twice the maximum frequency in the bandlimited signal. The continuous time signal can then be recovered using an appropriate reconstruction filter (e.g. a sinc filter). For example, we can represent a sampled continuous signal as a multiplication of the signal with a train of Dirac delta functions at multiples of the sampling period T.
+%
+\begin{equation}
+x\left(nT\right) = \sha\left(t-nT\right)x\left(t\right)
+\end{equation}
+%
+where
+%
+\begin{equation}
+\sha\left(t-nT\right) = \sum_{k=-\infty}^{\infty} \delta\left(t - kT\right)
+\end{equation}
+
+Working the frequency domain, this multiplication becomes convolution (which is equivalent to shifting):
+
+\begin{equation}
+\hat{X}_{s}\left(f\right) = \sum_{k=-\infty}^\infty x\left(t - kT\right)
+\end{equation}
+
+Thus if the spectrum of the frequency is supported on the interval \(\left(-B, B\right)\) then sampling at intervals \(\frac{1}{2B}\) will contain enough information to reconstruct the signal \(x(\left(t\right)\). Multiplying the spectrum by a rectangle function (low-pass filtering), to remove any images caused by the periodicity of the function, and the signal \(x(\left(t\right)\) can be reconstructed from its samples:
+
+\begin{equation}
+x\left(t\right) = \sum_{n=-\infty}^\infty x\left(nT\right) sinc\left(\frac{t_nT}{T}\right)
+\end{equation}
+
+\subsection{Compressed Sensing}
+
+Compressive sensing is a modern signal acquisition technique in which randomness is used as an effective sensing strategy for classes of signals typically encountered in practice.
+
+Informally, CS posits that for \(k\)-sparse signals \(\in \re^{n}\) - signals with \(k\) non-zero amplitudes at unknown locations) - \(k\log{n}\) measurements are sufficient to exactly reconstruct the signal. In other words we can sample at the information rate, without information loss.
+
+For TVWS signals, this reasoning can be inverted: signals with very large bandwidth - but with a sparse spectrum - can be sampled randomly in time at rates below below those thought sufficient by the Nyquist theorem.
+
+This work has been extended to cases where the signal isn't exactly sparse, and where the measurements are imperfect.
+
+The central idea of CS is that randomness is an effective sensing strategy. We require that sensing vectors satisfy two technical conditions (described in detail below): an Isotropy property, which means that components of the sensing vectors have unit variance and are uncorrelated, and an Incoherence property, which means that sensing vectors are almost orthogonal. These conditions are summed up in the Restricted Isometry Property.
+
+Once the set of measurements have been taken, the signal may be reconstructed from a simple linear program.
+
+In practice many signals encountered 'in the wild' can be fully specified by much fewer bits than required by the Nyquist sampling theorem. This is either a natural property of the signals, for example images have large areas of similar pixels, or as a conscious design choice, for example training sequences in communication transmissions. These signals are not statistically white, and so these signals may be compressed (to save on storage). For example, lossy image compression algorithms can reduce the size of a stored image to about 1\% of the size required by Nyquist sampling. 
+
+Whilst this vein of research has been extraordinarily successful, it poses the question: if the reconstruction algorithm is able to reconstruct the signal from this compressed representation, why collect all the data in the first place, when most of the information can be thrown away? Is it possible to directly measure the part that will not end up being thrown away?
+
+Compressed Sensing answers these questions, by way of providing an alternative signal acquisition method to the Nyquist theorem. Specifically, situations are considered where fewer samples are collected than traditional sensing schemes. 
+
+That is, in contrast to Nyquist sampling, Compressive Sensing is a method of measuring the informative parts of a signal directly without acquiring unessential information at the same time. 
+
+Signals which are compressible, are signals whose information content is smaller than the ambient dimension they are acquired in. Such signals have representations in which they are sparse (i.e. the most of the co-efficients in that representation are zero, or close to zero). For example, 
+
+\begin{enumerate}
+\item  A sine wave at frequency \(\omega\) is defined as a single spike in the frequency domain yet has an infinite support in the time domain
+\item An image will have values for every pixel, yet the wavelet decomposition of the image will typically only have a few non-zero coefficients
+\end{enumerate} 
+
+We may not be able to directly obtain those coefficients, as we may not posses an appropriate measuring device or one may not exist, or there is considerable uncertainty about where the non-zero coefficients are. Yet we still are able to measure correlations between the signal and some waveforms \(\phi_{k}\) i.e. 
+%
+\begin{equation}
+y_{k} = \left\langle f \text{,} \phi_{k} \right\rangle \text{ } k = 1 \ldots m
+\end{equation}
+%
+for \( f \in \mathbb{R}^n \) expanded in an orthonormal basis \( \psi \) s.t.
+%
+\begin{equation}
+f(t) = \sum_{i = 1}^n x_{i}\psi_{i}(t) 
+\end{equation}
+%
+where the \(x_{i} \) are the coefficient sequence of f. 
+
+%An example of a practical Compressive Sensing system is the single-pixel camera at Rice University \cite{Duarte2008}. Typical camera devices obtain pixel samples by exposing a bank of photon detectors (one for each pixel) to the incident light field. This data is the processed into an image.
+
+%The single pixel camera takes pictures by first directing the incoming light field onto an array of tiny mirrors (one for each pixel). Each mirror can be either be oriented towards a single photon detector, or oriented away from the detector. In this setup, a measurement is taken as the sum of all the incident light beams. Afterwards, the mirrors are flipped to a new random configuration, and another measurement is taken. This process is repeated, until enough information has been collected to reconstruct the image. Figure \ref{singlepixelcamera} shows the operation of the single pixel camera.
+
+%\begin{figure*}[h]
+%\centering
+%\includegraphics[height = 7 cm]{singlepixel.png}
+%\caption{The operation of the single pixel camera at Rice University \cite{singlepixelimaging}}
+%\label{singlepixelcamera}
+%\end{figure*}
+
+%Compressive Sensing works best if the \(x_{i}\) are compressible (i.e. they are distributed according to a power law), and the error \(\|x - x_{s}\|\) is small.
+
+%In Compressive Sensing measurements are taken is an incoherent basis, as opposed to the basis of the original signal. 
+
+Given that we know a basis in which our signal is sparse, \(\phi\), how do we choose \(\psi\), so that we can accomplish this sensing task? In classical sensing, we choose (\psi_k\) to be the set of \(T_s\)-spaced delta functions (or equivalently the set of \(1/T_s\) spaced delta functions in the frequency domain). A simple set of \(\psi_k\) would be to choose a (random) subset of the delta functions above.
+
+In general, we seek waveforms in which the signals' representation would be dense.
+
+\begin{defn}
+A pair of bases is said to be incoherent if the largest projection of two elements between the sensing (\(\psi\)) and representation (\(\phi\)) basis  is in the set \( [1 , \sqrt{n}] \), where \( n \) is the dimension of the signal. 
+\end{defn}
+
+The coherence of a set of bases is denoted by \(\mu\).
+
+This implies that sensing with incoherent systems is good (in the sine wave example above it would be better to sample randomly in the time domain as opposed to the frequency domain), and efficient mechanisms ought to acquire correlations with random waveforms (e.g. white noise).
+
+\textbf{Theorem} \cite{Candes2006}
+Fix a signal f \(\in \mathbb{R}^n\) with a sparse coefficient basis, \(x_{i}\) in \(\phi\). Then a reconstruction from \(m\) random measurements in \(\psi\) is possible with probability \(1 - \delta\) if: 
+
+\begin{equation}
+m \geq C \mu^2(\phi, \psi) S \log\left(\frac{n}{\delta}\right)
+\end{equation}
+\label{minsamples}
+
+where \( \mu(\phi, \psi)\) is the coherence of the two bases, and \(S\) is the number of non-zero entries on the support of the signal.
+
+Once we have obtained the measurements \(m\), we need to reconstruct the signal. 
+
+To recover a sparse vector, we must make sure that the vectors are not in the null space of the sensing matrix (otherwise there would be no hope of recovery). We also require that any subset of \(S\) columns taken from the measurement matrix be nearly orthogonal w.r.t sparse vectors: i.e. all pairwise distances between S-sparse vecotrs be well preserved in the measurement space.
+
+This can be summed up in the following inequality (Restricted Isometry Property) \cite{Emma}:
+
+\begin{equation}
+\left(1-\delta\right)\vectornorm{x}_{l_2}^2 \leq \vectornorm{Ax}_{l_2}^2 \leq \left(1+\delta\right) \vectornorm{x}_{l_2}^2
+\end{equation}
+\label{RIP}
+
+We are also in a position to evaluate the meaning of the constant \(\mu\) in \ref{minsamples}. We are considering sampling within orthonormal systems (for example, Time and Frequency):
+%
+\begin{equation}
+A*A = nI
+\end{equation}
+\label{orthonormal}
+%
+so that each row or column has \(l_2\) norm equal to \(sqrt{n}\). \(A\) is any matrix satisfying this property (examples include the Fourier matrix and the Dirac matrix). Thus \(\mu\) must be in the set \(\left[1, \sqrt{n}\right]\). \(\mu\) then, is a measure of how concentrated the rows of our measurement matrix is - i.e. how much information is spread across each vector. If \(\mu = 1\) then the rows are 'flat' -  and we need relatively fewer samples to reconstruct an S-sparse signal (i.e. each sample provides the same amount of information). However, if the rows contain all non-zero entries except for a single component, then \(\mu^2 = n\) and we will need to observe all components to determine the non-zero one (i.e. we have no guarantees of recovery from limited samples) \cite{Candes2007}. 
+
+Noting that the measurements we take are projections from our orthonormal system (from example time) onto a sparsifying basis (i.e. frequency) we can see that:
+
+\begin{equation}
+\mu = max_{k,j} |\langle \phi_k, \psi_j \rangle |
+\end{equation}
+\label {mudef}
+ 
+So we need to choose a sensing basis, where the vectors will be 'spread out', and the degree of spreading is characterised by \(\mu\).
+
+The correct functional to minimise would be:
+
+\begin{equation}
+min\|\tilde{x}\|_{l_{0}} \text{ subject to } y_{k} = langle \phi_{k} \text{,} \psi x^* \right\rangle \text{   } \forall k \in M \subset [1 \ldots n]
+\end{equation}
+\label{programl0}
+
+where 
+
+\begin{equation}
+|| s ||_0 = |s|
+\end{equation}
+
+However, this norm is not convex and so minimising it is an NP-hard optimisation problem. As we are seeking sparse solutions the \(l_1\)-norm will suffice \cite{Donoho2006a}. This is because all vectors in a random \(k\)-dimensional subspace of an \(n\)-dimensional space are approximately Gaussian (in the sense that the components are distributed according to an approximate normal distribution). Such vectors have roughly equivalent norms, and so any solution to the \(l_1\) minimisation problem will be the same solution to the \(l_0\) minimisation problem for sufficiently sparse signals.
+
+Thus the role of \(l_{1}\) minimisation is to decompress the data. There are many ways to perform this operation: some popular methods are basis pursuit \cite{Chen1998} and Greedy approaches such as Orthogonal Matching Pursuit \cite{Tropp2007}. 
+
+Then \(f^*\) (the proposed reconstruction) is given by \(f^* = \psi x^*\) where \(x^*\) is the solution to the convex optimisation program (n.b. \(\| x\|_{l_{1}} := \sum_{i} |x_{i}| \)):
+
+\begin{equation}
+min\|\tilde{x}\|_{l_{1}} \text{ subject to } y_{k} = \left\langle \phi_{k} \text{,} \psi x^* \right\rangle \text{   } \forall k \in M \subset [1 \ldots n]
+\end{equation}
+\label{programl0}
+
+In summary the \textbf{CS: Sample non-adaptively in an incoherent domain and invoke linear programming after the acquisition step to decompress the signal}
+
+\subsection{RIPless Theory}
+
+
+\subsubsection{Short, Fat matrices}
+As remarked upon earlier: Compressive Sensing is equivalent to solving an under-determined linear system, with the constraint that we seek the sparsest solution. The content of the previous sections amounts to constraints on the number of rows of matrix of this linear system. 
+
+If we had an Oracle which could tell us where the non-zero components of our solution were, then we would need only as many rows of the matrix as there were non-zero components in the signal to fully specify the problem. 
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm, width=\textwidth]{compressive_sensing_example.jpg}
+\caption{A visualisation of the Compressive Sensing problem as an under-determined system}
+\label{l1l2}
+\end{figure*}
+
+However, such and Oracle does not exist, and so we're left with the task of constructing a matrix to recover those components. Knowing that we're looking for k-sparse solutions, we need a matrix with at least 2k columns which are linearly independent. Equivalently, all images of \(k\)-sparse vectors under the operation of the sensing matrix \(\Phi\) must be distinct. From this, any k-sparse signal can be reconstructed from \(Ax\). 
+
+To prove this assume the opposite - then there are two vectors \(x, x' \in \mathbb{R}^n\) such that \(Ax = Ax'\). I.e. \(A(x-x') = 0\). However, \((x-x')\) is 2k-sparse and so there is a linear dependence between 2k columns of the sensing matrix A. We have a contradiction, and so 2k columns will suffice to reconstruct a k-sparse signal. 
+
+The problem with this is that we are trying to find the support of a k-sparse signal over a vector of length N, and so we would need to check all \(N \choose k\) combinations of k-sparse signals which is prohibitively computationally expensive. Is there some way to gain the advantages of sparsity, without having to minimise a non-convex functional?
+
+As it turns out, the answer is yes. If we take \( m \geq C \mu^2(\phi, \psi) S \log\left(n\right) \) rows minimising the \(l_{1}\) norm will find the sparsest solution. This is because the \(l_1\) norm is an octahedron (in 3-dimensions, in higher dimensions it has an analogous spiky geometry), and solutions are more likely to intersect the norm at the points. Figure \ref{l1l2} shows this.
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm]{l1l2.jpg}
+\caption{Solutions to the Compressive Sensing optimisation problem intersect the \(l_1\) norm the points where all components (but one) of the vector are zero (i.e. it is sparsity promoting) \cite{Tibshirani1996}}
+\label{l1l2}
+\end{figure*}
+
+\subsubsection{Bayesian Compressive Sensing}
+Based on the discussion above we can represent the compressive sensing measurements as: 
+
+\begin{equation}
+\textbf{g} = \Phi	\textbf{w}
+\end{equation}
+
+where \(\Phi\) is a \(K \times	N\) matrix which is the product of the measurement and sparse bases described earlier.
+
+Note that the measurements may be noisy, with the measurement noise represented by a zero mean Gaussian distribution and unknown variance \( \sigma^2 \):
+
+\begin{equation}
+\textbf{g} = \Phi \textbf{w} + \textbf{n}
+\end{equation}
+\label{CSequation}
+
+Where \textbf{n} is the vector representing the vector of noise, and has the same support as the measurements. 
+
+Previous sections have shown how the weights \(w\) may be found through optimisation methods such as basis pursuit or greedy algorithms. Here, an alternative Bayesian model is described.
+
+From \ref{CSequation} we have a Gaussian likelihood model: 
+
+\begin{equation}
+p \left( \textbf{g} \mid \textbf{w}\text{,} \sigma^2 \right) = (2 \pi \sigma^2)^{-K/2} \exp{\left(- \frac{1}{2 \sigma^2} \|\textbf{g} - \Phi	\textbf{w}\|_{2}^{2} \right)} 
+\end{equation}
+
+The above has converted the CS problem of inverting sparse weight \textbf{w} into a linear regression problem with a constraint (prior) that \textbf{w} is sparse. 
+
+To seek the full posterior distribution over \textbf{w} and \( \sigma^2 \), we can chose a sparsity promoting prior. A popular sparseness prior is the Laplace density functions:
+
+\begin{equation}
+p\left(w\mid\lambda\right) = \left(\frac{\lambda}{2}\right)^N exp{-\lambda \sum_{i=1}^{N} |w_i|}
+\end{equation}
+
+Note that the solution the convex optimisation problem \ref{program0} corresponds to a maximum \textit{a posteriori} estimate for \(w\) using this prior. I.e this prior is equivalent to using the \(l_1\) norm as an optimisation function (see figure \ref{laplacenormal} \cite{Tibshirani1996}).
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm]{LaplaceandNormalDensity.png}
+\caption{The Laplace (\(l_1\)-norm, bold line) and Normal (\(l_2\)-norm, dotted line) densities. Note that the Laplace density is sparsity promoting as it penalises solutions away from zero more than the Gaussian density. \cite{Tibshirani1996}}
+\label{laplacenormal}
+\end{figure*}
+
+The full posterior distribution on \(w\) and \(\sigma^2\) may be realised, by using a hierarchical prior instead. To do this, define a zero-mean Gaussian prior on each element of \(w\):
+%
+\begin{equation}
+p\left(w\mid a\right) = \prod_{i=1}^{N}\mathbb{N}\left(w_i\mid 0, \alpha_{i}^-1\right)
+\end{equation}
+%
+where \(\alpha\) is the precision of the distribution. A gamma prior is then imposed on \(\alpha\):
+
+\begin{equation}
+p\left(\alpha \mid a, b \right) = \prod_{i=1}^{N} \Gamma\left( \alpha_i \mid a, b \right)
+\end{equation}
+
+The overall prior is found by marginalising over the hyperparameters:
+
+\begin{equation}
+p\left( w \mid a, b \right) = \prod_{i=1}^{N} \int_{0}^{\infty} \mathbb{N}\left(w_i\mid 0, \alpha_{i}^-1\right) \Gamma\left( \alpha_i \mid a, b \right)
+\end{equation}
+
+This integral can be done analytically and is a Student-t distribution. Choosing the parameters \(a,b\) appropriately we can make the Student-t distribution peak strongly around \(w_i = 0\) i.e. sparsifying. This process can be repeated for the noise variance \(\sigma^2\). The hierarchical model for this process is shown in \ref{bayesiancs}. This model, and other CS models which not necessarily have closed form solutions, can be solved via belief-propagation \cite{Baron2010}
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm]{bayesiancs.png}
+\caption{The hierarchical model for the Bayesian CS formulation \cite{Ji2008}}
+\label{bayesiancs}
+\end{figure*}
+
+\subsection{Group Testing}
+Group Testing originated in the second world war because of the need to test all incoming conscriptees for syphilis. It would have been inefficient and expensive to test each soldier individually, as the rate for syphilis was only 10 per 100,000. Dorfman \cite{Dorfman1943}, considered the idea of pooling blood samples and testing the pooled samples for syphilis and only further testing the pools which come up positive.
+
+A typical problem that can be solved by Group Testing is finding a counterfeit coin in a group of otherwise identical coins by weighing groups of coins on a pan balance. For example, given 80 coins known to contain a single counterfeit, which is lighter than the others, what is the minimum number of weighings needed to determine the counterfeit with certainty? You may get lucky and pick the counterfeit in the for the first go: but there's only a \(\frac{1}{80}\) chance of that happening. There's also no need to check all \(80 \choose 1\) combinations of pairs of coins. However, putting more than one coin on a pan reveals the same information  - it's better to weigh groups of coins against each other.
+
+Choose the groups so that each weighing can distinguish between the hypothesis that the pans will balance, or than there will be a heavier pan i.e. split the initial group into 3 (27, 27, 26). Continue this process recursively, splitting the remaining group into 3 each time, until you have found the counterfeit. If the two groups of 27 balance initially, take a coin from one of those groups and add it to the group of 26 to make a power of 3. This won't add any new information (you know this coin is not counterfeit) and so won't affect the inference.
+
+The Group Testing problem can be formalised as follows: a set of items is given, along with an upper bound on the number of defectives. The set is described as a vector, where if an item is 0 it is not defective and 1 if it is defective. Before the tests are run, the position of the 1's is unknown. 
+
+To find the defective items, a query is run against a subset of \([n]\), where the answer is defined as follows:
+
+\begin{equation}
+A\left(S\right) = 1 \sum_{i} x_i \geq 1
+\end{equation}
+
+Note that the addition is the binary-or in the above summation. The goal of Group Testing is to minimise the number of tests required to reconstruct the defective set.
+
+\subsubsection*{Algorithms}
+An initial algorithm to consider is a simple binary search of the set to be tested. That is, given a set of size \(N = 2^r\) i.e a powre of 2, we can recover a single defective in
+\(\lceil{\log_2{N}}\rceil\) tests.
+
+To do this, create a new set of size \(S = 2^{\lceil{\log_2{n}}\rceil}\) which is guaranteed to contain a defective. Label the items with integers, and test the items in the sets \({1,2,\ldots ,S/2}\) and \({S/2 + 1,\ldots ,S/2}\) separately. Then repeat the procedure on any groups which have a positive test. 
+
+To see why this testing procedure takes at most \(\lceil{\log_2{n}}\rceil\) tests, note that the procedure defines a binary tree over subsets of the N items, and so the depth of this tree is \(\lceil{\log_2{N}}\rceil\).
+
+For input sets with more than a single defective (say \(K\) defectives) the binary search algorithm can be repeated, and each time a defective is found it is removed from the set. The binary search is then repeated, but on a set of size \(N-1\). Using this procedure we are guaranteed to find all the defectives in 
+
+\begin{equation}
+K \lceil \log_2{N} \rceil \leq K\log_2{N} + K
+\end{equation}
+
+tests. However, this is a very inefficient algorithm: early sets are large and so are likely to contain a defective.
+
+The above algorithms return, with certainty, after at most \(K\lceil \log_2{N\choose K}\rceil\) tests, the defective set. Much work has gone into combinatorial search algorithms, often more complex than those described above. 
+
+This has been motivated by the analogy that the Group Testing problem can be considered a decoding problem where an experimenter receives a binary vector: 
+
+\begin{equation}
+y = \textbf{A}x
+\end{equation}
+
+\(y \in \{0,1\}^K, x \in \{0,1\}^N\), and wishes to decode the vector \(x\) to recover the defective set, subject to the constraints of the testing matrix \(\textbf{A}\). The matrix has to satisfy the property that the Boolean sum of any \(t\) columns was unique, and did not contain any other column in the matrix. These properties are known as seperability and disjunctness. 
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm]{GTFat.png}
+\caption{The Group Testing model: multiplication with a short, fat matrix \cite{Atia2008}}
+\label{bayesiancs}
+\end{figure*}
+
+See \cite{cgt} for more a detailed introduction and analysis of the requisite algorithms.
+
+\subsubsection*{Hwang's Algorithm}
+In modern Coding Theory, there has been a move away from exlicit combinatorial algorithms which return the codeword with certainty, towards probabalisitic algorithms which return the correct codeword with an associated probability. The advantage of this has been the development of algorithms which can decode codes close to the Shannon capacity of the channel.
+
+Similarly in Group Testing, the state of the art considers probabilistic algorithms instead of explicit combinatorial designs. 
+
+The problems with the binary search algorithm (that initial groups are very large and are highly likely to contain a defective) above can be overcome by instead considering groups whose size is chosen so that the probability that the group will have a positive test is close to half. Equivalently, given a set of size \(N=2^r\) which are known to contain K defectives, in expectation a group of size \(\frac{K}{N}\) should contain a defective. 
+
+Thus we can use fewer tests than predicted by simple repeated binary search, by testing 'pilot' groups of size roughly \(\frac{K}{N}\). Hwang \cite{Hwang1972} gives such an algorithm, and provides an upper bound on the number of tests required to recover the defective set.
+
+The steps for the algorithm are:
+
+\begin{enumerate}
+\item If \(n \leq 2d-2\) then test every item individually. Otherwise set \(l = n - d + 1\) and define \(\alpha:=\log{\lceil \frac{l}{d}\rceil}\).
+\item Test a group of size \(2^\alpha\). If the outcome is negative, the groups is good. Set \(n := n - 2^\alpha \) and go to 1. If the outcome is positive, then use binary splitting on the group to identify a defective and \(x\) good items. Set \(n := n - 1 -x \) and \(d:= d-1\) and go to 1.
+\end{enumerate}
+
+The upper bound on the number of tests is given by the following argument: as there are \(n \choose k\) possible sets of defectives, and in \(t\) tests at most \(2^t\) cases can be differentiated, \(\lceil \log_2{n \choose k} \rceil\) tests are needed. 
+
+\subsubsection*{Bounds}
+It has been previously believed that the success probability to recover the defective set given \(T\) tests was:
+
+\begin{equation}
+P\left(Success\right) \leq \frac{T}{\log_2{N \choose K}}
+\end{equation}
+
+However, a tighter upper bound has recently been found \cite{Aldridge2013} at:
+%
+\begin{equation}
+P\left(Success\right) \leq \frac{2^T}{ {N \choose K} }
+\end{equation}
+%
+i.e. the probability of success increases exponentially with the number tests, opposed to linearly. 
+
+In the Group Testing literature there exists an 'adaptivity gap' - it seems that adaptive algorithms \textit{do} give a performance improvement over non-adaptive algorithms, in terms of the number of tests required to recover the defective set. This is discussed here, using Hwang's algorithm as a test bed.
+
+Hwang's algorithm is guaranteed to succeed in:
+
+\begin{equation}
+T = \log_2{N\choose K} + K
+\end{equation}
+
+tests. The Combinatorial Orthogonal Matching Pursuit algorithm, considered in \cite{Chan2011}, is guaranteed to recover the defective set with probability \(N^{-\delta} \) in
+%
+\begin{equation}
+T = \left(\left(1+\delta\right)e\right)K\ln{N}
+\end{equation}
+%
+tests. For all \(N\) and \(K)\) we have:
+%
+\begin{equation}
+K\log_2{\frac{N}{K}} \leq \log_2{N \choose K} \leq K \log_2{\frac{Ne}{K}}
+\end{equation}
+%
+which follows from well-know bounds on binomial coefficients. This allows a contrast between the asymptotic bounds of previous algorithms to be considered in this section. We see that, the regime where \(K = N^{1-\beta}\), Hwang's algorithm succeeds with:
+%
+\begin{equation}
+T = \beta K \log_2{N} + K\left(\log_2{e} + 1\right)
+\end{equation}
+\label{hwangbound}
+%
+tests, whilst the COMP algorithm succeeds with:
+%
+\begin{equation}
+1.88\left(1+\delta\right)K\log_2{N}
+\end{equation}
+\label{compbound}
+%
+tests. It's worthwhile to contrast these results, to gain some insight into the problem. \ref{hwangbound} suggests that for very sparse problems (\(\beta\) tending towards 1) that Hwang's adaptive algorithm will outperform a simmilar non-adaptive algorithm. Even though the two procedures have the same complexity, they have different constants (1 v,s 1.88 in the sparse case). Thus, there are asymptotic gains (in terms of the number of tests required to recover the defective set) which are offered by adaptive algorithms, and not by non-adaptive algorithms.
+
+These ideas can be summarised in the idea of a \textit{capacity} for Group Testing \cite{Baldassini2013}. That is, there is a constant \(C\) such that a sequence of Group Testing algorithms with \( K = \omega\left(N\right)\) will succeed with probability tending to 1. This allows different noise, and dilution models to be considered so that a more complete characterisation of the structural properties of Group Testing is revealed.
+ 
+\subsubsection{Comparison to Compressive Sensing}
+The goal of Coding Theory is given a vector \(x \in \mathbb{F}^m\), where \(\mathbb{F}\) is some finite-field, is to construct a 'code-book' \(C\) which produces a vector \(y \in \mathbb{F}^n\), \(n > m\), so that the original vector may be transmitted over a noisy-channel with vanishing error probability. This problem is structurally similar to the Compressive Sensing and Group Testing problems, but in reverse. In CS and GT we're given 'short' vector, and we wish to infer the 'longer' one satisfying the constraint that we seek the sparsest vector, under some conditions on the matrix \(\Phi\). This suggests that there may be some Information-theoretic framework uniting all three disciplines. 
+
+In \cite{Emma} Tao and Candes consider the CS problem as one of error correction of a linear code: however in this case the codewords are drawn from \(\mathbb{R}^m\) as opposed to a finite alphabet more common in Coding Theory. This is done by considering \(\Phi\) as the parity check matrix of a linear code and the signal x as the error pattern. Linear programming can then be viewed as a method for decoding. 
+
+Group testing is a combinatorial variant of Compressive Sensing, where the sensing matrix is a binary matrix. The matrix represents combinations (or pools) of items, such that a 1 in the \(i^{th}\) row and \(j^{th}\) column means that  the \(i^{th}\) item is tested in the \(j^{th}\) pool. The goal of Group testing can then be seen as designing testing pools so to accurately reconstruct the sparse set of interesting items. 
+
+In Group Testing, instead of the sensing matrix being to subject to coherence constraints such as those above, the sensing matrices have the property that the support of any column is not contained in the union of the supports of any t other columns. Thus a t-disjunct matrix defines a group testing scheme which an identify any defective set up to size t.
+
+The analogue between Group Testing and Coding is even closer, as GT explicitly considers signals and matrices from Binary alphabets. That is, Group Testing is a closer cousin of Coding Theory than Compressive Sensing, in a sense the inverse problem as in both Coding and Group Testing we are working over a finite field. This is encouraging, as it could allow the reconstruction of the defective set via methods developed in Coding Theory. There has been some work done on this, \cite{Sejdinovic2010} considers the noisy Group Testing problem and the reconstruction of the defective set via belief propagation whilst \cite{Wadayama2013} gives explicit theorems on conditions for the recovery of the defective set for the case of the binary symmetric channel. \cite{Baldassini2013} takes this further and finds the capacity of Group Testing for a number of cases. 
+
+\subsection{Sub-Nyquist Sampling techniques}
+This section presents some work on sampling methods for wide-band spectrum sensing
+
+\subsubsection{Wideband Modulated Converter} 
+The sampling scheme proposed in \cite{Mishali2010} is capable of sampling wideband signals at rates below those predicted by Shannon-Nyquist sampling theory. 
+
+It works by mixing the incoming analogue signal \(x\left(t\right)\) with a mixing function \(p_i\left(t\right)\) aliasing the spectrum. \(x\left(t\right)\) is assumed to be bandlimited and composed of up to \(N_sig\) uncorrelated transmissions (i.e. possible narrowband channels). 
+
+This process is repeated in parallel over \(M\) channels (unrelated to \(N_sig\) so that each band in \(x\) appears in baseband. The mixing functions are required to be periodic, with period \(T_p\). Since \(p_i\) is periodic it has Fourier expansion:
+
+\begin{equation}
+p_i\left(t\right) = \sum_{l=-\infty}^{\infty} c_{il} exp{jlt\frac{2\pi}{T_p}}
+\end{equation}
+
+The \(c_{il}\) are the Fourier coefficients of the expansion and are defined in the standard manner. The result of the mixing procedure in channel \(i\) is therefore \(xp_i\), with Fourier transform:
+
+\begin{align}
+X_{i}\left(f\right) &=& \int_{-\infty}^{\infty} x\left(t\right) p_i\left(t\right) dt
+\\ &=& \sum_{l=-\infty}^{\infty} c_{il} X\left(f-lf_p\right)
+\end{align}
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm, width=\textwidth]{mwc.png}
+\caption{The operation of the Modulated Wideband Converter \cite{Mischali2010}}
+\label{bayesiancs}
+\end{figure*}
+
+(insert the Fourier series for \(p_i\), then exchange the sum and integral). The output of this mixing process then, is a linear combination of shifted copies of \(X\left(f\right)\), with at most \(\lceil f_NYQ/f_p\rceil\) terms since \(X\left(f\right)\) is zero outside it's support (we have assumed this Nyquist frequency exists, even though we never sample at that rate).
+
+Once the mixing process has been completed the signal in each channel is low-pass filtered and sampled at a rate \(f_s \geq f_p\). In the frequency domain this is a ideal rectangle function, so the output of a single channel is:
+
+\begin{equation}
+Y_i\left(e^{j 2 \pi f T_s }\right) = \sum_{l = -L_0}^{+L_0}
+\end{equation}
+
+since frequencies outside of \([-f_2/2, f_s/2]\) will filtered out. \(L_0\) is the smallest integer number of non-zero contributions in \(X\left(f\right)\) over \([-f_2/2, f_s/2]\) - at most \(\lceil f_NYQ/f_p\rceil\) if we choose \(f_s = f_p\). These relations can be written in matrix form as:
+
+\begin{equation}
+\textbf{y} = \textunderscore{\textbf{A}}\textbf{x}
+\end{equation}
+
+where \(\textbf{y}\) contains the output of the WMC process, \(\textunderscore{\textbf{A}}\) contains the Fourier coefficients of the mixing functions, and \(\textbf{x}\) is the vector of unknown samples of \(x\left(t\right)\). 
+
+
+\section{Results and Simulations}
+To compare the efficacy of Group Testing and Compressive Sensing, Hwang's algorithm and the algorithm presented in \cite{Aldrouobi} were simulated for a problem size of N=1024 and K=10.  The problem was simulated 100 times and the cumulative distribution found - i.e. after how many tests or measurements were the respective problems solved? This allows the number of tests required by Group Testing to be compared to the number of measurements in Compressive Sensing. Figure \ref{GTvsCS} shows the results:
+
+\begin{figure*}[h]
+\centering
+\includegraphics[height = 7 cm]{GTvsCS.png}
+\caption{Group Testing vs Compressive Sensing}
+\label{GTvsCS} 
+\end{figure*}
+
+Note that both the algorithms meet their respective asymptotic bounds (\( \log_2{N \choose K}\) in the case of GT and \(k\log{N}\) for CS). The main point of interest is that Group Testing requires roughly \(\frac{2}{3}\) of the tests required by Compressive Sensing. This is encouraging: despite there being 'less' information - in the sense that the result is a binary number as opposed to a real one -  GT outperforms CS. Intuitively, one would conjecture the opposite - more information should allow you to locate the non-zero components faster. This justifies our interest in the problem, as the performance increase is substantial. 
+
+\section{Further Work and Project Plan}
+Both the Compressive Sensing and Group Testing problems have been well studied for the case where there is no prior belief over where the non-zero components of the signal are (or equivalently, which items constitute the defective set). Despite some work being done solving the CS problem in the Bayesian paradigm, the prior distributions used are sparsifying (for example a Laplace prior), and not over the placement of the non-zero components. 
+
+AS such, there is some 'low hanging fruit' to be picked: would using extra information about the likelihood of an item being defective improve the performance of recovery suitably defined? For example, would a Group Testing procedure require fewer tests if there was reason to believe that some subset of items was more likely to be defective. In the coin weighing example discussed above, the input set may contain a coin which is a different colour than the others  - by testing this 'suspicious' coin in the first weighing we could find the counterfeit in a single test (otherwise we would find the counterfeit in at most five tests - one for the suspicious coin, and four following the procedure outlined in the Group Testing section). 
+
+This suggests that using prior information in could significantly reduce the number of tests required to recover the defective set, however if initial tests come back negative the performance of these algorithms could be worsened by using a non-iid distribution. 
+
+To try and characterise this numerical simulations and probabilistic analyses are required. The goal is to design algorithms which have better average case performance than current GT algorithms by incorporating prior beliefs, whilst at the same time do no worse than current performance guarantees. In the example above we'd seek an algorithm that could find the counterfeit coin in a single weighing (by testing the suspicious coin initially), yet could guarantee to find the counterfeit in at most four weighings of the pan balance. 
+
+For the 80 coins, 1 counterfeit discussed above this is probably not possible: adding an extra test which fails before proceeding with the standard approach will always be worse than simply assuming all coins are equally likely to be fake and proceeding accordingly. Do many cases like this exist, and what characterises them? Will testing suspicious items initially always give a hit in performance should those tests fail? 
+
+A few directions into answering these questions are sketched below:
+
+\begin{enumerate}
+\item Implicit in the discussion of Hwang's algorithm above is that each item is defective with the same probability \( \frac{K}{N} \). Using prior knowledge over the input set we could test groups of size \(2^\beta\), where \(\beta\) is the empirical expectation of the input set. I.e. modify Hwang's algorithm to test groups in size roughly equal to the (empirical) expectation of the distribution over the input. \textbf{Timeline:} the rest of October 2013. \textbf{Risk: } this is a low risk activity and should take at most a fortnight - the Author has already implemented Hwang's algorithm, so all that needs to be done is to calculate the empiracle mean of the input distribution, and characterise the algorithm in a few cases.
+
+\item Re-formulate the problem in terms of source coding as per \cite{Aldroubi} and represent the items in the input set as a Huffman tree. \textbf{Timeline:} October-December 2013. \textbf{Risk: } medium risk. The Group Testing algorithm will take place over the tree with th groups to test being the branches of the Huffman tree. A bit of the code is ready, however it's not clear how to fit it all together to realise a full solution
+
+\item It has usually been assumed that defective items are independent. Is it possible to relax this assumption, and if so what are the consequences of this for Group Testing algorithms? For example, what happens if defectives occur in clumps? This is a high risk activity, and should take over 6 months to begin to characterise. \textbf{Timeline: }
+October 2013-March 2014. \textbf{Risk: } medium risk. Defectives are currently assumed to be independent from each other in the classical Group Testing literature. Motivated by Spectrum Sensing for Cognitive Radios, where available frequencies are not necessarily independent between measurements, we will investigate Group Testing algorithms where the defectives are not independently distributed. Examples include inputs with defective which are pairwise independent, input sets in which the defectives are negatively dependent, and input sets where there is some (random or deterministic) process affecting the distribution of defectives.
+
+\item Some work has been done considering Group Testing as the reverse of Coding \cite{Wadayama2013}, \cite{Sejdinovic2010}, but there is still much to be done. How close is the analogy? Coding theory has a wealth of noise cases - could these be imported into the Group Testing literature, and how useful will they be? \textbf{Timeline: } October 2013 - September 2014. \textbf{Risk: } medium to high risk. A few cases have been explicitly solved (the 'binary-symmetric' and 'erasure' models). Does this analogy extend further, and can techniques from Coding help us in Group Testing. Can we formulate a more general 'Shannon Theory' type theory for Group Testing?
+
+\item To make these models suitable for engineering applications, noisy cases must be considered. \textbf{Timeline: } January - September 2013. \textbf{Risk: } High risk: whereas Group Testing has previously been utilised in Medium Access Control protocol design, it has not been applied to spectrum sensing as of yet. The exact mechanism that can robustly sense spectral opportunities, and make decisions needs careful consideration. Example problems include how should we sample spectra using Group Testing - will a series of wideband pulses over the TVWS band be sufficient, or are is there some other possibility? Once we have these samples, how do then infer spectral opportunities? The work of previous sections (non-iid input distributions, 2D input sets, defectives which are not independent in some way etc) will inform this part of the research. 
+
+\item There currently exist no two-dimensional models of Group Testing in the literature. This is particularly relevant for the problem faced by Cognitive Radios: the radios could represent the measurement point on a geographic grid, and the 'groups' they need to infer are sets of available frequencies. \textbf{Timeline: }  January-April 2014. \textbf{Risk: } High risk: there currently is no work in the literature on 2D group testing. Conjectured methods of solving this problem include factor graph methods from Coding Theory. It's not clear that this is an appropriate method, however.

@@ -1,0 +1,179 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\par \penalty \@M \unhbox \voidb@x \hbox {}\hfill {\nag@@warning@vi \bfseries Page}\par \penalty \@M 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{iii}{section*.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{v}{section*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {2}Classical Sensing}{5}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Classical Sensing}{8}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Narrowband Spectrum Sensing}{9}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Energy Detection}{10}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Cyclostationary Feature Detection}{11}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Matched Filtering}{13}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Limitations}{13}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Wideband Spectrum Sensing}{14}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Compressed Sensing}{14}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Incoherence, isometries and all that}{16}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Short, Fat matrices}{17}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Reconstruction Algorithms}{18}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Bayesian Compressive Sensing}{19}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {3}Compressive Sensing}{23}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Introduction and Preliminaries}{23}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}RIP and Stable Embeddings}{24}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Random Matrix Constructions}{27}{subsection.3.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}Wishart Matrices}{27}{subsection.3.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.4}Reconstruction Algorithms}{28}{subsection.3.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Compressive Sensing Architechtures}{35}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Modulated Wideband Converter}{35}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Random Demodulator}{36}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}ADMM}{39}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Wideband Spectrum Sensing}{40}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Compressed Sensing}{41}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}RIPless Theory}{43}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Short, Fat matrices}{43}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Bayesian Compressive Sensing}{44}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Sub-Nyquist Sampling techniques}{46}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Wideband Modulated Converter}{47}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Results and Simulations}{48}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Optimisation on Graphs}{51}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}ADMM}{51}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}The Proximity Operator}{55}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Properties}{56}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Motivation}{56}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Examples}{57}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Statistical Interpretation}{59}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.3}Acceleration}{60}{subsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Constrained Optimisation on Graphs}{60}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Joint Space-Frequency Model}{64}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Results}{65}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Conclusions}{67}{section.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Sensing with Heavyside Basis}{73}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Introduction}{73}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Signal Model}{74}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Sensing Model}{75}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Constrained Optimisation on Graphs}{76}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Results}{80}{section.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.6}Conclusions}{81}{section.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Compressive Inference}{85}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Introduction}{85}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Preliminaries}{87}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}RIP and Stable Embeddings}{87}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.2}Random Matrix Constructions}{88}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.3}Wishart Matrices}{88}{subsection.7.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.4}Maximum Likelihood estimation: non-compressive case}{89}{subsection.7.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Compressive Estimation}{91}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1}Example: Single Spike}{93}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Estimating a single rectangle}{93}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.3}Estimating Frequency spectra}{95}{subsection.7.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {8}Group Testing}{99}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Introduction and notation}{99}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.1}Group Testing}{99}{subsection.8.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Comparison to Compressive Sensing}{103}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.2}The Probabilistic group testing problem}{103}{subsection.8.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.3}Group testing capacity}{104}{subsection.8.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.4}Main results}{105}{subsection.8.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Algorithms and existing results}{105}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.1}Upper bounds on success probability}{105}{subsection.8.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.2}Binary search algorithms}{106}{subsection.8.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.3}Summary of our contribution}{107}{subsection.8.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.4}Wider context: sparse inference problems}{107}{subsection.8.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Analysis and new bounds}{108}{section.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.1}Searching a set of bounded ratio}{108}{subsection.8.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.2}Discarding low probability items}{109}{subsection.8.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.3}Searching the entire set}{110}{subsection.8.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.4}Bounding the expected number of tests}{111}{subsection.8.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.5}Controlling the error probabilities}{112}{subsection.8.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.4}Results}{113}{section.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.5}Discussion}{114}{section.8.5}

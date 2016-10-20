@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}
+
+\bibitem{bazerque2008}
+G~B Bazerque, J.A~Giannakis.
+\newblock Distributed spectrum sensing for cognitive radios by exploiting
+  sparsity.
+\newblock {\em Proc. of 42nd Asilomar Conf. on Signals, Systems, and
+  Computers}, 2008.
+
+\bibitem{davenport2010signal}
+Mark Davenport, Petros~T Boufounos, Michael~B Wakin, Richard~G Baraniuk, et~al.
+\newblock Signal processing with compressive measurements.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
+  4(2):445--460, 2010.
+
+\bibitem{goldstein2014fast}
+Tom Goldstein, Brendan O'Donoghue, Simon Setzer, and Richard Baraniuk.
+\newblock Fast alternating direction optimization methods.
+\newblock {\em SIAM Journal on Imaging Sciences}, 7(3):1588--1623, 2014.
+
+\bibitem{mishali2010theory}
+Moshe Mishali and Yonina~C Eldar.
+\newblock From theory to practice: Sub-nyquist sampling of sparse wideband
+  analog signals.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
+  4(2):375--391, 2010.
+
+\bibitem{mota2013d}
+Jo{\~a}o~FC Mota, Jo{\~a}o~MF Xavier, Pedro~MQ Aguiar, and Markus Puschel.
+\newblock D-admm: A communication-efficient distributed algorithm for separable
+  optimization.
+\newblock {\em Signal Processing, IEEE Transactions on}, 61(10):2718--2723.
+
+\bibitem{Zhang2011b}
+Huazi Zhang, Zhaoyang Zhang, and Yuen Chau.
+\newblock {Distributed compressed wideband sensing in Cognitive Radio Sensor
+  Networks}.
+\newblock In {\em 2011 IEEE Conference on Computer Communications Workshops,
+  INFOCOM WKSHPS 2011}, pages 13--17, 2011.
+
+\end{thebibliography}

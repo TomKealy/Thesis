@@ -1,0 +1,77 @@
+\linespread{1}
+\usepackage{wrapfig}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+%\usepackage[english]{babel}
+\usepackage[algoruled]{algorithm2e}
+
+\renewcommand{\theequation}{\thesection.arabic{equation}}
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .gif}
+
+\usepackage{amsthm}
+
+\usepackage{mathtools}
+
+%\usepackage[OT2,T1]{fontenc}
+%\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+%\DeclareMathSymbol{\sha}{\mathalpha}{cyrletters}{"58}
+
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcounter{eqn}
+\renewcommand*{\theeqn}{\alph{eqn})}
+%\newcommand{\num}{\refstepcounter{eqn}\text{\theeqn}\;}
+
+\makeatother
+\newcommand{\vectornorm}[1]{\left|\left|#1\right|\right|}
+\newcommand*\conjugate[1]{\bar{#1}}
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+ %\theoremstyle{plain}
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}[theorem]{Example}
+  \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{conj}[theorem]{Conjecture}
+ \newtheorem{condition}{Condition}
+ \newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\supp}{\operatorname{supp}} 
+\newcommand{\vc}[1]{{\mathbf{ #1}}}
+\newcommand{\tn}{\widetilde{\nabla}_{n} }
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\re}{{\mathbb{R}}}
+\newcommand{\II}{{\mathbb{I}}}
+\newcommand{\ep}{{\mathbb{E}}}
+\newcommand{\pr}{{\mathbb{P}}}
+\newcommand{\FF}{{\mathcal{F}}}
+\newcommand{\TT}{{\mathcal{T}}}
+\newcommand{\phin}{\phig{n}}
+\newcommand{\phig}[1]{\phi^{(#1)}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\eff}{{\rm eff}}
+\newcommand{\suc}{{\rm suc}}
+\newcommand{\tends}{\rightarrow \infty}
+\newcommand{\setS}{{\mathcal{S}}}
+\newcommand{\setP}{{\mathcal{P}}}
+\newcommand{\setX}{{\mathcal{X}}}
+\newcommand{\nec}{{\rm nec}}
+\newcommand{\bd}{{\rm bd}}

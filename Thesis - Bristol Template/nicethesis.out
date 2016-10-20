@@ -1,0 +1,87 @@
+\BOOKMARK [0][-]{section*.1}{List of Figures}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Classical Sensing}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Classical Sensing}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Classical Sensing Techniques}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{Energy Detection}{section.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.3.2}{Cyclostationary Feature Detection}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.3}{Matched Filtering}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.4}{Distributed Approaches to Spectrum Sensing}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.5}{Limitations}{section.2.3}% 12
+\BOOKMARK [0][-]{chapter.3}{Compressive Sensing}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Preliminaries}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.2.1}{RIP and Stable Embeddings}{section.3.2}% 16
+\BOOKMARK [1][-]{section.3.3}{Incoherence}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.3.1}{Random Matrix Constructions}{section.3.3}% 18
+\BOOKMARK [2][-]{subsection.3.3.2}{Wishart Matrices}{section.3.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Reconstruction Objectives}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Reconstruction Algorithms}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.5.1}{Convex Algorithms}{section.3.5}% 22
+\BOOKMARK [2][-]{subsection.3.5.2}{Greedy Algorithms}{section.3.5}% 23
+\BOOKMARK [2][-]{subsection.3.5.3}{Bayesian Algorithms}{section.3.5}% 24
+\BOOKMARK [1][-]{section.3.6}{Compressive Sensing Architectures}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.6.1}{Modulated Wideband Converter}{section.3.6}% 26
+\BOOKMARK [2][-]{subsection.3.6.2}{Random Demodulator}{section.3.6}% 27
+\BOOKMARK [2][-]{subsection.3.6.3}{Compressive Multiplexer}{section.3.6}% 28
+\BOOKMARK [1][-]{section.3.7}{Compressive Sampling for Spectrum Sensing}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.7.1}{Noise Folding}{section.3.7}% 30
+\BOOKMARK [2][-]{subsection.3.7.2}{Dynamic Range}{section.3.7}% 31
+\BOOKMARK [2][-]{subsection.3.7.3}{CS models}{section.3.7}% 32
+\BOOKMARK [0][-]{chapter.4}{ADMM}{}% 33
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.2}{Background}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.2.1}{Preliminary Definitiona}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.2}{Lagrangian Formulation}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.3}{ADMM}{section.4.2}% 38
+\BOOKMARK [1][-]{section.4.3}{The Proximity Operator}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.4}{Acceleration}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{Optimisation on Graphs}{}% 41
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.2}{Constrained Optimisation on Graphs}{chapter.5}% 43
+\BOOKMARK [2][-]{subsection.5.2.1}{DADMM-Lasso}{section.5.2}% 44
+\BOOKMARK [2][-]{subsection.5.2.2}{DADMM-Dantzig-Selector}{section.5.2}% 45
+\BOOKMARK [2][-]{subsection.5.2.3}{DADMM-MMV}{section.5.2}% 46
+\BOOKMARK [1][-]{section.5.3}{Results}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.4}{Conclusions}{chapter.5}% 48
+\BOOKMARK [0][-]{chapter.6}{Sensing with Heavyside Basis}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{Signal Model}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.3}{Sensing Model}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.4}{Constrained Optimisation on Graphs}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.5}{Results}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.6}{Conclusions}{chapter.6}% 55
+\BOOKMARK [0][-]{chapter.7}{Compressive Inference}{}% 56
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 57
+\BOOKMARK [1][-]{section.7.2}{Theory}{chapter.7}% 58
+\BOOKMARK [1][-]{section.7.3}{Compressive Estimation}{chapter.7}% 59
+\BOOKMARK [2][-]{subsection.7.3.1}{Example: Single Spike}{section.7.3}% 60
+\BOOKMARK [2][-]{subsection.7.3.2}{Estimating a single rectangle}{section.7.3}% 61
+\BOOKMARK [2][-]{subsection.7.3.3}{Estimating Frequency spectra}{section.7.3}% 62
+\BOOKMARK [0][-]{chapter.8}{Results on OFCOM Data}{}% 63
+\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 64
+\BOOKMARK [1][-]{section.8.2}{Data Set}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.3}{Results: Distributed Estimation with Heaviside Basis}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.4}{Compressive Estimation}{chapter.8}% 67
+\BOOKMARK [0][-]{chapter.9}{Group Testing}{}% 68
+\BOOKMARK [1][-]{section.9.1}{Introduction and notation}{chapter.9}% 69
+\BOOKMARK [2][-]{subsection.9.1.1}{Group Testing}{section.9.1}% 70
+\BOOKMARK [2][-]{subsection.9.1.2}{The Probabilistic group testing problem}{section.9.1}% 71
+\BOOKMARK [2][-]{subsection.9.1.3}{Group testing capacity}{section.9.1}% 72
+\BOOKMARK [2][-]{subsection.9.1.4}{Main results}{section.9.1}% 73
+\BOOKMARK [1][-]{section.9.2}{Algorithms and existing results}{chapter.9}% 74
+\BOOKMARK [2][-]{subsection.9.2.1}{Upper bounds on success probability}{section.9.2}% 75
+\BOOKMARK [2][-]{subsection.9.2.2}{Binary search algorithms}{section.9.2}% 76
+\BOOKMARK [2][-]{subsection.9.2.3}{Summary of our contribution}{section.9.2}% 77
+\BOOKMARK [2][-]{subsection.9.2.4}{Wider context: sparse inference problems}{section.9.2}% 78
+\BOOKMARK [1][-]{section.9.3}{Analysis and new bounds}{chapter.9}% 79
+\BOOKMARK [2][-]{subsection.9.3.1}{Searching a set of bounded ratio}{section.9.3}% 80
+\BOOKMARK [2][-]{subsection.9.3.2}{Discarding low probability items}{section.9.3}% 81
+\BOOKMARK [2][-]{subsection.9.3.3}{Searching the entire set}{section.9.3}% 82
+\BOOKMARK [2][-]{subsection.9.3.4}{Bounding the expected number of tests}{section.9.3}% 83
+\BOOKMARK [2][-]{subsection.9.3.5}{Controlling the error probabilities}{section.9.3}% 84
+\BOOKMARK [1][-]{section.9.4}{Results}{chapter.9}% 85
+\BOOKMARK [1][-]{section.9.5}{Discussion}{chapter.9}% 86
+\BOOKMARK [0][-]{section*.10}{Bibliography}{}% 87

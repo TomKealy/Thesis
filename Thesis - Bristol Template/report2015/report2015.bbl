@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{akan2009cognitive}
+Ozgur~B Akan, O~Karli, and Ozgur Ergul.
+\newblock Cognitive radio sensor networks.
+\newblock {\em Network, IEEE}, 23(4):34--40, 2009.
+
+\bibitem{bazerque2008}
+G~B Bazerque, J.A~Giannakis.
+\newblock Distributed spectrum sensing for cognitive radios by exploiting
+  sparsity.
+\newblock {\em Proc. of 42nd Asilomar Conf. on Signals, Systems, and
+  Computers}, 2008.
+
+\bibitem{Boyd2010a}
+Stephen Boyd.
+\newblock {Distributed Optimization and Statistical Learning via the
+  Alternating Direction Method of Multipliers}.
+\newblock {\em Foundations and Trends® in Machine Learning}, (1):1--122.
+
+\bibitem{Candes2006}
+Emmanuel~J Candes, Justin Romberg, and Terence Tao.
+\newblock {Robust Uncertainty Principles : Exact Signal Frequency Information}.
+\newblock 52(2):489--509, 2006.
+
+\bibitem{Dahlman2014}
+Eirk Dahlman.
+\newblock 5{G} wireless acces: Requirements and realization.
+\newblock {\em {IEEE} Communications Magazine}, (December):42--47, 2014.
+
+\bibitem{goldstein2014fast}
+Tom Goldstein, Brendan O'Donoghue, Simon Setzer, and Richard Baraniuk.
+\newblock Fast alternating direction optimization methods.
+\newblock {\em SIAM Journal on Imaging Sciences}, 7(3):1588--1623, 2014.
+
+\bibitem{mishali2010theory}
+Moshe Mishali and Yonina~C Eldar.
+\newblock From theory to practice: Sub-nyquist sampling of sparse wideband
+  analog signals.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
+  4(2):375--391, 2010.
+
+\bibitem{mota2013d}
+Jo{\~a}o~FC Mota, Jo{\~a}o~MF Xavier, Pedro~MQ Aguiar, and Markus Puschel.
+\newblock D-admm: A communication-efficient distributed algorithm for separable
+  optimization.
+\newblock {\em Signal Processing, IEEE Transactions on}, 61(10):2718--2723.
+
+\bibitem{nesterov2005smooth}
+Yu~Nesterov.
+\newblock Smooth minimization of non-smooth functions.
+\newblock {\em Mathematical programming}, 103(1):127--152, 2005.
+
+\bibitem{stevenson2009ieee}
+Carl~R Stevenson, Gerald Chouinard, Zhongding Lei, Wendong Hu, Stephen~J
+  Shellhammer, and Winston Caldwell.
+\newblock {IEEE} 802.22: The first cognitive radio wireless regional area
+  network standard.
+\newblock {\em IEEE Communications Magazine}, 47(1):130--138, 2009.
+
+\bibitem{tropp2010beyond}
+Joel~A Tropp, Jason~N Laska, Marco~F Duarte, Justin~K Romberg, and Richard~G
+  Baraniuk.
+\newblock Beyond nyquist: Efficient sampling of sparse bandlimited signals.
+\newblock {\em Information Theory, IEEE Transactions on}, 56(1):520--544, 2010.
+
+\bibitem{Zhang2011b}
+Huazi Zhang, Zhaoyang Zhang, and Yuen Chau.
+\newblock {Distributed compressed wideband sensing in Cognitive Radio Sensor
+  Networks}.
+\newblock In {\em 2011 IEEE Conference on Computer Communications Workshops,
+  INFOCOM WKSHPS 2011}, pages 13--17, 2011.
+
+\end{thebibliography}

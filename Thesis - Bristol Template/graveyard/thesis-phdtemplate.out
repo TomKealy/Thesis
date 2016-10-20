@@ -1,0 +1,73 @@
+\BOOKMARK [0][-]{section*.1}{List of Tables}{}% 1
+\BOOKMARK [0][-]{section*.2}{List of Figures}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Classical Sensing}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Classical Sensing}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Narrowband Spectrum Sensing}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Wideband Spectrum Sensing}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.4.1}{Compressed Sensing}{section.2.4}% 10
+\BOOKMARK [2][-]{subsection.2.4.2}{Reconstruction Algorithms}{section.2.4}% 11
+\BOOKMARK [0][-]{chapter.3}{Compressive Sensing}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Introduction and Preliminaries}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{RIP and Stable Embeddings}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.2}{Random Matrix Constructions}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.3}{Wishart Matrices}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.4}{Reconstruction Algorithms}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Compressive Sensing Architechtures}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Modulated Wideband Converter}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Random Demodulator}{section.3.2}% 20
+\BOOKMARK [0][-]{chapter.4}{ADMM}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Wideband Spectrum Sensing}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.2.1}{Compressed Sensing}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.2}{RIPless Theory}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.3}{Sub-Nyquist Sampling techniques}{section.4.2}% 26
+\BOOKMARK [1][-]{section.4.3}{Results and Simulations}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{Optimisation on Graphs}{}% 28
+\BOOKMARK [1][-]{section.5.1}{ADMM}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.1.1}{The Proximity Operator}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.2}{Statistical Interpretation}{section.5.1}% 31
+\BOOKMARK [2][-]{subsection.5.1.3}{Acceleration}{section.5.1}% 32
+\BOOKMARK [1][-]{section.5.2}{Constrained Optimisation on Graphs}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.3}{Joint Space-Frequency Model}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.4}{Results}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.5}{Conclusions}{chapter.5}% 36
+\BOOKMARK [0][-]{chapter.6}{Sensing with Heavyside Basis}{}% 37
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.2}{Signal Model}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.3}{Sensing Model}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.4}{Constrained Optimisation on Graphs}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.5}{Results}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.6}{Conclusions}{chapter.6}% 43
+\BOOKMARK [0][-]{chapter.7}{Compressive Inference}{}% 44
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.2}{Preliminaries}{chapter.7}% 46
+\BOOKMARK [2][-]{subsection.7.2.1}{RIP and Stable Embeddings}{section.7.2}% 47
+\BOOKMARK [2][-]{subsection.7.2.2}{Random Matrix Constructions}{section.7.2}% 48
+\BOOKMARK [2][-]{subsection.7.2.3}{Wishart Matrices}{section.7.2}% 49
+\BOOKMARK [2][-]{subsection.7.2.4}{Maximum Likelihood estimation: non-compressive case}{section.7.2}% 50
+\BOOKMARK [1][-]{section.7.3}{Compressive Estimation}{chapter.7}% 51
+\BOOKMARK [2][-]{subsection.7.3.1}{Example: Single Spike}{section.7.3}% 52
+\BOOKMARK [2][-]{subsection.7.3.2}{Estimating a single rectangle}{section.7.3}% 53
+\BOOKMARK [2][-]{subsection.7.3.3}{Estimating Frequency spectra}{section.7.3}% 54
+\BOOKMARK [0][-]{chapter.8}{Group Testing}{}% 55
+\BOOKMARK [1][-]{section.8.1}{Introduction and notation}{chapter.8}% 56
+\BOOKMARK [2][-]{subsection.8.1.1}{Group Testing}{section.8.1}% 57
+\BOOKMARK [2][-]{subsection.8.1.2}{The Probabilistic group testing problem}{section.8.1}% 58
+\BOOKMARK [2][-]{subsection.8.1.3}{Group testing capacity}{section.8.1}% 59
+\BOOKMARK [2][-]{subsection.8.1.4}{Main results}{section.8.1}% 60
+\BOOKMARK [1][-]{section.8.2}{Algorithms and existing results}{chapter.8}% 61
+\BOOKMARK [2][-]{subsection.8.2.1}{Upper bounds on success probability}{section.8.2}% 62
+\BOOKMARK [2][-]{subsection.8.2.2}{Binary search algorithms}{section.8.2}% 63
+\BOOKMARK [2][-]{subsection.8.2.3}{Summary of our contribution}{section.8.2}% 64
+\BOOKMARK [2][-]{subsection.8.2.4}{Wider context: sparse inference problems}{section.8.2}% 65
+\BOOKMARK [1][-]{section.8.3}{Analysis and new bounds}{chapter.8}% 66
+\BOOKMARK [2][-]{subsection.8.3.1}{Searching a set of bounded ratio}{section.8.3}% 67
+\BOOKMARK [2][-]{subsection.8.3.2}{Discarding low probability items}{section.8.3}% 68
+\BOOKMARK [2][-]{subsection.8.3.3}{Searching the entire set}{section.8.3}% 69
+\BOOKMARK [2][-]{subsection.8.3.4}{Bounding the expected number of tests}{section.8.3}% 70
+\BOOKMARK [2][-]{subsection.8.3.5}{Controlling the error probabilities}{section.8.3}% 71
+\BOOKMARK [1][-]{section.8.4}{Results}{chapter.8}% 72
+\BOOKMARK [1][-]{section.8.5}{Discussion}{chapter.8}% 73

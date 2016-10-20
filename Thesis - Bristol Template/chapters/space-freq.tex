@@ -1,0 +1,65 @@
+\section{Joint Space-Frequency Model}
+We write the power spectral density (psd) of the \(sth\) transmitter as:
+
+\begin{equation}
+\phi_s = \sum_b \beta_{bs} \psi_b\left(f\right)
+\label{basis_expansion}
+\end{equation}
+\\ 
+
+This model expresses in psd of the transmitter in a suitable basis - for example \(\psi_b\left(f\right)\) could be zero everywhere except for the set of frequencies where \(f=b\) i.e. \(\psi\) is a rectangular function with height \(\beta_{bs}\) and support \(f\). Other candidates for \(\psi\) include splines (e.g. raised cosines), and complex exponentials. 
+
+Given this, the psd at the \(rth\) receiver is:
+
+\begin{equation}
+\phi_r = \sum_s g_{sr}\phi_s = \sum_s g_{sr} \sum _b \beta_{bs}\psi_b\left(f\right)
+\end{equation}
+
+where
+
+\begin{equation}
+g_{sr} = \exp\left(-||x_r - x_s||_2^\alpha\right)
+\end{equation}
+
+is the channel response between the \(sth\) transmitter and the \(rth\) reciver.
+
+This model can be summarised using Kronecker products as follows:
+
+Let \(\tilde{G} = g_sr^T\), \(e_r, e_b\) be unit vectors i.e. they are \(1\) for the \(i^{th}\) receiver or frequency band respectively.
+
+The received power at a receiver (when only a single transmitter is transmitting) can be written:
+
+\begin{equation}
+y_r = \left(	e_r^T \bigotimes I_{n_b}\right) y
+\end{equation}
+
+with,
+
+\begin{equation}
+y = \left( \tilde{G} \bigotimes I_{n_b} \right) \phi
+\end{equation}
+
+Now, we have
+
+\begin{equation}
+\phi = e_s \bigotimes \phi_s
+\end{equation}
+
+so,
+
+\begin{equation}
+y = \left( \tilde{G} \bigotimes I_{n_b} \right) \left(e_s \bigotimes \phi_s \right)
+\end{equation}
+
+finally we have,
+
+\begin{equation}
+y_r = \left(	e_r^T \bigotimes I_{n_b}\right)\left[\left( \tilde{G} \bigotimes I_{n_b} \right) \left(e_s \bigotimes \phi_s \right)\right]
+\end{equation}
+
+\(\beta_{bs} \in \re^{1 \times n_b}\), \(g_{sr} \in \re^{n_r \times n_s}\) and \(\psi_{kb} \in 1 \times n_k n_b\) where \(n_k\) is the number of frequency bands (in this example \(n_k = n_b\).
+
+In the absence of knowledge of the location of the transmitters we introduce a grid of \textit{candidate} locations, to make the above model linear. \(s\) now runs over the set of these candidate locations.
+
+The problem of estimating the coefficients, \(\beta\), from noisy observations \(y = \phi_r + N\left(0,1\right)\) is now one that can be tackled by linear regression/convex optimisation.
+

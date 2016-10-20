@@ -1,0 +1,72 @@
+\select@language {english}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Abstract}}{i}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Acknowledgments}}{iii}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Author's declaration}}{v}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {Table of contents}}{viii}
+\contentsline {chapter}{\vspace {-0.4cm}\emph {List of tables}}{ix}
+\contentsline {chapter}{\emph {List of figures}}{xii}
+\contentsline {section}{\numberline {0.1}Introduction}{1}
+\contentsline {section}{\numberline {0.2}Introduction}{6}
+\contentsline {section}{\numberline {0.3}Narrowband Spectrum Sensing}{8}
+\contentsline {subsubsection}{Energy Detection}{9}
+\contentsline {subsubsection}{Cyclostationary Feature Detection}{11}
+\contentsline {subsubsection}{Matched Filtering}{13}
+\contentsline {subsubsection}{Limitations}{14}
+\contentsline {section}{\numberline {0.4}Wideband Spectrum Sensing}{14}
+\contentsline {subsection}{\numberline {0.4.1}Classical Sensing}{14}
+\contentsline {subsection}{\numberline {0.4.2}Compressed Sensing}{16}
+\contentsline {subsection}{\numberline {0.4.3}RIPless Theory}{20}
+\contentsline {subsubsection}{Short, Fat matrices}{20}
+\contentsline {subsubsection}{Bayesian Compressive Sensing}{22}
+\contentsline {subsection}{\numberline {0.4.4}Group Testing}{24}
+\contentsline {subsubsection}{*}{26}
+\contentsline {subsubsection}{*}{27}
+\contentsline {subsubsection}{*}{28}
+\contentsline {subsubsection}{Comparison to Compressive Sensing}{30}
+\contentsline {subsection}{\numberline {0.4.5}Sub-Nyquist Sampling techniques}{31}
+\contentsline {subsubsection}{Wideband Modulated Converter}{31}
+\contentsline {section}{\numberline {0.5}Results and Simulations}{33}
+\contentsline {section}{\numberline {0.6}Further Work and Project Plan}{34}
+\contentsline {section}{\numberline {0.7}ADMM}{38}
+\contentsline {subsection}{\numberline {0.7.1}The Proximity Operator}{43}
+\contentsline {subsubsection}{Properties}{44}
+\contentsline {subsubsection}{Motivation}{45}
+\contentsline {subsubsection}{Examples}{46}
+\contentsline {subsection}{\numberline {0.7.2}Statistical Interpretation}{49}
+\contentsline {subsection}{\numberline {0.7.3}Acceleration}{49}
+\contentsline {section}{\numberline {0.8}Constrained Optimisation on Graphs}{49}
+\contentsline {section}{\numberline {0.9}Compressive Sensing Architechtures}{56}
+\contentsline {subsection}{\numberline {0.9.1}Modulated Wideband Converter}{56}
+\contentsline {subsection}{\numberline {0.9.2}Random Demodulator}{58}
+\contentsline {section}{\numberline {0.10}Joint Space-Frequency Model}{59}
+\contentsline {section}{\numberline {0.11}Results}{61}
+\contentsline {section}{\numberline {0.12}Conclusions}{62}
+\contentsline {section}{\numberline {0.13}Introduction}{70}
+\contentsline {section}{\numberline {0.14}Preliminaries}{73}
+\contentsline {subsection}{\numberline {0.14.1}RIP and Stable Embeddings}{73}
+\contentsline {subsection}{\numberline {0.14.2}Random Matrix Constructions}{74}
+\contentsline {subsection}{\numberline {0.14.3}Wishart Matrices}{75}
+\contentsline {subsection}{\numberline {0.14.4}Maximum Likelihood estimation: non-compressive case}{76}
+\contentsline {section}{\numberline {0.15}Compressive Estimation}{78}
+\contentsline {subsection}{\numberline {0.15.1}Example: Single Spike}{81}
+\contentsline {subsection}{\numberline {0.15.2}Estimating a single rectangle}{82}
+\contentsline {subsection}{\numberline {0.15.3}Estimating Frequency spectra}{84}
+\contentsline {section}{\numberline {0.16}Introduction and notation}{87}
+\contentsline {subsection}{\numberline {0.16.1}The Probabilistic group testing problem}{87}
+\contentsline {subsection}{\numberline {0.16.2}Group testing capacity}{88}
+\contentsline {subsection}{\numberline {0.16.3}Main results}{89}
+\contentsline {section}{\numberline {0.17}Algorithms and existing results}{90}
+\contentsline {subsection}{\numberline {0.17.1}Upper bounds on success probability}{90}
+\contentsline {subsection}{\numberline {0.17.2}Binary search algorithms}{91}
+\contentsline {subsection}{\numberline {0.17.3}Summary of our contribution}{92}
+\contentsline {subsection}{\numberline {0.17.4}Wider context: sparse inference problems}{94}
+\contentsline {section}{\numberline {0.18}Analysis and new bounds}{95}
+\contentsline {subsection}{\numberline {0.18.1}Searching a set of bounded ratio}{95}
+\contentsline {subsection}{\numberline {0.18.2}Discarding low probability items}{97}
+\contentsline {subsection}{\numberline {0.18.3}Searching the entire set}{98}
+\contentsline {subsection}{\numberline {0.18.4}Bounding the expected number of tests}{99}
+\contentsline {subsection}{\numberline {0.18.5}Controlling the error probabilities}{101}
+\contentsline {section}{\numberline {0.19}Results}{103}
+\contentsline {section}{\numberline {0.20}Discussion}{105}
+\contentsline {section}{\numberline {0.21}*}{106}
+\contentsline {chapter}{Bibliography}{107}

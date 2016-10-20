@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: compressivesensing.aux
+The style file: plain.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "watkincandes"
+Warning--empty journal in Candes2006
+Warning--can't use both volume and number fields in hastie2005elements
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            635 strings with 7563 characters,
+and the built_in function-call counts, 7456 in all, are:
+= -- 754
+> -- 318
+< -- 5
++ -- 129
+- -- 104
+* -- 549
+:= -- 1210
+add.period$ -- 62
+call.type$ -- 21
+change.case$ -- 112
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 269
+empty$ -- 583
+format.name$ -- 104
+if$ -- 1552
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 22
+newline$ -- 107
+num.names$ -- 42
+pop$ -- 103
+preamble$ -- 1
+purify$ -- 93
+quote$ -- 0
+skip$ -- 206
+stack$ -- 0
+substring$ -- 590
+swap$ -- 61
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 80
+warning$ -- 2
+while$ -- 79
+width$ -- 23
+write$ -- 226
+(There were 3 warnings)

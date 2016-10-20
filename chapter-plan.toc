@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Spectrum Sensing}{2}
+\contentsline {subsection}{\numberline {2.1}Nyquist Approaches}{2}
+\contentsline {subsection}{\numberline {2.2}Compressive Sensing}{2}
+\contentsline {subsection}{\numberline {2.3}Architectures for Compressive Spectrum Sensing}{3}
+\contentsline {subsubsection}{\numberline {2.3.1}Random Demodulator}{3}
+\contentsline {subsubsection}{\numberline {2.3.2}Modulated Wideband Converter}{3}
+\contentsline {section}{\numberline {3}Convex Optimisation}{3}
+\contentsline {subsection}{\numberline {3.1}ADMM}{3}
+\contentsline {subsection}{\numberline {3.2}The Proximity Operator}{3}
+\contentsline {subsubsection}{\numberline {3.2.1}Properties}{3}
+\contentsline {subsubsection}{\numberline {3.2.2}Motivation}{3}
+\contentsline {subsubsection}{\numberline {3.2.3}Examples}{3}
+\contentsline {section}{\numberline {4}Distributed Spectrum Sensing}{3}
+\contentsline {subsection}{\numberline {4.1}Sensing Models}{3}
+\contentsline {subsection}{\numberline {4.2}Constrained Optimisation on Graphs}{3}
+\contentsline {section}{\numberline {5}New Basis}{3}
+\contentsline {subsection}{\numberline {5.1}Edge Detection}{3}
+\contentsline {section}{\numberline {6}Compressive Inference}{3}
+\contentsline {section}{\numberline {7}Numerical Results}{3}
+\contentsline {section}{\numberline {8}Group Testing}{3}
+\contentsline {section}{\numberline {9}Conclusions}{3}
