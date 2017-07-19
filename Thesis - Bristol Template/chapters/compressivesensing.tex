@@ -244,7 +244,7 @@ For example, if we take \(A_{ij} \sim \mathcal{N}\left(0, 1/m\right)\), then the
 
 where \(\delta\) is the RIP constant, and \(c_0\) is a constant/
 
-\subsection{Wishart Matrices}
+\subsection{Wishart Matrices}\label{sec:wishart}
 
 Let \(\{X_i\}_{i=1}^r\) be a set of i.i.d \(1 \times p\) random vectors drawn from the multivariate normal distribution with mean 0 and covariance matrix \(H\).
 
@@ -274,7 +274,7 @@ where \(p\) is the number of degrees of freedom.
 This distribution is a generalisation of the Chi-squared distribution: let \(p = H = 1\). 
 \end{remark}
 
-\begin{theorem}[Expected Value]
+\begin{theorem}[Expected Value]\label{thm:wishart-mean}
 \begin{equation}
 \ep\left(W\right) = rH
 \end{equation}
@@ -390,7 +390,7 @@ The estimate has the benefits of both Ridge and Lasso regression: feature select
 
 \begin{equation}
 \argmin_x \frac{1}{2}\vectornorm{Ax-y}_2^2 +  \lambda\vectornorm{\nabla x}_1
-\label{program:enat}
+\label{program:tc}
 \end{equation}
 
 This type of regularisation is used when preserving edges whilst simultaneously de-noising a signal is required. It is used extensively in image processing, where signals exhibit large flat patches alongside large discontinuities between groups of pixels.
@@ -399,6 +399,7 @@ This type of regularisation is used when preserving edges whilst simultaneously 
 
 \begin{equation}
 \min_{x \in \re^n} \vectornorm{x}_1 \text{ s.t. } \vectornorm{A^T(Ax-y)}_{\infty} \leq t\sigma
+\label{program:danzig}
 \end{equation}
 
 with \(t = c\sqrt{2\log{n}}\). Similarly to the LASSO this functional selects sparse vectors consistent with the data, in the sense that the residual \(r = y - Ax\) is smaller than the maximum amount of noise present. In \cite{candes2007dantzig} it was shown that the \(l_2\) error of the solution is within a factor of \(\log{n}\) of the ideal \(l_2\) error. More recent work by Bikel, Ritov, and Tsybakov, \cite{bickel2009simultaneous}, has shown that the LASSO enjoys similar properties.
@@ -572,9 +573,157 @@ z^{t+1} = y - Ax^t
 
 The choice of prior is key in Bayesian inference, as it encodes all knowledge about the problem. Penalising the least-squares estimate  with the \(\ell_1\) norm,
 
+\section{Compressive Estimation} \label{sec:estimation}
+In this section, we develop some intuition into constructing estimators for the signal \(s\) directly on the compressive measurements:
+
+\begin{theorem}
+
+Given a set of measurements of the form:
+
+\begin{equation}
+y = As + n
+\end{equation}
+\\
+where \(A \in \re^{m \times n} \), \(A_{ij} \sim \mathcal{N}\left(0,1/m\right)\), and \(n \in \re^n\) is AWGN i.e. \(\sim N\left(0, \sigma^2 I\right)\). We again assume that \(s\) comes from a fixed set of models, parametrised by some set \(\Theta\). 
+
+Then, the maximum likelihood estimator of \(s\), for the case where \(s\) can be expanded in an orthonormal basis \(s = \sum_{i=1}^n \alpha_i\phi_i\):
+
+\begin{equation}
+\hat{s} = \sum_{i=1}^n m\langle y, A\phi_i\rangle \phi_i
+\end{equation}
+
+\end{theorem}
+\begin{proof}
+The likelihood for this model is, (as y is a normal random variable):
+
+\begin{equation}
+f\left(y \mid s\right) = \left(\frac{1}{\left(2\pi\right)^{n/2}} \right)\exp{\left( - \frac{\left(y-As\right)^T  \left(y-As\right)}{2} \right)}
+\end{equation}
+
+Taking the logarithm and expanding, we find
+
+\begin{equation}
+\ln{f\left(y \mid s\right)} = -y^Ty - s^TA^TAs + 2\langle y, As \rangle + c
+\end{equation}
+
+which is equal to:
+
+\begin{equation}
+ln{f} = - \vectornorm{y}_2^2 - \vectornorm{As}_2^2 + 2\langle y, As \rangle
+\label{log-like}
+\end{equation}
+
+(where the constant has been dropped). The first term of \eqref{log-like} is constant, for the same reasons as in section \eqref{sec:estimation}. The term 
+
+\begin{equation}
+\vectornorm{As}^2_2 = \langle As, As\rangle
+\end{equation}
+
+can be written as 
+
+\begin{equation}
+\langle A^T As, s\rangle
+\label{ata}
+\end{equation}
+
+We will assume that \(A^TA\) concentrates in the sense of \ref{cond:sub-Gauss concetration} and replace \ref{ata} with its expectation \(\ep{\left( \langle A^T As, s\rangle \right)}\)
+
+\begin{align*}
+\ep{\left(\langle A^T As, s\rangle\right)} &=  \ep{\sum_{i=1}^n (A^TAs)^T_i s_i} \\
+&= \sum_{i=1}^n \ep{(A^TAs)_i s_i} \\
+&= \sum_{i=1}^n (\frac{1}{m}e_i s_i)^T_i s_i \\
+&= \frac{1}{m} \langle s, s \rangle
+\end{align*}
+
+because
+
+\begin{equation}
+\ep{A^TA} = \frac{1}{m}I
+\end{equation}
+
+as it is a Wishart matrix (see section\ref{sec:prelims}). 
+\\
+So we can further approximate \eqref{log-like}:
+
+\begin{equation}
+\ln{f\left(y \mid s\right)}  = - \vectornorm{y}_2^2 - \frac{1}{m}\vectornorm{s}_2^2 + 2\langle y, As \rangle
+\label{approx-log-like}
+\end{equation}
+
+The only, non-constant part of \eqref{approx-log-like} is the third term and so we define the estimator:
+
+\begin{equation}
+\hat{s} = \argmax_{\Theta} \langle y , As\left(\Theta\right)\rangle
+\label{eq: compressive-estimator}
+\end{equation}
+\end{proof}
+
+\begin{corollary}
+Consider the case where \( y = As\) (no noise). Then
+
+\begin{align*}
+y^TA\phi_j &= \sum_i \alpha_i \phi_i^TA^TA\phi_j
+\end{align*}
+
+
+
+So 
+
+
+\begin{align*}
+y^TA\phi_j &= \sum_i \alpha_i \phi_i^TA^TA\phi_j \sim \frac{\alpha_i}{m} \delta_{ij}
+\end{align*}
+
+giving
+ 
+\begin{equation}
+\widehat{\alpha_i} = m\left(y^TA\phi_j\right)
+\end{equation}
+\end{corollary}
+
+\begin{remark}
+The matrix \(M = A^TA\) is the projection onto the row-space of \(A\). It follows that \(\vectornorm{Ms}_2^2\) is simply the norm of the component of \(s\) which lies in the row-space of \(A\). This quantity is at most \(\vectornorm{s}_2^2\), but can also be \(0\) if \(s\) lies in the null space of \(A\). However, because \(A\) is random, we can expect that \(\vectornorm{Ms}_2^2\) will concentrate around \(\sqrt{m/n}\vectornorm{s}_2^2\) (this follows from the concentration property of sub-Gaussian random variables \eqref{cond:sub-Gauss concetration}).
+\end{remark}
+
+\begin{example}{Example: Single Spike}
+We illustrate these ideas with a simple example: estimate which of \(n\) frequencies \(s\) is composed of.
+
+A signal \(s \in \re^{300}\) composed of a single (random) delta function, with coefficients drawn from a Normal distribution (with mean 100, and variance 1) i.e 
+
+\begin{equation}
+s = \alpha_i \delta_i
+\end{equation}
+\\
+with 
+
+\begin{equation}
+a_i \sim \mathcal{N}\left(100, 1\right)
+\end{equation}
+
+and the index \(i\) chosen uniformly at random from \([1, n]\).
+\\
+The signal was measured via a random Gaussian matrix \(A \in \re^{100 \times 300}\), with variance \(\sigma^2 = 1/
+100 \) and the inner product between \(y = As\) and all 300 delta functions projected onto \(\re^{100}\) was calculated:
+
+\begin{equation}
+\hat{\alpha}_j = m\langle (A\alpha_i\delta_i), A\delta_j \rangle
+\end{equation} 
+
+We plot the \(\hat{\alpha_j}\) below, figure \ref{fig:new_basis_25}, (red circles), with the original signal (in blue, continuous line). Note how the maximum of the \(\hat{\alpha_j}\), coincides with the true signal.
+
+\begin{figure}[h]
+\centering
+\includegraphics[height = 7.3 cm]{1spike_legend.jpg}
+\caption{}
+\label{fig:new_basis_25}
+\end{figure}
+\end{example}
+\subsection{Estimating Frequency Spectra}\label{sec:freq-model}
+
+
 \section{Compressive Sensing Architectures}\label{sec:sensingmodel}
 
-\subsection{Modulated Wideband Converter}
+\subsection{Modulated Wideband Converter}\label{sec:MWC}
 We try to sense and reconstruct a wideband signal, divided into \(L\) channels. We have a (connected) network of \(J\) (= 50) nodes placed uniformly at random within the square \(  \left[0,1\right]\times \left[0,1\right] \). This is the same model, as in \cite{Zhang2011b}. The calculations which follow are taken from \cite{Zhang2011b} as well.
 
 The nodes individually take measurements (as in \cite{mishali2010theory}) by mixing the incoming analogue signal \(x\left(t\right)\) with a mixing function \(p_i\left(t\right)\) aliasing the spectrum. \(x\left(t\right)\) is assumed to be bandlimited and composed of up to \(k\) uncorrelated transmissions over the \(L\) possible narrowband channels - i.e. the signal is \(k\)-sparse. 

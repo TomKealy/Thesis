@@ -25,7 +25,7 @@
 % preliminary pages) should normally be double-sided.
 %
 % Memoir class loads useful packages by default (see manual).
-\documentclass[a4paper,11pt,leqno]{memoir} %add 'draft' to turn draft option on (see below)
+\documentclass[a4paper,11pt,reqno]{memoir} %add 'draft' to turn draft option on (see below)
 %
 %
 % Adding metadata:
@@ -227,7 +227,23 @@
 %Change tombstone symbol
 \newcommand{\blackged}{\hfill$\blacksquare$}
 \newcommand{\whiteged}{\hfill$\square$}
-
+\newcommand{\kronecker}{\raisebox{1pt}{\ensuremath{\:\otimes\:}}} 
+\newcommand{\dottedcolumn}[3]{%
+  \settowidth{\dimen0}{$#1$}
+  \settowidth{\dimen2}{$#2$}
+  \ifdim\dimen2>\dimen0 \dimen0=\dimen2 \fi
+  \begin{pmatrix}\,
+    \vcenter{
+      \kern.6ex
+      \vbox to \dimexpr#1\normalbaselineskip-1.2ex{
+        \hbox{$#2$}
+    \kern3pt
+    \xleaders\vbox{\hbox to \dimen0{\hss.\hss}\vskip4pt}\vfill
+    \kern1pt
+    \hbox{$#3$}
+  }\kern.6ex}\,
+  \end{pmatrix}
+}
 %
 %
 % New definition of square root:
@@ -291,6 +307,7 @@
 \newacronym{cr}{CR}{Cognitie Radio}
 \newacronym{mmv}{MMV}{Multiple Measurement Vector}
 \newacronym{cs}{CS}{Compressive Sensing}
+\newacronym{snr}{SNR}{Signal to Noise ratio}
 \numberwithin{equation}{chapter}
 \begin{document}
 
@@ -354,6 +371,7 @@
 
 \chapter{Classical Sensing}
 \input{chapters/chapter1}
+\label{chap:nyq}
 
 \chapter{Compressive Sensing}
 \label{chap:cs}
@@ -364,15 +382,18 @@
 
 \chapter{Optimisation on Graphs}
 \input{chapters/report2015}
+\label{chap:dist-opt}
 
-\chapter{Sensing with Heavyside Basis}
-\input{chapters/cswirelesspaper_new_basis}
+\chapter{Sensing with Heaviside Basis}
+\label{chap:rect-basis}
+\input{chapters/freq_model}
 
-\chapter{Compressive Inference}
-\input{chapters/compressive_filtering_3}
+\chapter{Sensing with Heaviside Basis in time and frequency}
+\label{chap:2d-rect-basis}
+\input{chapters/time_freq_model}
 
-\chapter{Results on OFCOM Data}
-\input{chapters/ofcom_results}
+%\chapter{Results on OFCOM Data}
+%\input{chapters/ofcom_results}
 
 \chapter{Group Testing}
 \input{chapters/root}

@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper, titlepage]{article}
+\input{macros}
+
+\begin{document}
+\title{Cramer Rao bound for CS}
+\maketitle
+
+\section{Introduction}
+This document is a short derivation of theCramer Rao bound for the Compressive sensing.
+
+\section{Model and Derivation}
+
+We capture a deterministic sparse vector \(x \in \re^n\)  through a sensing matrix \(A \in \re^{m \times n}\), giving us compressive measurements \(y \in \re^m\).
+
+\begin{equation}
+y = Ax
+\end{equation}
+
+We can model the signal with:
+
+\begin{equation}
+p \left(y \mid x \text{,} \sigma^2 \right) = (2 \pi \sigma^2)^{-K/2} \exp{\left(- \frac{1}{2 \sigma^2} \vectornorm{y - Ax}_{2}^{2} \right)}\exp{(-\lambda\vectornorm{x}_1)} 
+\end{equation}
+
+Up to a constant we find that":
+
+\begin{equation}
+-\log{p \left(y \mid x \text{,} \sigma^2 \right) }=\frac{1}{2\sigma^2}\vectornorm{Ax-y}_2^2 + \lambda\vectornorm{x}_1
+\end{equation}
+\label{logprob}
+
+and we calculate that:
+
+\begin{equation}
+\frac{\partial^2}{\partial^2x}-\log{p \left(y \mid x \text{,} \sigma^2 \right) } = \frac{1}{\sigma^2}A^T A
+\end{equation}
+\label{Fisher}
+
+\begin{remark}
+The second term in \eqref{logprob} doesn't add anything to this as the first derivative is either \(\lambda\), \(-\lambda\) or \(0\), depending on the sign of \(x\).
+\end{remark}
+
+Taking the expectation of \eqref{Fisher} we find that:
+
+\begin{equation}
+\ep{\frac{\partial^2}{\partial^2x} -\log{p \left(y \mid x \text{,} \sigma^2 \right) }} = \frac{1}{\sigma^2 n}
+\end{equation}
+
+where we have used:
+
+\begin{theorem}[Expected Value of Wishart Matrices]\label{thm:wishart-mean}
+Given a matrix  \(W \in \re^{r \times r}\)
+\begin{equation}
+\ep\left(W\right) = rI
+\end{equation}
+\end{theorem}
+
+So we find that the Cramer Rao bound is:
+
+\begin{align}
+\ep{\vectornorm{\hat{x}-x}} &\geq \frac{\sigma^2}{n}
+\end{align}
+
+where \(\hat{x}\) is any unbiased estimator of \(x\).
+
+\end{document}

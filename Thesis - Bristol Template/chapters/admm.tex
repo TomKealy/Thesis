@@ -200,7 +200,7 @@ The dual problem is:
 \max_{\eta} H\left(\eta\right)
 \end{equation}
 
-We can find an optimum pair of points by gradient ascent. First we find a point \(x^+ = \argmin_x L\), and then we have \(\nabla g = Ax^+ - b\), which is the residual for the equality constraint. The dual ascent method is:
+We can find an optimum pair of points by gradient descent. First we find a point \(x^+ = \argmin_x L\), and then we have \(\nabla g = Ax^+ - b\), which is the residual for the equality constraint. The dual ascent method is:
 
 \begin{align}
 x^{k+1} &:= \argmin_x L\\
@@ -208,7 +208,7 @@ x^{k+1} &:= \argmin_x L\\
 \label{dual-ascent}
 \end{align}
 
-where \(\alpha\) is a step size.
+where \(\alpha \in \) is a step size.
 
 The \(\eta\) variable can be interpreted as a vector of prices, that an agent must pay in order to satisfy the optimisation problem. Thus the second step in dual ascent (and the final step in ADMM) can be interpreted as a price update.
 
@@ -409,14 +409,14 @@ at \(z=0\) we find:
 i.e.
 
 \begin{equation}
-\mid x+ \frac{\eta}{\rho}\mid \leq \frac{\lambda}{\rho}
+\lvert x+ \frac{\eta}{\rho}\rvert \leq \frac{\lambda}{\rho}
 \label{zbounds}
 \end{equation}
 
 combining \eqref{dellz-negative}, \eqref{dellz-positive}, \eqref{zbounds} together we find the optimal \(z\) is:
 
 \begin{equation}
-z = \mathrm{sign}(x+\frac{\eta}{\rho})\text{ }\mathrm{max}\left( \mid x+\frac{\eta}{\rho} \mid - \frac{\lambda}{\rho} ,0\right)
+z = \mathrm{sign}(x+\frac{\eta}{\rho})\text{ }\mathrm{max}\left( \lvert x+\frac{\eta}{\rho} \rvert- \frac{\lambda}{\rho} ,0\right)
 \label{optz}
 \end{equation}
 
@@ -481,7 +481,7 @@ i.e \(S_\gamma(y)\).
 
 In this section we introduce the proximity operator of a closed and proper convex function. We discuss the existence of the operator, and some properties. We then motivate the operator from the perspective of ADMM, before giving some examples.
 
-The Proximity Operator for a closed, convex, and proper function \(f\) (the set of all such functions will be denoted \(\Gamma\) in a Hilbert space \(\mathcal{H}\) is defined as \cite{moreau1965proximite}:
+The Proximity Operator for a closed, convex, and proper function \(f\) (the set of all such functions will be denoted \(\Gamma\)) in a Hilbert space \(\mathcal{H}\) is defined as \cite{moreau1965proximite}:
 
 \begin{definition}[Proximity Operator]\label{def:prox_operator}
 \begin{equation}
@@ -531,55 +531,6 @@ The Moreau envelope is (Frechet) differentiable, with
 \( \mathrm{Prox}_f : \left(\mathcal{H}, \vectornorm{\circ}\right) \leftarrow \left(\mathcal{H}, \vectornorm{\circ}\right) \) is 1-Lipchitz continuous.
 \end{theorem}
 
-\subsubsection{Motivation}
-We are solving problems of the following form:
-
-\begin{align}
-&\min_{x \in \mathcal{H}} f\left(x\right) + g\left(z\right)\\
-&\text{s.t } x - z = 0
-\end{align}
-
-with \(f, g \in \Gamma\). To solve this problem we form the augmented Lagrangian: 
-
-\begin{align*}
-L_p\left(x, z, \eta\right) = f\left( x\right) +& g\left(z\right)+\eta^T\left(Ux+Vz-c\right) + \frac{\rho}{2}\|Ux+Vz-c\|_2^2
-\end{align*}
-
-and then performing the following iterative minimisation:
-
-\begin{align}
-x^{k+1} &:= \argmin_{x} L_\rho\left(x,z^k,\eta^k\right)\\
-z^{k+1} &:= \argmin_{z} L_\rho\left(x^{k+1},z,\eta^k\right)\\
-\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
-\end{align}
-
-i.e. 
-
-\begin{align}
-x^{k+1} &:= \argmin_{x} \left( f\left(x\right) + \eta^{kT}x + \frac{\rho}{2}\vectornorm{x - z^k}^2 \right) \\
-z^{k+1} &:= \argmin_{z} \left( g\left(z\right) - \eta^{kT}z + \frac{\rho}{2}\vectornorm{x^{k+1} - z}^2 \right)\\
-\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
-\end{align}
-
-pulling the linear terms into the quadratic ones we get:
-
-\begin{align}
-x^{k+1} &:= \argmin_{x} \left( f\left(x\right) +  \frac{\rho}{2}\vectornorm{x - z^k + \left(1/\rho\right)\eta^k}^2 \right) \\
-z^{k+1} &:= \argmin_{z} \left( g\left(z\right) +  \frac{\rho}{2}\vectornorm{x^{k+1} - z - \left(1/\rho\right)\eta^k}^2 \right)\\
-\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
-\end{align}
-
-i.e.
-
-\begin{align}
-x^{k+1} &:= \mathrm{Prox}_f \left( z^k - u^k\right)\\
-z^{k+1} &:= \mathrm{Prox}_f \left(x^{k+1} + u^k\right)  \\
-u^{k+1} &:= u^{k} + \left(x^{k+1} + z^{k+1}\right)
-\end{align}
-
-with \(u^k = \left(1/\rho\right) \eta^k\).
-
-The motivation for the Proximal operator should now be clear: to perform the minimisation we simply calculate the proximal operator of each of the functions at each step. For many functions found in Statistics (e.g. the \(l_p\) norms, this can be found in closed form, and so ADMM presents a particularly attractive method for finding MAP solutions to regularised statistical problems.
 
 \subsubsection{Examples}
 
@@ -610,6 +561,7 @@ For \(f(y) = \frac{\mu}{2}\vectornorm{y}^2\) the \(\mathrm{Prox}\) operator is:
 \begin{equation}
 \mathrm{Prox}_f\left(x\right) := \mathrm{sign}(x_i)\left(|x_i| - \gamma\right)^+ = S_\gamma\left(x\right)_i 
 \end{equation}
+\label{eqn:proxl1}
 \end{example}
 
 \begin{example}[Elastic Net]
@@ -708,6 +660,57 @@ Each agent is minimising its own function, plus a quadratic term (the squared no
 
 Note that the 'gather' stage doesn't require a central processor - this can be done in a distributed manner also.
 \end{example}
+
+\subsubsection{Motivation}
+We are solving problems of the following form:
+
+\begin{align}
+&\min_{x \in \mathcal{H}} f\left(x\right) + g\left(z\right)\\
+&\text{s.t } x - z = 0
+\end{align}
+
+with \(f, g \in \Gamma\). To solve this problem we form the augmented Lagrangian: 
+
+\begin{align*}
+L_p\left(x, z, \eta\right) = f\left( x\right) +& g\left(z\right)+\eta^T\left(Ux+Vz-c\right) + \frac{\rho}{2}\|Ux+Vz-c\|_2^2
+\end{align*}
+
+and then performing the following iterative minimisation:
+
+\begin{align}
+x^{k+1} &:= \argmin_{x} L_\rho\left(x,z^k,\eta^k\right)\\
+z^{k+1} &:= \argmin_{z} L_\rho\left(x^{k+1},z,\eta^k\right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
+\end{align}
+
+i.e. 
+
+\begin{align}
+x^{k+1} &:= \argmin_{x} \left( f\left(x\right) + \eta^{kT}x + \frac{\rho}{2}\vectornorm{x - z^k}^2 \right) \\
+z^{k+1} &:= \argmin_{z} \left( g\left(z\right) - \eta^{kT}z + \frac{\rho}{2}\vectornorm{x^{k+1} - z}^2 \right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
+\end{align}
+
+pulling the linear terms into the quadratic ones we get:
+
+\begin{align}
+x^{k+1} &:= \argmin_{x} \left( f\left(x\right) +  \frac{\rho}{2}\vectornorm{x - z^k + \left(1/\rho\right)\eta^k}^2 \right) \\
+z^{k+1} &:= \argmin_{z} \left( g\left(z\right) +  \frac{\rho}{2}\vectornorm{x^{k+1} - z - \left(1/\rho\right)\eta^k}^2 \right)\\
+\eta^{k+1} &:= \eta^{k} + \rho \left(x^{k+1} + z^{k+1}\right)
+\end{align}
+
+i.e.
+
+\begin{align}
+x^{k+1} &:= \mathrm{Prox}_f \left( z^k - u^k\right)\\
+z^{k+1} &:= \mathrm{Prox}_g \left(x^{k+1} + u^k\right)  \\
+u^{k+1} &:= u^{k} + \left(x^{k+1} - z^{k+1}\right)
+\end{align}
+
+with \(u^k = \left(1/\rho\right) \eta^k\).
+
+The motivation for the Proximal operator should now be clear: to perform the minimisation we simply calculate the proximal operator of each of the functions at each step. For many functions found in Statistics (e.g. the \(l_p\) norms, this can be found in closed form, and so ADMM presents a particularly attractive method for finding MAP solutions to regularised statistical problems.
+
 
 \section{Acceleration}\label{sec:accel}
 

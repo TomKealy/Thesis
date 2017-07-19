@@ -1,0 +1,33 @@
+\section{Distributed Sensing Model}\label{sec:sensingmodel}
+
+
+We consider a radio environment with a single primary user (PU) and a network of \(J\) nodes collaboratively trying to sense and reconstruct the PU signal in a fully distributed manner by local communication and regularisation only.
+
+We try to sense and reconstruct a wideband signal, using a network of \(J\) (= 50) nodes placed uniformly at random within the square \(  \left[0,1\right]\times \left[0,1\right] \). 
+
+We consider the frequency domain measurements, formed by each node mixing the signal with a random Gaussian signal \(A_j \in \re^n\). The measurements taken at node \(j\) are:
+
+\begin{equation}
+y_j = A_jH_jg + w_j
+\label{dist_system}
+\end{equation}
+
+where \(H_j \in \re\) is the scalar channel gain, and \(w_j \sim \mathcal{N}(0,\sigma^2_n) \in \re \) is additive white Gaussian noise. 
+
+For the purposes of comparison in section (\ref{sec:results}), this corresponds to the concatenated system:
+
+\begin{equation}
+y = AHg + w
+\label{system}
+\end{equation}
+
+where \(H \in \re^{n \times n}\) is a block diagonal matrix of channel gains.
+
+The system  \ref{system} can then be solved (in the sense of finding the sparse vector \(a\) (\ref{basis}) by convex optimisation via minimising the objective function:
+
+\begin{equation}
+\hat{a} = \argmin_{a} \frac{1}{2}\|AHL^{T}a-y\|_2^2 + \lambda \|a\|_1
+\label{opt}
+\end{equation}
+
+where \(\lambda\) is a parameter chosen to promote sparsity. Larger \(\lambda\) means sparser \(a\).

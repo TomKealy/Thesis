@@ -1,10 +1,5 @@
 \begin{thebibliography}{100}
 
-\bibitem{akan2009cognitive}
-Ozgur~B Akan, O~Karli, and Ozgur Ergul.
-\newblock Cognitive radio sensor networks.
-\newblock {\em Network, IEEE}, 23(4):34--40, 2009.
-
 \bibitem{aksoylar}
 Cem Aksoylar, George Atia, and Venkatesh Saligrama.
 \newblock Sparse signal processing with linear and non-linear observations: A
@@ -211,14 +206,6 @@ Mark Davenport, Petros~T Boufounos, Michael~B Wakin, Richard~G Baraniuk, et~al.
 \newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
   4(2):445--460, 2010.
 
-\bibitem{davenport2007smashed}
-Mark~A Davenport, Marco~F Duarte, Michael~B Wakin, Jason~N Laska, Dharmpal
-  Takhar, Kevin~F Kelly, and Richard~G Baraniuk.
-\newblock The smashed filter for compressive classification and target
-  recognition.
-\newblock In {\em Electronic Imaging 2007}, pages 64980H--64980H. International
-  Society for Optics and Photonics, 2007.
-
 \bibitem{Davenport2007}
 Mark~a. Davenport, Marco~F. Duarte, Michael~B. Wakin, Jason~N. Laska, Dharmpal
   Takhar, Kevin~F. Kelly, and Richard~G. Baraniuk.
@@ -232,25 +219,12 @@ Mark~A Davenport, Jason~N Laska, John~R Treichler, and Richard~G Baraniuk.
   acquisition: Noise folding versus dynamic range.
 \newblock {\em IEEE Transactions on Signal Processing}, 60(9):4628--4642, 2012.
 
-\bibitem{davenport2010wideband}
-Mark~A Davenport, Stephen~R Schnelle, JP~Slavinsky, Richard~G Baraniuk,
-  Michael~B Wakin, and Petros~T Boufounos.
-\newblock A wideband compressive radio receiver.
-\newblock In {\em MILITARY COMMUNICATIONS CONFERENCE, 2010-MILCOM 2010}, pages
-  1193--1198. IEEE, 2010.
-
 \bibitem{prony1795essai}
 Baron Gaspard~Riche de~Prony.
 \newblock Essai éxperimental et analytique: sur les lois de la dilatabilité
   de fluides élastique et sur celles de la force expansive de la vapeur de
   l'alkool, à différentes températures.
 \newblock {\em Journal de l'école Polytechnique}, 1(22):24--76, 1795.
-
-\bibitem{donoho2004neighborly}
-David~L Donoho.
-\newblock Neighborly polytopes and sparse solution of underdetermined linear
-  equations.
-\newblock 2004.
 
 \bibitem{donoho2}
 David~L Donoho.
@@ -291,12 +265,6 @@ Jonathan Eckstein and Dimitri~P Bertsekas.
 \newblock On the douglas—rachford splitting method and the proximal point
   algorithm for maximal monotone operators.
 \newblock {\em Mathematical Programming}, 55(1-3):293--318, 1992.
-
-\bibitem{eftekhari2013matched}
-Armin Eftekhari, Justin Romberg, and Michael~B Wakin.
-\newblock Matched filtering from limited frequency samples.
-\newblock {\em Information Theory, IEEE Transactions on}, 59(6):3475--3496,
-  2013.
 
 \bibitem{Elad2010}
 Michael Elad.
@@ -495,12 +463,6 @@ Hosein Mohimani, Massoud Babaie-Zadeh, Irina Gorodnitsky, and Christian Jutten.
 \newblock Sparse recovery using smoothed l0 (sl0): Convergence analysis.
 \newblock {\em arXiv preprint arXiv:1001.5073}, 2010.
 
-\bibitem{mokhtari2015dqm}
-Aryan Mokhtari, Wei Shi, Qing Ling, and Alejandro Ribeiro.
-\newblock Dqm: Decentralized quadratically approximated alternating direction
-  method of multipliers.
-\newblock {\em arXiv preprint arXiv:1508.02073}, 2015.
-
 \bibitem{moreau1965proximite}
 Jean-Jacques Moreau.
 \newblock Proximit{\'e} et dualit{\'e} dans un espace hilbertien.
@@ -638,13 +600,6 @@ Ioannis~D Schizas, Alejandro Ribeiro, and Georgios~B Giannakis.
   estimation of deterministic signals.
 \newblock {\em IEEE Transactions on Signal Processing}, 56(1):350--364, 2008.
 
-\bibitem{schnelle2012compressive}
-Stephen~R Schnelle, John~P Slavinsky, Petros~T Boufounos, Mark~A Davenport, and
-  Richard~G Baraniuk.
-\newblock A compressive phase-locked loop.
-\newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE
-  International Conference on}, pages 2885--2888. IEEE, 2012.
-
 \bibitem{Sejdinovic2010}
 Dino Sejdinovic and Oliver Johnson.
 \newblock {Note on noisy group testing: Asymptotic bounds and belief
@@ -760,12 +715,6 @@ Joel~A Tropp and Anna~C Gilbert.
   pursuit.
 \newblock {\em Information Theory, IEEE Transactions on}, 53(12):4655--4666,
   2007.
-
-\bibitem{tropp2010beyond}
-Joel~A Tropp, Jason~N Laska, Marco~F Duarte, Justin~K Romberg, and Richard~G
-  Baraniuk.
-\newblock Beyond nyquist: Efficient sampling of sparse bandlimited signals.
-\newblock {\em Information Theory, IEEE Transactions on}, 56(1):520--544, 2010.
 
 \bibitem{unser2000sampling}
 Michael Unser.

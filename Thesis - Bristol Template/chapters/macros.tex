@@ -1,0 +1,91 @@
+\usepackage{dsfont}
+%\usepackage{a4wide}
+\usepackage{wrapfig}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{algpseudocode}
+\usepackage{amsthm}
+\usepackage[english]{babel}
+\usepackage{mathtools}
+\usepackage{epstopdf}
+
+\renewcommand{\theequation}{\thesection.arabic{equation}}
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .gif, .eps}
+
+%\usepackage[OT2,T1]{fontenc}
+%\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+%\DeclareMathSymbol{\sha}{\mathalpha}{cyrletters}{"58}
+
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+%\DeclareMathOperator*{\sinc{\mathrm{sinc}}}
+
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4
+		\end{array}
+	\right.
+}
+
+
+\newcounter{eqn}
+\renewcommand*{\theeqn}{\alph{eqn})}
+\newcommand{\num}{\refstepcounter{eqn}\text{\theeqn}\;}
+
+\makeatother
+\newcommand{\vectornorm}[1]{\left|\left|#1\right|\right|}
+\newcommand*\conjugate[1]{\bar{#1}}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{condition}{Condition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\supp}{\operatorname{supp}} 
+\newcommand{\vc}[1]{{\mathbf{ #1}}}
+\newcommand{\tn}{\widetilde{\nabla}_{n} }
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\re}{{\mathbb{R}}}
+\newcommand{\II}{{\mathbb{I}}}
+\newcommand{\ep}{{\mathbb{E}}}
+\newcommand{\pr}{{\mathbb{P}}}
+\newcommand{\FF}{{\mathcal{F}}}
+\newcommand{\TT}{{\mathcal{T}}}
+\newcommand{\phin}{\phig{n}}
+\newcommand{\phig}[1]{\phi^{(#1)}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\eff}{{\mathrm{eff}}}
+\newcommand{\suc}{{\mathrm{suc}}}
+\newcommand{\tends}{\rightarrow \infty}
+\newcommand{\setS}{{\mathcal{S}}}
+\newcommand{\setP}{{\mathcal{P}}}
+\newcommand{\setX}{{\mathcal{X}}}
+\newcommand{\nec}{{\mathrm{nec}}}
+\newcommand{\bd}{{\mathrm{bd}}}

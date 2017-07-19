@@ -31,6 +31,7 @@
 \DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
 \DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
 \DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathSymbol{\kronecker}{\otimes}
 
 \newcounter{eqn}
 \renewcommand*{\theeqn}{\alph{eqn})}
@@ -40,8 +41,8 @@
 \newcommand{\vectornorm}[1]{\left|\left|#1\right|\right|}
 \newcommand*\conjugate[1]{\bar{#1}}
 
-
-\newtheorem{thm}{Theorem}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter]
 \newtheorem{defn}{Definition}
  %\theoremstyle{plain}
   \newtheorem{theorem}{Theorem}[section]
@@ -75,3 +76,4 @@
 \newcommand{\setX}{{\mathcal{X}}}
 \newcommand{\nec}{{\rm nec}}
 \newcommand{\bd}{{\rm bd}}
+\newcommand{\kronecker}{{\otimes}}
